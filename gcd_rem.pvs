@@ -1,0 +1,76 @@
+%%
+% @theory: gcd_rem
+% @author: Thiago Mendonca Ferreira Ramos
+% @date: Sun, 03 Nov 2024 20:54:54 GMT
+%%
+gcd_rem: THEORY
+  BEGIN
+
+  IMPORTING ints@mod_nat, ints@div_nat
+
+  gcd_rem(m : int, n : int | abs(m)+abs(n)/=0): RECURSIVE nat =
+  LET M = abs(m), N = abs(n) IN
+  IF M = 0 OR N = 0 THEN M + N
+  ELSIF M >= N THEN gcd_rem(N, nmod(M,N))
+  ELSE gcd_rem(M, nmod(N,M))
+  ENDIF
+  MEASURE abs(m) + abs(n)
+
+  % @QED gcd_rem_commutes proved by thiago on Mon, 04 Nov 2024 02:05:32 GMT
+  gcd_rem_commutes: LEMMA
+  FORALL(m : int, n : int | abs(m)+abs(n)/=0):
+  gcd_rem(m,n) = gcd_rem(n,m)
+
+  % @QED gcd_rem_divides_left proved by thiago on Mon, 04 Nov 2024 02:31:25 GMT
+  gcd_rem_divides_left: LEMMA
+  FORALL(m : int, n : int | abs(m)+abs(n)/=0):
+  divides(gcd_rem(m,n),m)
+
+  % @QED gcd_rem_divides_right proved by thiago on Mon, 04 Nov 2024 02:33:39 GMT
+  gcd_rem_divides_right: LEMMA
+  FORALL(m : int, n : int | abs(m)+abs(n)/=0):
+  divides(gcd_rem(m,n),n)
+
+  % @QED gcd_rem_greater proved by thiago on Mon, 04 Nov 2024 02:51:04 GMT
+  gcd_rem_greater: LEMMA
+  FORALL(m : int, n : int | abs(m)+abs(n)/=0):
+  FORALL(k : nat | divides(k,m) AND divides(k,n)):
+  gcd_rem(m,n) >= k
+
+  linear_comb(m : posnat, n: posnat | m /= n): RECURSIVE 
+        {ret : [nat, nat] | gcd_rem(m,n) = ret`1*m - ret`2*n}=
+  IF nmod(m,n) = 0 THEN (1,div(m,n)-1)
+  ELSIF nmod(n,m) = 0 THEN (n-div(n,m)+1,m-1)
+  ELSIF m > n THEN LET k1= linear_comb(nmod(m,n),n)`1, 
+                       k2 = linear_comb(nmod(m,n),n)`2 IN
+              (k1, k2 + div(m,n)*k1)
+  ELSE LET k1 = linear_comb(m,nmod(n,m))`1,
+           k2 = linear_comb(m,nmod(n,m))`2 IN
+      (k1+div(n,m)*k2,k2)
+  ENDIF
+  MEASURE m+n
+
+  % @QED gcd_rem_linear_comb proved by thiago on Wed, 06 Nov 2024 21:50:35 GMT
+  gcd_rem_linear_comb : LEMMA
+  FORALL(m : posnat,n : posnat | m /= n):
+  LET k1 = linear_comb(m,n)`1,
+      k2 = linear_comb(m,n)`2 IN
+  gcd_rem(m,n) = k1*m-k2*n
+
+  % @QED linear_comb_gen proved by thiago on Wed, 13 Nov 2024 22:05:50 GMT
+  linear_comb_gen: SUBLEMMA
+  FORALL(m,n: posnat, ret : int | ret /=0, k1,k2 :int):
+  (ret = k1*m - k2*n) =>
+  FORALL(a : int):
+  (ret = (k1 + n*a)*m - (k2 + m*a)*n)
+
+  % @QED linear_comb_form proved by thiago on Fri, 15 Nov 2024 03:00:26 GMT
+  linear_comb_form : LEMMA
+  FORALL(m : posnat,n: posnat | m/=n, ret : int | ret /=0, k1,k2 :nat):
+  (gcd_rem(m,n) = 1 AND ret = k1*m - k2*n) =>
+  EXISTS(a : int):
+  (k1 = ret*linear_comb(m,n)`1 + n*a AND k2 = ret*linear_comb(m,n)`2 + m *a)
+
+  
+    
+  END gcd_rem

@@ -1,0 +1,1391 @@
+{
+ "Goldbach.list_of_primes_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_primes_TCC2": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_primes_TCC3": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_primes_TCC4": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_primes_TCC5": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_TCC5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.incong_int_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "incong_int_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e86170e4b6234811ff17f9cb55c0ed771323c9bba8fe8d4acc3134e73f7414f0"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "incong_int_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.incong_int_TCC2": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "incong_int_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e86170e4b6234811ff17f9cb55c0ed771323c9bba8fe8d4acc3134e73f7414f0"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "incong_int_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.incong_int_TCC3": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "incong_int_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e86170e4b6234811ff17f9cb55c0ed771323c9bba8fe8d4acc3134e73f7414f0"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "incong_int_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"l2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand length -1 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"length\" -1 2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lift-if)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(grind)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(grind)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.incong_int_TCC4": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "incong_int_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e86170e4b6234811ff17f9cb55c0ed771323c9bba8fe8d4acc3134e73f7414f0"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "incong_int_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_cong_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_cong_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "97f074e3eb436e93bdebc9ad3533c205e1997d310860326ab04e0c1c2e9c9a53"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_cong_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_cong_TCC2": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_cong_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "97f074e3eb436e93bdebc9ad3533c205e1997d310860326ab04e0c1c2e9c9a53"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_cong_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"l2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_cong_TCC3": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_cong_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "97f074e3eb436e93bdebc9ad3533c205e1997d310860326ab04e0c1c2e9c9a53"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_cong_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"l2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide-all-but (-2 1 2))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"length\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_cong_TCC4": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_cong_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "97f074e3eb436e93bdebc9ad3533c205e1997d310860326ab04e0c1c2e9c9a53"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_cong_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_cong_correctness_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_cong_correctness_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "97f074e3eb436e93bdebc9ad3533c205e1997d310860326ab04e0c1c2e9c9a53"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_cong_correctness_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.list_of_primes_correctness": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "list_of_primes_correctness",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "193ced3c1ac546bac051d64fa269891cd77de5017646186be553dc664fa4ff30"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "list_of_primes_correctness",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(measure-induct+ \"n\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"list_of_primes\" 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(typepred \"i\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(rewrite \"nth_append\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lift-if)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(inst -3 \"x!1-1\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "2.1.1",
+                "name": "(2.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.1",
+                  "name": "(inst -3 \"i\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "2.1.2",
+                "name": "(2.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(case \"i - length[(prime?)](list_of_primes(x!1 - 1)) = 0\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "2.2.1",
+                "name": "(2.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.2.1",
+                  "name": "(replaces -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.1",
+                  "name": "(grind)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "2.2.2",
+                "name": "(2.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.2.2",
+                  "name": "(typepred \"i\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.2",
+                  "name": "(expand \"list_of_primes\" -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.2",
+                  "name": "(rewrite \"length_append\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.2",
+                  "name": "(expand \"length\" -1 2)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.2",
+                  "name": "(expand \"length\" -1 2)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.2.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "2.2.3T",
+                "name": "(2.2.3T)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.2.3T",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(inst -1 \"x!1-1\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "3.1",
+            "name": "(3.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.1",
+              "name": "(inst -1 \"i\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "3.2",
+            "name": "(3.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.prod_list_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "prod_list_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "prod_list_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.prod_list_TCC2": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "prod_list_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "prod_list_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.signature_pred_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "signature_pred_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "signature_pred_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.sign_aux_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "sign_aux_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sign_aux_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.sign_aux_correctness_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "sign_aux_correctness_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sign_aux_correctness_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(use \"sign_aux_length\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"i\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.sign_aux_length": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "sign_aux_length",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "0eea0bd2fee0f727610a4288a5d550b482122fbfd6628cca7dac8ef50be042b6"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sign_aux_length",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(measure-induct+ \"length(l)\" \"l\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"sign_aux\" 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"length\" 1 2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.sign_aux_correctness": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "sign_aux_correctness",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "31fd62fc2fe2e91d4a3c76a1eb4b38b26574793bde8410ed44ca1e2a0566d6d0"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sign_aux_correctness",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(measure-induct+ \"length(l)\" \"l\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"sign_aux\" 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(typepred \"i\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"length\" -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lift-if)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"nth\" 2 2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lift-if)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(replace -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(expand \"nth\" 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(typepred \"nmod(n, car(x!1))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(expand \"nth\" 2 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(inst -2 \"cdr(x!1)\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(inst -2 \"n\" \"i-1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(expand \"length\" -2 2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(typepred \"i!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lemma \"sign_aux_correctness_TCC1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst?)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(typepred \"i!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(lemma \"sign_aux_correctness_TCC1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(inst?)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.signature_TCC1": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "signature_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "signature_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"every_nth\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"list_of_primes(n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"every_nth\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst?)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"prime?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "Goldbach.signature_TCC2": [
+  {
+   "info": {
+    "theory": "Goldbach",
+    "formula": "signature_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "62190c1451a97550c151bdd299b1953d8cd4c25d9ec5e8907c524ed966b73766"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "signature_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(lemma \"sign_aux_length\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst?)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(lemma \"sign_aux_correctness\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"signature_pred\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -1 \"m\" \"list_of_primes(n)\" \"i\")",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

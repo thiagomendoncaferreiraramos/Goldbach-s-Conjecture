@@ -1,0 +1,4344 @@
+{
+ "gcd_rem.gcd_rem_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "ce4b30cca2104d556b8f6696d165217ba90a958c909d6fa8867fdc998d68e221"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC3": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC4": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC5": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC6": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC6",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC6",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(M,N)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\" 3 (1 3))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC7": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC7",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC7",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC8": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC8",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC8",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC9": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC9",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC9",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC10": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC10",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC10",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_TCC11": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_TCC11",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_TCC11",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(N,M)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\" 4 (1 3))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_commutes": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_commutes",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_commutes",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"gcd_rem\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_commutes_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_commutes_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_commutes_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_divides_left": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_divides_left",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_divides_left",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(measure-induct+ \"abs(m)+abs(n)\" (\"m\" \"n\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"gcd_rem\" 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(case \"x!1=0\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(replace -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(rewrite \"divides_zero\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(hide -2 2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(grind)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"abs\" 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(lift-if)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(rewrite \"opposite_divides\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(rewrite \"divides_reflexive\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(rewrite \"divides_reflexive\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(inst-cp -2 \"nmod(abs(x!1), abs(x!2))\" \"abs(x!2)\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "3.1",
+            "name": "(3.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "3.1.1",
+                "name": "(3.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "3.1.1",
+                  "name": "(expand \"nmod\" -1 2)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.1.1",
+                  "name": "(inst -3 \"abs(x!2)\" \"nmod(abs(x!1), abs(x!2))\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.1.1",
+                  "name": "(prop)",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "3.1.1.1",
+                    "name": "(3.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(rewrite \"gcd_rem_commutes\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(name-replace \"q\" \"gcd_rem(nmod(abs(x!1), abs(x!2)), abs(x!2))\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(lemma \"divides_prod1\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(inst -1 \"div(abs(x!1), abs(x!2))\" \"abs(x!2)\" \"q\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(lemma \"divides_sum\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(inst -1 \"abs(x!2) * div(abs(x!1), abs(x!2))\" \"abs(x!1) - abs(x!2) * div(abs(x!1), abs(x!2))\" \"q\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(hide-all-but (-1 1 2 3))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(expand \"abs\" -1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.1",
+                      "name": "(rewrite \"divides_opposite\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "3.1.1.2",
+                    "name": "(3.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "3.1.1.2",
+                      "name": "(typepred \"nmod(abs(x!1), abs(x!2))\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.2",
+                      "name": "(expand \"abs\" 1 (1 3))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.2",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.1.1.2",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "3.1.1.2.1",
+                        "name": "(3.1.1.2.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "3.1.1.2.1",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "3.1.1.2.2",
+                        "name": "(3.1.1.2.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "3.1.1.2.2",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "3.1.2",
+                "name": "(3.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "3.1.2",
+                  "name": "(typepred \"nmod(abs(x!1), abs(x!2))\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.1.2",
+                  "name": "(expand \"abs\" 1 (1 4))",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.1.2",
+                  "name": "(lift-if)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.1.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "3.2",
+            "name": "(3.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.2",
+              "name": "(expand \"abs\" -1 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.2",
+              "name": "(lift-if)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "4",
+        "name": "(4)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "4",
+          "name": "(inst -1 \"abs(x!1)\" \"nmod(abs(x!2), abs(x!1))\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "4.1",
+            "name": "(4.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.1",
+              "name": "(name-replace \"q\" \"gcd_rem(abs(x!1), nmod(abs(x!2), abs(x!1)))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(expand \"abs\" -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(lift-if)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(rewrite \"divides_opposite\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "4.2",
+            "name": "(4.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.2",
+              "name": "(typepred \"nmod(abs(x!2), abs(x!1))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.2",
+              "name": "(expand \"abs\" 1 (1 3))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_divides_right": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_divides_right",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_divides_right",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"gcd_rem_commutes\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"gcd_rem_divides_left\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_greater": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_greater",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_greater",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(measure-induct+ \"abs(m)+abs(n)\" (\"m\" \"n\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"gcd_rem\" 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(typepred \"k\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(case \"divides(k,abs(x!2))\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(use \"divisor_smaller\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(hide-all-but (-2 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(expand \"abs\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(lift-if)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(rewrite \"divides_opposite\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(replaces -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(typepred \"k\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(case \"divides(k,abs(x!1))\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(use \"divisor_smaller\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(typepred \"x!2\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(reveal -2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(hide-all-but (-1 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(expand \"abs\" 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(lift-if)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(rewrite \"divides_opposite\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(inst -2 \"abs(x!2)\" \"nmod(abs(x!1), abs(x!2))\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(inst -2 \"k\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "3.1",
+            "name": "(3.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.1",
+              "name": "(typepred \"nmod(abs(x!1), abs(x!2))\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.1",
+              "name": "(expand \"abs\" 1 (1 3))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "3.2",
+            "name": "(3.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "3.2",
+              "name": "(typepred \"k\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "3.2",
+              "name": "(case \"divides(k,abs(x!1)) and divides(k,abs(x!2))\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "3.2.1",
+                "name": "(3.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "3.2.1",
+                  "name": "(prop)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(expand \"nmod\" 1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(lemma \"divides_prod1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(inst -1 \"div(abs(x!1), abs(x!2))\" \"abs(x!2)\" \"k\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(lemma \"divides_diff\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(inst -1 \"abs(x!2) * div(abs(x!1), abs(x!2))\" \"abs(x!1)\" \"k\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "3.2.2",
+                "name": "(3.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "3.2.2",
+                  "name": "(hide-all-but (-1 -2 1 2))",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.2",
+                  "name": "(hide 2)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "3.2.2",
+                  "name": "(prop)",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "3.2.2.1",
+                    "name": "(3.2.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "3.2.2.1",
+                      "name": "(expand \"abs\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.1",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.1",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.1",
+                      "name": "(rewrite \"divides_opposite\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "3.2.2.2",
+                    "name": "(3.2.2.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "3.2.2.2",
+                      "name": "(expand \"abs\" 1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.2",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.2",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "3.2.2.2",
+                      "name": "(rewrite \"divides_opposite\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "4",
+        "name": "(4)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "4",
+          "name": "(inst -1 \"abs(x!1)\" \"nmod(abs(x!2), abs(x!1))\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(inst -1 \"k\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "4.1",
+            "name": "(4.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(expand \"abs\" 1 (1 3))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "4.2",
+            "name": "(4.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.2",
+              "name": "(case \"divides(k,abs(x!1)) and divides(k,abs(x!2))\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "4.2.1",
+                "name": "(4.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "4.2.1",
+                  "name": "(prop)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(expand \"nmod\" 1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(lemma \"divides_prod1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(inst -1 \"div(abs(x!2), abs(x!1))\" \"abs(x!1)\" \"k\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(lemma \"divides_diff\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(inst -1 \"abs(x!1) * div(abs(x!2), abs(x!1))\" \"abs(x!2)\" \"k\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "4.2.2",
+                "name": "(4.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "4.2.2",
+                  "name": "(hide-all-but 1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.2",
+                  "name": "(typepred \"k\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "4.2.2",
+                  "name": "(prop)",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "4.2.2.1",
+                    "name": "(4.2.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "4.2.2.1",
+                      "name": "(expand \"abs\" 1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.1",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.1",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.1",
+                      "name": "(rewrite \"divides_opposite\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "4.2.2.2",
+                    "name": "(4.2.2.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "4.2.2.2",
+                      "name": "(expand \"abs\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.2",
+                      "name": "(lift-if)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.2",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "4.2.2.2",
+                      "name": "(rewrite \"divides_opposite\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"nmod\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"div(m,n) = 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC3": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"gcd_rem\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"abs\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"divides(n,m)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(use \"divisor_smaller\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"gcd_rem\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"nmod\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(hide 2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"divides\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"nmod\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst 1 \"div(m,n)\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC4": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"nmod\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"n = m *div(n,m)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(case \"m*div(n,m) - div(n,m) +1 >= 0\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(case \"(m-1)*div(n,m) >= 0\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.2.1",
+                "name": "(1.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.2.2",
+                "name": "(1.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC5": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC6": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC6",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC6",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"gcd_rem\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"abs\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"divides(m,n)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(use \"divisor_smaller\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"gcd_rem\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"nmod\" -3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(hide 2 3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"nmod\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"divides\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst 1 \"div(n,m)\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC7": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC7",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC7",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(m,n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC8": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC8",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC8",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(m,n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_linear_comb_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_linear_comb_TCC1",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b6fa1ae3929fefaf8ef5c1644908b5a2c6a197cbc2a89b3083a418a47e663969"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_linear_comb_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_linear_comb": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_linear_comb",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_linear_comb",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC9": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC9",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC9",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(m,n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_form_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_form_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b6fa1ae3929fefaf8ef5c1644908b5a2c6a197cbc2a89b3083a418a47e663969"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_form_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_form": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_form",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_form",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"gcd_rem_linear_comb\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"m\" \"n\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -3 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(name-replace \"x\" \"linear_comb(m, n)`1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(name-replace \"y\" \"linear_comb(m, n)`2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst 1 \"k2*x-k1*y\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"k1 * m * x - k1 * n * y = k1*(m * x - n * y)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replaces -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(case \"m * x - n * y = 1\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(replace -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_gen": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_gen",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "4fcaebf452007e43915a722eeea0d28c458b70be6e4d7608b18b4cafb2df92d4"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_gen",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC3": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC4": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"l2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"length\" -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC5": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"l3\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"length\" -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lift-if)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.p_TCC6": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "p_TCC6",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "p_TCC6",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC10": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC10",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC10",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"v(nmod(m, n), n)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -3 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -4 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"gcd_rem\" 3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\" 3)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(rewrite \"gcd_rem_commutes\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"nmod\" -1 2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(propax)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(typepred \"v(nmod(m, n), n)\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(replace -3 :dir rl)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(replace -4 :dir rl)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(expand \"gcd_rem\" 4)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(expand \"abs\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.3",
+            "name": "(2.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.3",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC11": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC11",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC11",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC12": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC12",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC12",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC13": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC13",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC13",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(m,n)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC14": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC14",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC14",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC15": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC15",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC15",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(n,m)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC16": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC16",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC16",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"v(m, nmod(n, m))\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -2 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -3 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"gcd_rem\" 4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"abs\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"nmod\" -1 2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(propax)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC17": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC17",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC17",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC18": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC18",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC18",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(n,m)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.linear_comb_TCC19": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "linear_comb_TCC19",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7125a0b97f1ea040e708511bbf38ef443124a62bdf3daa56d6dedbd1686b8e6b"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "linear_comb_TCC19",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(n,m)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.gcd_rem_linear_comb_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "gcd_rem_linear_comb_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b6fa1ae3929fefaf8ef5c1644908b5a2c6a197cbc2a89b3083a418a47e663969"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "gcd_rem_linear_comb_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"linear_comb(q1, q2)`1 >= 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(rewrite \"pos_times_ge\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC3": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"linear_comb(q1, q2)`2 >= 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(rewrite \"pos_times_ge\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC4": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC5": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC6": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC6",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC6",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"-k >= 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(case \"linear_comb(q2, q1)`2 >= 0\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(rewrite \"pos_times_ge\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC7": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC7",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC7",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"-k >= 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(case \"linear_comb(q2, q1)`1 >= 0\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(rewrite \"pos_times_ge\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC8": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC8",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC8",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"q2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"gcd_rem_commutes\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(use \"gcd_rem_linear_comb\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC9": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC9",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "64e5dfeca7444662335f3c67744c1eb6ac79f097d6045a56c421ff38c7652f05"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC9",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC10": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC10",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "f99dbe15d0bee87749c59c74fef943a5ebe347c132f4975ec7decf2e93f6f17e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC10",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_TCC11": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_TCC11",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "f99dbe15d0bee87749c59c74fef943a5ebe347c132f4975ec7decf2e93f6f17e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_TCC11",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC1": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"nmod(lc_f`1, q2) >= 0\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(expand \"nmod\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -3 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(case \"q2*a > q2*b\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(hide-all-but (-5 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(use \"both_sides_times_pos_neg_gt2\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC2": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nmod(lc_f`2, q1)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"lc_f`2 - b * q1 = nmod(lc_f`2, q1)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC3": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC3",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(typepred \"lc_factor(k, q1, q2)\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(typepred \"y\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(typepred \"lc_factor(k, q1, q2)\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(replace -3 :dir rl)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(case \"nmod(lc_f`2, q1) = lc_f`2 - b * q1\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(replaces -1 :dir rl)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC4": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC4",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC5": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC5",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC6": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC6",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "5a9345729bca22fbd50b54461e3452a54fe610dadb4bb254191f1b676ec78b88"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC6",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": []
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC7": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC7",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "f99dbe15d0bee87749c59c74fef943a5ebe347c132f4975ec7decf2e93f6f17e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC7",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC8": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC8",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "f99dbe15d0bee87749c59c74fef943a5ebe347c132f4975ec7decf2e93f6f17e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC8",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "gcd_rem.lc_factor_min_TCC9": [
+  {
+   "info": {
+    "theory": "gcd_rem",
+    "formula": "lc_factor_min_TCC9",
+    "status": "untried",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "f99dbe15d0bee87749c59c74fef943a5ebe347c132f4975ec7decf2e93f6f17e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "lc_factor_min_TCC9",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": []
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

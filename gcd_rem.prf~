@@ -1,0 +1,2396 @@
+(gcd_rem
+ (gcd_rem_TCC1 0
+  (gcd_rem_TCC1-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (nnreal_plus_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil))
+   nil
+   (gcd_rem subtype "(number_fields.+)(gcd_rem.M, gcd_rem.N)" "nat")))
+ (gcd_rem_TCC2 0
+  (gcd_rem_TCC2-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.N" "int")))
+ (gcd_rem_TCC3 0
+  (gcd_rem_TCC3-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.M" "nat")))
+ (gcd_rem_TCC4 0
+  (gcd_rem_TCC4-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.N" "posnat")))
+ (gcd_rem_TCC5 0
+  (gcd_rem_TCC5-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((real_minus_real_is_real application-judgement "real" reals nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (rat_div_nzrat_is_rat application-judgement "rat" rationals nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (real_times_real_is_real application-judgement "real" reals nil))
+   nil
+   (gcd_rem subtype "mod_nat.nmod(gcd_rem.M, gcd_rem.N)"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(gcd_rem.N), real_defs.abs(n)) = 0)}")))
+ (gcd_rem_TCC6 0
+  (gcd_rem_TCC6-1 nil 3939674304
+   ("" (skeep)
+    (("" (typepred "nmod(M,N)")
+      (("1" (replace -2)
+        (("1" (replace -3)
+          (("1" (expand "abs" 3 (1 3)) (("1" (assert) nil nil)) nil))
+          nil))
+        nil)
+       ("2" (grind) nil nil) ("3" (grind) nil nil))
+      nil))
+    nil)
+   ((abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (minus_real_is_real application-judgement "real" reals nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (real_div_nzreal_is_real application-judgement "real" reals nil)
+    (nnreal_times_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil)
+    (real_minus_real_is_real application-judgement "real" reals nil)
+    (nnreal_plus_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil
+   (gcd_rem termination
+    "gcd_rem.gcd_rem(gcd_rem.N, mod_nat.nmod(gcd_rem.M, gcd_rem.N))"
+    "nil")))
+ (gcd_rem_TCC7 0
+  (gcd_rem_TCC7-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.M" "int")))
+ (gcd_rem_TCC8 0
+  (gcd_rem_TCC8-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.N" "nat")))
+ (gcd_rem_TCC9 0
+  (gcd_rem_TCC9-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil (gcd_rem subtype "gcd_rem.M" "posnat")))
+ (gcd_rem_TCC10 0
+  (gcd_rem_TCC10-1 nil 3939674304 ("" (subtype-tcc) nil nil)
+   ((real_minus_real_is_real application-judgement "real" reals nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (rat_div_nzrat_is_rat application-judgement "rat" rationals nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (real_times_real_is_real application-judgement "real" reals nil))
+   nil
+   (gcd_rem subtype "mod_nat.nmod(gcd_rem.N, gcd_rem.M)"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(gcd_rem.M), real_defs.abs(n)) = 0)}")))
+ (gcd_rem_TCC11 0
+  (gcd_rem_TCC11-1 nil 3939674304
+   ("" (skeep)
+    (("" (typepred "nmod(N,M)")
+      (("1" (replace -2)
+        (("1" (replace -3)
+          (("1" (expand "abs" 4 (1 3)) (("1" (assert) nil nil)) nil))
+          nil))
+        nil)
+       ("2" (grind) nil nil) ("3" (grind) nil nil))
+      nil))
+    nil)
+   ((abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (minus_real_is_real application-judgement "real" reals nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (real_div_nzreal_is_real application-judgement "real" reals nil)
+    (nnreal_times_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil)
+    (real_minus_real_is_real application-judgement "real" reals nil)
+    (nnreal_plus_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil
+   (gcd_rem termination
+    "gcd_rem.gcd_rem(gcd_rem.M, mod_nat.nmod(gcd_rem.N, gcd_rem.M))"
+    "nil")))
+ (gcd_rem_commutes_TCC1 0
+  (gcd_rem_commutes_TCC1-1 nil 3939674673 ("" (subtype-tcc) nil nil)
+   ((int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   nil
+   (gcd_rem_commutes subtype "gcd_rem.n"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(gcd_rem.m), real_defs.abs(n)) = 0)}")))
+ (gcd_rem_commutes 0
+  (gcd_rem_commutes-1 nil 3939674673
+   ("" (skeep)
+    (("" (expand "gcd_rem")
+      (("" (lift-if)
+        (("" (lift-if)
+          (("" (lift-if)
+            (("" (lift-if)
+              (("" (prop)
+                (("1" (assert) nil nil) ("2" (assert) nil nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((gcd_rem def-decl "nat" gcd_rem nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   shostak))
+ (gcd_rem_divides_left 0
+  (gcd_rem_divides_left-1 nil 3939675059
+   ("" (measure-induct+ "abs(m)+abs(n)" ("m" "n"))
+    (("" (expand "gcd_rem" 1)
+      (("" (lift-if)
+        (("" (prop)
+          (("1" (replace -1)
+            (("1" (case "x!1=0")
+              (("1" (replace -1)
+                (("1" (rewrite "divides_zero") nil nil)) nil)
+               ("2" (hide -2 2) (("2" (grind) nil nil)) nil))
+              nil))
+            nil)
+           ("2" (replace -1)
+            (("2" (expand "abs" 1)
+              (("2" (lift-if)
+                (("2" (prop)
+                  (("1" (rewrite "opposite_divides")
+                    (("1" (rewrite "divides_reflexive") nil nil)) nil)
+                   ("2" (rewrite "divides_reflexive") nil nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("3" (inst-cp -2 "nmod(abs(x!1), abs(x!2))" "abs(x!2)")
+            (("1" (prop)
+              (("1" (expand "nmod" -1 2)
+                (("1" (inst -3 "abs(x!2)" "nmod(abs(x!1), abs(x!2))")
+                  (("1" (prop)
+                    (("1" (rewrite "gcd_rem_commutes")
+                      (("1"
+                        (name-replace "q"
+                         "gcd_rem(nmod(abs(x!1), abs(x!2)), abs(x!2))")
+                        (("1" (lemma "divides_prod1")
+                          (("1"
+                            (inst -1 "div(abs(x!1), abs(x!2))"
+                             "abs(x!2)" "q")
+                            (("1" (assert)
+                              (("1"
+                                (lemma "divides_sum")
+                                (("1"
+                                  (inst
+                                   -1
+                                   "abs(x!2) * div(abs(x!1), abs(x!2))"
+                                   "abs(x!1) - abs(x!2) * div(abs(x!1), abs(x!2))"
+                                   "q")
+                                  (("1"
+                                    (assert)
+                                    (("1"
+                                      (hide-all-but (-1 1 2 3))
+                                      (("1"
+                                        (expand "abs" -1)
+                                        (("1"
+                                          (lift-if)
+                                          (("1"
+                                            (prop)
+                                            (("1"
+                                              (rewrite
+                                               "divides_opposite")
+                                              nil
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (typepred "nmod(abs(x!1), abs(x!2))")
+                      (("2" (expand "abs" 1 (1 3))
+                        (("2" (lift-if)
+                          (("2" (prop)
+                            (("1" (assert) nil nil)
+                             ("2" (assert) nil nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (typepred "nmod(abs(x!1), abs(x!2))")
+                (("2" (expand "abs" 1 (1 4))
+                  (("2" (lift-if) (("2" (assert) nil nil)) nil)) nil))
+                nil))
+              nil)
+             ("2" (expand "abs" -1 1)
+              (("2" (lift-if) (("2" (assert) nil nil)) nil)) nil))
+            nil)
+           ("4" (inst -1 "abs(x!1)" "nmod(abs(x!2), abs(x!1))")
+            (("4" (prop)
+              (("1"
+                (name-replace "q"
+                 "gcd_rem(abs(x!1), nmod(abs(x!2), abs(x!1)))")
+                (("1" (expand "abs" -1)
+                  (("1" (lift-if)
+                    (("1" (prop)
+                      (("1" (rewrite "divides_opposite") nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (typepred "nmod(abs(x!2), abs(x!1))")
+                (("2" (expand "abs" 1 (1 3)) (("2" (assert) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((divides_zero formula-decl nil divides nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (divides_reflexive formula-decl nil divides nil)
+    (opposite_divides formula-decl nil divides nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (gcd_rem_commutes formula-decl nil gcd_rem nil)
+    (divides_prod1 formula-decl nil divides nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (divides_opposite formula-decl nil divides nil)
+    (divides_sum formula-decl nil divides nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   shostak))
+ (gcd_rem_divides_right 0
+  (gcd_rem_divides_right-1 nil 3939676357
+   ("" (skeep)
+    (("" (rewrite "gcd_rem_commutes")
+      (("" (rewrite "gcd_rem_divides_left") nil nil)) nil))
+    nil)
+   ((gcd_rem_commutes formula-decl nil gcd_rem nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (gcd_rem_divides_left formula-decl nil gcd_rem nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   shostak))
+ (gcd_rem_greater 0
+  (gcd_rem_greater-1 nil 3939676463
+   ("" (measure-induct+ "abs(m)+abs(n)" ("m" "n"))
+    (("" (skeep)
+      (("" (expand "gcd_rem" 1)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (replace -1)
+              (("1" (typepred "k")
+                (("1" (case "divides(k,abs(x!2))")
+                  (("1" (use "divisor_smaller")
+                    (("1" (assert) nil nil)) nil)
+                   ("2" (hide-all-but (-2 1))
+                    (("2" (expand "abs")
+                      (("2" (lift-if)
+                        (("2" (prop)
+                          (("2" (rewrite "divides_opposite") nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (replaces -1)
+              (("2" (typepred "k")
+                (("2" (case "divides(k,abs(x!1))")
+                  (("1" (use "divisor_smaller")
+                    (("1" (assert)
+                      (("1" (typepred "x!2")
+                        (("1" (assert)
+                          (("1" (reveal -2) (("1" (assert) nil nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (hide-all-but (-1 1))
+                    (("2" (expand "abs" 1)
+                      (("2" (lift-if)
+                        (("2" (prop)
+                          (("2" (rewrite "divides_opposite") nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (inst -2 "abs(x!2)" "nmod(abs(x!1), abs(x!2))")
+              (("3" (inst -2 "k")
+                (("1" (prop)
+                  (("1" (typepred "nmod(abs(x!1), abs(x!2))")
+                    (("1" (expand "abs" 1 (1 3))
+                      (("1" (assert) nil nil)) nil))
+                    nil))
+                  nil)
+                 ("2" (typepred "k")
+                  (("2"
+                    (case "divides(k,abs(x!1)) and divides(k,abs(x!2))")
+                    (("1" (prop)
+                      (("1" (expand "nmod" 1)
+                        (("1" (lemma "divides_prod1")
+                          (("1"
+                            (inst -1 "div(abs(x!1), abs(x!2))"
+                             "abs(x!2)" "k")
+                            (("1" (assert)
+                              (("1"
+                                (lemma "divides_diff")
+                                (("1"
+                                  (inst
+                                   -1
+                                   "abs(x!2) * div(abs(x!1), abs(x!2))"
+                                   "abs(x!1)"
+                                   "k")
+                                  (("1" (assert) nil nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (hide-all-but (-1 -2 1 2))
+                      (("2" (hide 2)
+                        (("2" (prop)
+                          (("1" (expand "abs")
+                            (("1" (lift-if)
+                              (("1"
+                                (prop)
+                                (("1"
+                                  (rewrite "divides_opposite")
+                                  nil
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (expand "abs" 1)
+                            (("2" (lift-if)
+                              (("2"
+                                (prop)
+                                (("2"
+                                  (rewrite "divides_opposite")
+                                  nil
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("4" (inst -1 "abs(x!1)" "nmod(abs(x!2), abs(x!1))")
+              (("4" (inst -1 "k")
+                (("1" (prop)
+                  (("1" (expand "abs" 1 (1 3)) (("1" (assert) nil nil))
+                    nil))
+                  nil)
+                 ("2"
+                  (case "divides(k,abs(x!1)) and divides(k,abs(x!2))")
+                  (("1" (prop)
+                    (("1" (expand "nmod" 1)
+                      (("1" (lemma "divides_prod1")
+                        (("1"
+                          (inst -1 "div(abs(x!2), abs(x!1))" "abs(x!1)"
+                           "k")
+                          (("1" (assert)
+                            (("1" (lemma "divides_diff")
+                              (("1"
+                                (inst
+                                 -1
+                                 "abs(x!1) * div(abs(x!2), abs(x!1))"
+                                 "abs(x!2)"
+                                 "k")
+                                (("1" (assert) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (hide-all-but 1)
+                    (("2" (typepred "k")
+                      (("2" (prop)
+                        (("1" (expand "abs" 1)
+                          (("1" (lift-if)
+                            (("1" (prop)
+                              (("1"
+                                (rewrite "divides_opposite")
+                                nil
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (expand "abs")
+                          (("2" (lift-if)
+                            (("2" (prop)
+                              (("2"
+                                (rewrite "divides_opposite")
+                                nil
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (divides_prod1 formula-decl nil divides nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (divides_diff formula-decl nil divides nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (TRUE const-decl "bool" booleans nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (divisor_smaller formula-decl nil divides nil)
+    (divides_opposite formula-decl nil divides nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil))
+   shostak))
+ (linear_comb_TCC1 0
+  (linear_comb_TCC1-1 nil 3940982204 ("" (subtype-tcc) nil nil)
+   ((abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil))
+   nil
+   (linear_comb subtype "gcd_rem.n"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(gcd_rem.m), real_defs.abs(n)) = 0)}")))
+ (linear_comb_TCC2 0
+  (linear_comb_TCC3-1 nil 3939821825
+   ("" (skeep)
+    (("" (expand "nmod")
+      (("" (case "div(m,n) = 0")
+        (("1" (assert) nil nil) ("2" (assert) nil nil)) nil))
+      nil))
+    nil)
+   ((nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (/= const-decl "boolean" notequal nil))
+   nil
+   (linear_comb subtype
+    "(number_fields.-)(div_nat.div(gcd_rem.m, gcd_rem.n), 1)" "nat")))
+ (linear_comb_TCC3 0
+  (linear_comb_TCC3-1 nil 3940982204
+   ("" (skeep)
+    (("" (expand "gcd_rem")
+      (("" (expand "abs")
+        (("" (replace -1)
+          (("" (case "divides(n,m)")
+            (("1" (use "divisor_smaller")
+              (("1" (assert)
+                (("1" (expand "gcd_rem")
+                  (("1" (expand "abs")
+                    (("1" (expand "nmod") (("1" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (hide 2)
+              (("2" (expand "divides")
+                (("2" (expand "nmod")
+                  (("2" (inst 1 "div(m,n)") (("2" (assert) nil nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (divisor_smaller formula-decl nil divides nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (real_le_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil))
+   nil
+   (linear_comb subtype
+    "(1, (number_fields.-)(div_nat.div(gcd_rem.m, gcd_rem.n), 1))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.gcd_rem(gcd_rem.m, gcd_rem.n) = (number_fields.-)(number_fields.*(ret`1, gcd_rem.m), number_fields.*(ret`2, gcd_rem.n))}")))
+ (linear_comb_TCC4 0
+  (linear_comb_TCC2-1 nil 3940631826
+   ("" (skeep)
+    (("" (expand "nmod" -1)
+      (("" (case "n = m *div(n,m)")
+        (("1" (case "m*div(n,m) - div(n,m) +1 >= 0")
+          (("1" (assert) nil nil)
+           ("2" (case "(m-1)*div(n,m) >= 0")
+            (("1" (assert) nil nil) ("2" (assert) nil nil)) nil))
+          nil)
+         ("2" (assert) nil nil))
+        nil))
+      nil))
+    nil)
+   ((nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (div const-decl "upto(n)" div_nat ints))
+   nil
+   (linear_comb subtype
+    "(number_fields.+)((number_fields.-)(gcd_rem.n, div_nat.div(gcd_rem.n, gcd_rem.m)), 1)"
+    "nat")))
+ (linear_comb_TCC5 0
+  (linear_comb_TCC3-1 nil 3940631826
+   ("" (skeep) (("" (assert) nil nil)) nil)
+   ((int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil))
+   nil (linear_comb subtype "(number_fields.-)(gcd_rem.m, 1)" "nat")))
+ (linear_comb_TCC6 0
+  (linear_comb_TCC6-1 nil 3940982204
+   ("" (skeep)
+    (("" (expand "gcd_rem")
+      (("" (expand "abs")
+        (("" (case "divides(m,n)")
+          (("1" (use "divisor_smaller")
+            (("1" (assert)
+              (("1" (replace -3)
+                (("1" (expand "gcd_rem")
+                  (("1" (expand "abs")
+                    (("1" (expand "nmod" -3) (("1" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (hide 2 3)
+            (("2" (expand "nmod")
+              (("2" (expand "divides")
+                (("2" (inst 1 "div(n,m)") (("2" (assert) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (/= const-decl "boolean" notequal nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (real_le_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (divisor_smaller formula-decl nil divides nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (<= const-decl "bool" reals nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil))
+   nil
+   (linear_comb subtype
+    "((number_fields.+)((number_fields.-)(gcd_rem.n, div_nat.div(gcd_rem.n, gcd_rem.m)), 1), (number_fields.-)(gcd_rem.m, 1))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.gcd_rem(gcd_rem.m, gcd_rem.n) = (number_fields.-)(number_fields.*(ret`1, gcd_rem.m), number_fields.*(ret`2, gcd_rem.n))}")))
+ (linear_comb_TCC7 0
+  (linear_comb_TCC1-1 nil 3939820289
+   ("" (skeep)
+    (("" (typepred "nmod(m,n)") (("" (assert) nil nil)) nil)) nil)
+   ((/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype "mod_nat.nmod(gcd_rem.m, gcd_rem.n)"
+    "posnat")))
+ (linear_comb_TCC8 0
+  (linear_comb_TCC6-1 nil 3940631826
+   ("" (skeep*)
+    (("" (typepred "nmod(m,n)") (("" (assert) nil nil)) nil)) nil)
+   ((/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype "gcd_rem.n"
+    "{n_1: integers.posnat | mod_nat.nmod(gcd_rem.m, gcd_rem.n) /= n_1}")))
+ (linear_comb_TCC9 0
+  (linear_comb_TCC2-1 nil 3939820289
+   ("" (skeep)
+    (("" (skeep)
+      (("" (typepred "nmod(m,n)") (("" (assert) nil nil)) nil)) nil))
+    nil)
+   ((nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (< const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (/= const-decl "boolean" notequal nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb termination
+    "gcd_rem.linear_comb(mod_nat.nmod(gcd_rem.m, gcd_rem.n), gcd_rem.n)"
+    "nil")))
+ (linear_comb_TCC10 0
+  (linear_comb_TCC7-1 nil 3940631826
+   ("" (skeep*)
+    (("" (typepred "v(nmod(m, n), n)")
+      (("1" (replace -3 :dir rl)
+        (("1" (replace -4 :dir rl)
+          (("1" (expand "gcd_rem" 3)
+            (("1" (expand "abs" 3)
+              (("1" (assert)
+                (("1" (rewrite "gcd_rem_commutes")
+                  (("1" (expand "nmod" -1 2) (("1" (propax) nil nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (typepred "v(nmod(m, n), n)")
+        (("1" (replace -3 :dir rl)
+          (("1" (replace -4 :dir rl)
+            (("1" (expand "gcd_rem" 4)
+              (("1" (expand "abs") (("1" (assert) nil nil)) nil)) nil))
+            nil))
+          nil)
+         ("2" (assert) nil nil) ("3" (assert) nil nil))
+        nil)
+       ("3" (assert) nil nil))
+      nil))
+    nil)
+   ((* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (nzint_abs_is_pos application-judgement "{j: posint | j >= i}"
+     real_defs nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (gcd_rem_commutes formula-decl nil gcd_rem nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype
+    "(gcd_rem.k1, (number_fields.+)(gcd_rem.k2, number_fields.*(div_nat.div(gcd_rem.m, gcd_rem.n), gcd_rem.k1)))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.gcd_rem(gcd_rem.m, gcd_rem.n) = (number_fields.-)(number_fields.*(ret`1, gcd_rem.m), number_fields.*(ret`2, gcd_rem.n))}")))
+ (linear_comb_TCC11 0
+  (linear_comb_TCC3-1 nil 3939820289
+   ("" (skeep) (("" (assert) nil nil)) nil)
+   ((real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   nil
+   (linear_comb subtype "mod_nat.nmod(gcd_rem.m, gcd_rem.n)"
+    "posnat")))
+ (linear_comb_TCC12 0
+  (linear_comb_TCC11-1 nil 3940982204 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (> const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (posrat_div_posrat_is_posrat application-judgement "posrat"
+     rationals nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (nonneg_floor_is_nat application-judgement "nat" floor_ceil nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype "gcd_rem.n"
+    "{n_1: integers.posnat | mod_nat.nmod(gcd_rem.m, gcd_rem.n) /= n_1}")))
+ (linear_comb_TCC13 0
+  (linear_comb_TCC4-1 nil 3939820289
+   ("" (skeep)
+    (("" (typepred "nmod(m,n)") (("" (assert) nil nil)) nil)) nil)
+   ((/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil
+   (linear_comb termination
+    "gcd_rem.linear_comb(mod_nat.nmod(gcd_rem.m, gcd_rem.n), gcd_rem.n)"
+    "nil")))
+ (linear_comb_TCC14 0
+  (linear_comb_TCC5-1 nil 3939820289
+   ("" (skeep) (("" (skeep) (("" (assert) nil nil)) nil)) nil)
+   ((real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype "mod_nat.nmod(gcd_rem.n, gcd_rem.m)"
+    "{n: integers.posnat | gcd_rem.m /= n}")))
+ (linear_comb_TCC15 0
+  (linear_comb_TCC6-1 nil 3939820289
+   ("" (skeep)
+    (("" (skeep)
+      (("" (typepred "nmod(n,m)") (("" (assert) nil nil)) nil)) nil))
+    nil)
+   ((nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (< const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (/= const-decl "boolean" notequal nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb termination
+    "gcd_rem.linear_comb(gcd_rem.m, mod_nat.nmod(gcd_rem.n, gcd_rem.m))"
+    "nil")))
+ (linear_comb_TCC16 0
+  (linear_comb_TCC16-1 nil 3940982204
+   ("" (skeep*)
+    (("" (typepred "v(m, nmod(n, m))")
+      (("1" (replace -2 :dir rl)
+        (("1" (replace -3 :dir rl)
+          (("1" (expand "gcd_rem" 4)
+            (("1" (expand "abs")
+              (("1" (assert)
+                (("1" (expand "nmod" -1 2) (("1" (propax) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (nzint_abs_is_pos application-judgement "{j: posint | j >= i}"
+     real_defs nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (linear_comb subtype
+    "((number_fields.+)(gcd_rem.k1, number_fields.*(div_nat.div(gcd_rem.n, gcd_rem.m), gcd_rem.k2)), gcd_rem.k2)"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.gcd_rem(gcd_rem.m, gcd_rem.n) = (number_fields.-)(number_fields.*(ret`1, gcd_rem.m), number_fields.*(ret`2, gcd_rem.n))}")))
+ (linear_comb_TCC17 0
+  (linear_comb_TCC7-1 nil 3939820289
+   ("" (skeep) (("" (assert) nil nil)) nil)
+   ((real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   nil
+   (linear_comb subtype "mod_nat.nmod(gcd_rem.n, gcd_rem.m)"
+    "{n: integers.posnat | gcd_rem.m /= n}")))
+ (linear_comb_TCC18 0
+  (linear_comb_TCC8-1 nil 3939820289
+   ("" (skeep)
+    (("" (typepred "nmod(n,m)") (("" (assert) nil nil)) nil)) nil)
+   ((/= const-decl "boolean" notequal nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil
+   (linear_comb termination
+    "gcd_rem.linear_comb(gcd_rem.m, mod_nat.nmod(gcd_rem.n, gcd_rem.m))"
+    "nil")))
+ (gcd_rem_linear_comb 0
+  (gcd_rem_linear_comb-1 nil 3939821296
+   ("" (skeep) (("" (assert) nil nil)) nil)
+   ((int_minus_int_is_int application-judgement "int" integers nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   shostak))
+ (linear_comb_gen 0
+  (linear_comb_gen-1 nil 3940524258 ("" (grind) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (> const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (int_times_int_is_int application-judgement "int" integers nil))
+   shostak))
+ (linear_comb_form 0
+  (linear_comb_form-1 nil 3940523795
+   ("" (skeep)
+    (("" (lemma "gcd_rem_linear_comb")
+      (("" (inst -1 "m" "n")
+        (("" (assert)
+          (("" (replace -2)
+            (("" (replace -3 1)
+              (("" (name-replace "x" "linear_comb(m, n)`1")
+                (("" (name-replace "y" "linear_comb(m, n)`2")
+                  (("" (inst 1 "k2*x-k1*y")
+                    (("" (assert)
+                      ((""
+                        (case "k1 * m * x - k1 * n * y = k1*(m * x - n * y)")
+                        (("1" (replaces -1)
+                          (("1" (case "m * x - n * y = 1")
+                            (("1" (replace -1) (("1" (assert) nil nil))
+                              nil)
+                             ("2" (assert) nil nil))
+                            nil))
+                          nil)
+                         ("2" (assert) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((gcd_rem_linear_comb formula-decl nil gcd_rem nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (TRUE const-decl "bool" booleans nil)
+    (linear_comb def-decl
+     "{ret: [nat, nat] | gcd_rem(m, n) = ret`1 * m - ret`2 * n}"
+     gcd_rem nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (/= const-decl "boolean" notequal nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   shostak))
+ (p_TCC1 0
+  (p_TCC1-1 nil 3940631261 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (length def-decl "nat" list_props nil))
+   nil (p subtype "gcd_rem.l1" "(list_adt[[nat, nat]].cons?)")))
+ (p_TCC2 0
+  (p_TCC2-1 nil 3940631261 ("" (grind) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (length def-decl "nat" list_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil (p subtype "gcd_rem.l2" "(list_adt[nat].cons?)")))
+ (p_TCC3 0
+  (p_TCC3-1 nil 3940631261 ("" (grind) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (length def-decl "nat" list_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil (p subtype "gcd_rem.l3" "(list_adt[[int, nat, nat]].cons?)")))
+ (p_TCC4 0
+  (p_TCC4-1 nil 3940631261
+   ("" (skeep)
+    (("" (typepred "l2")
+      (("" (expand "length" -2)
+        (("" (assert) (("" (lift-if) (("" (assert) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((length def-decl "nat" list_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil
+   (p subtype "list_adt[nat].cdr(gcd_rem.l2)"
+    "{l2: list_adt[nat].list | list_props[[nat, nat]].length(list_adt[[nat, nat]].cdr(gcd_rem.l1)) = list_props[nat].length(l2)}")))
+ (p_TCC5 0
+  (p_TCC5-1 nil 3940631261
+   ("" (skeep)
+    (("" (typepred "l3")
+      (("" (expand "length" -1)
+        (("" (assert) (("" (lift-if) (("" (assert) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((length def-decl "nat" list_props nil)
+    (list type-decl nil list_adt nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil))
+   nil
+   (p subtype "list_adt[[int, nat, nat]].cdr(gcd_rem.l3)"
+    "{l3: list_adt[[int, nat, nat]].list | list_props[[nat, nat]].length(list_adt[[nat, nat]].cdr(gcd_rem.l1)) = list_props[[int, nat, nat]].length(l3)}")))
+ (p_TCC6 0
+  (p_TCC6-1 nil 3940631261 ("" (termination-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (length def-decl "nat" list_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   nil
+   (p termination
+    "gcd_rem.p(list_adt[[nat, nat]].cdr(gcd_rem.l1), list_adt[nat].cdr(gcd_rem.l2), list_adt[[int, nat, nat]].cdr(gcd_rem.l3))"
+    "nil")))
+ (lc_factor_TCC1 0
+  (lc_factor_TCC1-1 nil 3941635930 ("" (subtype-tcc) nil nil)
+   ((/= const-decl "boolean" notequal nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil))
+   nil
+   (lc_factor subtype "gcd_rem.q2"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(n), real_defs.abs(gcd_rem.q1)) = 0)}")))
+ (lc_factor_TCC2 0
+  (lc_factor_TCC4-1 nil 3941635930
+   ("" (skeep)
+    (("" (case "linear_comb(q1, q2)`1 >= 0")
+      (("1" (rewrite "pos_times_ge") (("1" (assert) nil nil)) nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((linear_comb def-decl
+     "{ret: [nat, nat] | gcd_rem(m, n) = ret`1 * m - ret`2 * n}"
+     gcd_rem nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (/= const-decl "boolean" notequal nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (pos_times_ge formula-decl nil real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor subtype
+    "number_fields.*(gcd_rem.k, gcd_rem.linear_comb(gcd_rem.q1, gcd_rem.q2)`1)"
+    "nat")))
+ (lc_factor_TCC3 0
+  (lc_factor_TCC5-1 nil 3941635930
+   ("" (skeep)
+    (("" (case "linear_comb(q1, q2)`2 >= 0")
+      (("1" (rewrite "pos_times_ge") (("1" (assert) nil nil)) nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((linear_comb def-decl
+     "{ret: [nat, nat] | gcd_rem(m, n) = ret`1 * m - ret`2 * n}"
+     gcd_rem nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (/= const-decl "boolean" notequal nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (pos_times_ge formula-decl nil real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor subtype
+    "number_fields.*(gcd_rem.k, gcd_rem.linear_comb(gcd_rem.q1, gcd_rem.q2)`2)"
+    "nat")))
+ (lc_factor_TCC4 0
+  (lc_factor_TCC6-1 nil 3941635930 ("" (subtype-tcc) nil nil)
+   ((nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (/= const-decl "boolean" notequal nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_times_int_is_int application-judgement "int" integers nil))
+   nil
+   (lc_factor subtype
+    "(number_fields.*(gcd_rem.k, gcd_rem.linear_comb(gcd_rem.q1, gcd_rem.q2)`1), number_fields.*(gcd_rem.k, gcd_rem.linear_comb(gcd_rem.q1, gcd_rem.q2)`2))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.k = (number_fields.-)(number_fields.*(ret`1, gcd_rem.q1), number_fields.*(ret`2, gcd_rem.q2))}")))
+ (lc_factor_TCC5 0
+  (lc_factor_TCC8-1 nil 3941635930 ("" (subtype-tcc) nil nil) nil nil
+   (lc_factor subtype "gcd_rem.q1"
+    "{n: integers.posnat | gcd_rem.q2 /= n}")))
+ (lc_factor_TCC6 0
+  (lc_factor_TCC9-1 nil 3941635930
+   ("" (skeep)
+    (("" (case "-k >= 0")
+      (("1" (case "linear_comb(q2, q1)`2 >= 0")
+        (("1" (rewrite "pos_times_ge") (("1" (assert) nil nil)) nil)
+         ("2" (assert) nil nil))
+        nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (pos_times_ge formula-decl nil real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (linear_comb def-decl
+     "{ret: [nat, nat] | gcd_rem(m, n) = ret`1 * m - ret`2 * n}"
+     gcd_rem nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor subtype
+    "number_fields.*((number_fields.-)(gcd_rem.k), gcd_rem.linear_comb(gcd_rem.q2, gcd_rem.q1)`2)"
+    "nat")))
+ (lc_factor_TCC7 0
+  (lc_factor_TCC10-1 nil 3941635930
+   ("" (skeep)
+    (("" (case "-k >= 0")
+      (("1" (case "linear_comb(q2, q1)`1 >= 0")
+        (("1" (rewrite "pos_times_ge") (("1" (assert) nil nil)) nil)
+         ("2" (assert) nil nil))
+        nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (minus_int_is_int application-judgement "int" integers nil)
+    (pos_times_ge formula-decl nil real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (linear_comb def-decl
+     "{ret: [nat, nat] | gcd_rem(m, n) = ret`1 * m - ret`2 * n}"
+     gcd_rem nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor subtype
+    "number_fields.*((number_fields.-)(gcd_rem.k), gcd_rem.linear_comb(gcd_rem.q2, gcd_rem.q1)`1)"
+    "nat")))
+ (lc_factor_TCC8 0
+  (lc_factor_TCC11-1 nil 3941635930
+   ("" (skeep)
+    (("" (assert)
+      (("" (typepred "q2")
+        (("" (rewrite "gcd_rem_commutes")
+          (("" (use "gcd_rem_linear_comb")
+            (("" (prop) (("" (assert) nil nil)) nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((minus_int_is_int application-judgement "int" integers nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (gcd_rem_commutes formula-decl nil gcd_rem nil)
+    (nzint_abs_is_pos application-judgement "{j: posint | j >= i}"
+     real_defs nil)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (gcd_rem_linear_comb formula-decl nil gcd_rem nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (> const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (/= const-decl "boolean" notequal nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (gcd_rem def-decl "nat" gcd_rem nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor subtype
+    "(number_fields.*((number_fields.-)(gcd_rem.k), gcd_rem.linear_comb(gcd_rem.q2, gcd_rem.q1)`2), number_fields.*((number_fields.-)(gcd_rem.k), gcd_rem.linear_comb(gcd_rem.q2, gcd_rem.q1)`1))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | gcd_rem.k = (number_fields.-)(number_fields.*(ret`1, gcd_rem.q1), number_fields.*(ret`2, gcd_rem.q2))}")))
+ (lc_factor_min_TCC1 0
+  (lc_factor_min_TCC3-1 nil 3941635930
+   ("" (skeep)
+    (("" (case "nmod(lc_f`1, q2) >= 0")
+      (("1" (expand "nmod")
+        (("1" (replace -3 :dir rl)
+          (("1" (assert)
+            (("1" (case "q2*a > q2*b")
+              (("1" (assert) nil nil)
+               ("2" (assert)
+                (("2" (hide-all-but (-5 1))
+                  (("2" (use "both_sides_times_pos_neg_gt2")
+                    (("2" (assert) nil nil)) nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (assert) nil nil))
+      nil))
+    nil)
+   ((gcd_rem def-decl "nat" gcd_rem nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (/= const-decl "boolean" notequal nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (nonzero_real nonempty-type-eq-decl nil reals nil)
+    (both_sides_times_pos_neg_gt2 formula-decl nil extra_real_props
+     nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor_min subtype
+    "(number_fields.-)(gcd_rem.lc_f`1, number_fields.*(gcd_rem.b, gcd_rem.q2))"
+    "nat")))
+ (lc_factor_min_TCC2 0
+  (lc_factor_min_TCC4-1 nil 3941635930
+   ("" (skeep*)
+    (("" (typepred "nmod(lc_f`2, q1)")
+      (("" (case "lc_f`2 - b * q1 = nmod(lc_f`2, q1)")
+        (("1" (replace -1) (("1" (assert) nil nil)) nil)
+         ("2" (grind) nil nil))
+        nil))
+      nil))
+    nil)
+   ((gcd_rem def-decl "nat" gcd_rem nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (/= const-decl "boolean" notequal nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nmod const-decl "below(m)" mod_nat ints)
+    (below type-eq-decl nil naturalnumbers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (lc_factor const-decl
+     "{ret: [nat, nat] | k = ret`1 * q1 - ret`2 * q2}" gcd_rem nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (nnrat_div_posrat_is_nnrat application-judgement "nonneg_rat"
+     rationals nil)
+    (nonneg_floor_is_nat application-judgement "nat" floor_ceil nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (<= const-decl "bool" reals nil)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil))
+   nil
+   (lc_factor_min subtype
+    "(number_fields.-)(gcd_rem.lc_f`2, number_fields.*(gcd_rem.b, gcd_rem.q1))"
+    "nat")))
+ (lc_factor_min_TCC3 0
+  (lc_factor_min_TCC5-1 nil 3941635930
+   ("" (skeep*)
+    (("" (typepred "lc_factor(k, q1, q2)")
+      (("" (prop)
+        (("1" (replace -2 :dir rl) (("1" (assert) nil nil)) nil)
+         ("2" (replace -2 :dir rl)
+          (("2" (skeep)
+            (("2" (typepred "y")
+              (("2"
+                (case "k = (lc_f`1 - b * q2)*q1 - (lc_f`2 - b * q1)*q2")
+                (("1" (prop)
+                  (("1" (postpone) nil nil) ("2" (postpone) nil nil))
+                  nil)
+                 ("2" (assert) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil nil
+   (lc_factor_min subtype
+    "((number_fields.-)(gcd_rem.lc_f`1, number_fields.*(gcd_rem.b, gcd_rem.q2)), (number_fields.-)(gcd_rem.lc_f`2, number_fields.*(gcd_rem.b, gcd_rem.q1)))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | booleans.AND(gcd_rem.k = (number_fields.-)(number_fields.*(ret`1, gcd_rem.q1), number_fields.*(ret`2, gcd_rem.q2)), FORALL (x: naturalnumbers.nat, y: nat | gcd_rem.k = (number_fields.-)(number_fields.*(gcd_rem.x, gcd_rem.q1), number_fields.*(y, gcd_rem.q2))): booleans.AND(reals.<=(ret`1, x), reals.<=(ret`2, y)))}")))
+ (lc_factor_min_TCC4 0
+  (lc_factor_min_TCC6-1 nil 3941635930 ("" (subtype-tcc) nil nil) nil
+   nil
+   (lc_factor_min subtype
+    "(number_fields.-)(gcd_rem.lc_f`1, number_fields.*(gcd_rem.a, gcd_rem.q2))"
+    "nat")))
+ (lc_factor_min_TCC5 0
+  (lc_factor_min_TCC7-1 nil 3941635930 ("" (subtype-tcc) nil nil) nil
+   nil
+   (lc_factor_min subtype
+    "(number_fields.-)(gcd_rem.lc_f`2, number_fields.*(gcd_rem.a, gcd_rem.q1))"
+    "nat")))
+ (lc_factor_min_TCC6 0
+  (lc_factor_min_TCC8-1 nil 3941635930 ("" (subtype-tcc) nil nil) nil
+   nil
+   (lc_factor_min subtype
+    "((number_fields.-)(gcd_rem.lc_f`1, number_fields.*(gcd_rem.a, gcd_rem.q2)), (number_fields.-)(gcd_rem.lc_f`2, number_fields.*(gcd_rem.a, gcd_rem.q1)))"
+    "{ret: [naturalnumbers.nat, naturalnumbers.nat] | booleans.AND(gcd_rem.k = (number_fields.-)(number_fields.*(ret`1, gcd_rem.q1), number_fields.*(ret`2, gcd_rem.q2)), FORALL (x: naturalnumbers.nat, y: nat | gcd_rem.k = (number_fields.-)(number_fields.*(gcd_rem.x, gcd_rem.q1), number_fields.*(y, gcd_rem.q2))): booleans.AND(reals.<=(ret`1, x), reals.<=(ret`2, y)))}"))))
+

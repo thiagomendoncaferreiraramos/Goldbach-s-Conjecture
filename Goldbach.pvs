@@ -1,0 +1,63 @@
+%%
+% @theory: Goldbach
+% @author: thiago
+% @date: Thu, 12 Dec 2024 18:16:15 GMT
+%%
+Goldbach: THEORY
+  BEGIN 
+    IMPORTING gcd_rem,
+              ints@primes
+
+    %List of primes less than or equal then n.
+    list_of_primes(n : nat): RECURSIVE list[(prime?)] =
+    IF n < 2 THEN (::)
+    ELSIF prime?(n) THEN append(list_of_primes(n-1),(:n:))
+    ELSE list_of_primes(n-1)
+    ENDIF
+    MEASURE n
+
+    % @QED list_of_primes_correctness proved by thiago on Wed, 19 Feb 2025 00:20:26 GMT
+    list_of_primes_correctness: LEMMA
+    FORALL(n : nat, i : below[length(list_of_primes(n))]):
+    prime?(nth(list_of_primes(n),i)) AND nth(list_of_primes(n),i) <= n
+
+    prod_list(l : list[nat]): RECURSIVE nat =
+    IF null?(l) THEN 1
+    ELSE car(l) * prod_list(cdr(l))
+    ENDIF
+    MEASURE length(l)
+
+    signature_pred(n : nat)(l : list[nat] 
+          | length(l) = length(list_of_primes(n))) : bool =
+    FORALL(i : below[length(l)]):
+    nth(l,i) < nth(list_of_primes(n),i)
+
+    sign_aux(n : nat)(l : list[posnat]) : RECURSIVE list[nat] =
+    CASES l OF
+        null : null,
+        cons(h,t) : cons(nmod(n,h), sign_aux(n)(t))
+    ENDCASES
+    MEASURE length(l)
+
+    % @QED sign_aux_length proved by thiago on Thu, 27 Feb 2025 00:38:17 GMT
+    sign_aux_length: LEMMA
+    FORALL(n : nat, l : list[posnat]):
+    length(sign_aux(n)(l)) = length(l)
+    
+    % @QED sign_aux_correctness proved by thiago on Thu, 27 Feb 2025 00:45:27 GMT
+    sign_aux_correctness : LEMMA
+    FORALL(n : nat, l :list[posnat], i : below[length(l)]):
+    nth(sign_aux(n)(l),i) < nth(l,i)
+
+    signature(n: nat)(m : nat): (signature_pred(n)) = 
+    sign_aux(m)(list_of_primes(n))
+
+    
+
+    Goldbach : CHALLENGE
+    FORALL(n : nat | n >= 2):
+    EXISTS(p1, p2 : (prime?)):
+    2*n = p1 + p2
+
+    
+  END Goldbach

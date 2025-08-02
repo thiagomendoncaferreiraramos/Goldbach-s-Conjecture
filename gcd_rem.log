@@ -1,0 +1,29 @@
+
+Context changed to ~/Documentos/Goldbach/
+Parsing gcd_rem
+gcd_rem parsed in 0.02 seconds
+Typechecking gcd_rem
+Restored theory from /home/thiago/Documentos/pvs-7.1.0/nasalib/ints/pvsbin/floor_more.bin in 0.10s (load part took 0.01s)
+Restored theory from /home/thiago/Documentos/pvs-7.1.0/nasalib/ints/pvsbin/div_nat.bin in 0.14s (load part took 0.01s)
+Restored theory from /home/thiago/Documentos/pvs-7.1.0/nasalib/ints/pvsbin/mod_nat.bin in 0.09s (load part took 0.00s)
+gcd_rem typechecked in 1.15s: 36 TCCs, 0 proved, 6 subsumed, 30 unproved; 8 msgs
+Warning: (method typecheck* (subtype-judgement t t t)), :operator was
+         defined in
+         /home/thiago/Documentos/pvs-7.1.0/nasalib/pvs-patches/patch-20210707-trivial-judgements.lisp
+         and is now being defined in
+         /home/thiago/Documentos/pvs-7.1.0/pvs-patches/patch-20210707.lisp
+Warning: (method typecheck* (subtype-judgement t t t)), :operator was
+         defined in
+         /home/thiago/Documentos/pvs-7.1.0/pvs-patches/patch-20210707.lisp
+         and is now being defined in
+         /home/thiago/Documentos/pvs-7.1.0/nasalib/pvs-patches/patch-20210707-trivial-judgements.lisp
+Warning: (method typecheck* (subtype-judgement t t t)), :operator was
+         defined in
+         /home/thiago/Documentos/pvs-7.1.0/nasalib/pvs-patches/patch-20210707-trivial-judgements.lisp
+         and is now being defined in
+         /home/thiago/Documentos/pvs-7.1.0/pvs-patches/patch-20210707.lisp
+Warning: (method typecheck* (subtype-judgement t t t)), :operator was
+         defined in
+         /home/thiago/Documentos/pvs-7.1.0/pvs-patches/patch-20210707.lisp
+         and is now being defined in
+         /home/thiago/Documentos/pvs-7.1.0/nasalib/pvs-patches/patch-20210707-trivial-judgements.lisp

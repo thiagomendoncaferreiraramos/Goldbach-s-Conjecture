@@ -1,0 +1,16 @@
+TCCs summary for theory Goldbach
+
+	list_of_primes_TCC1.............................................✅ proved              (0.361 s)
+	list_of_primes_TCC2.............................................✅ proved              (0.344 s)
+	list_of_primes_TCC3.............................................✅ proved              (0.371 s)
+	list_of_primes_TCC4.............................................✅ proved              (0.368 s)
+	list_of_primes_TCC5.............................................✅ proved              (0.376 s)
+	prod_list_TCC1..................................................✅ proved              (0.361 s)
+	prod_list_TCC2..................................................✅ proved              (0.409 s)
+	signature_pred_TCC1.............................................✅ proved              (0.39 s)
+	sign_aux_TCC1...................................................✅ proved              (0.457 s)
+	sign_aux_correctness_TCC1.......................................✅ proved              (0.459 s)
+	signature_TCC1..................................................❗ unfinished          (0.408 s)
+	signature_TCC2..................................................✨ untried             (0.466 s)
+
+Theory Goldbach totals: 12 formulas, 12 attempted, 10 succeeded (4.77 s)

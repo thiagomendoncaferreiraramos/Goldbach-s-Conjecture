@@ -1,0 +1,21 @@
+gcd_rem.gcd_rem_greater is UNPROVED.
+
+  gcd_rem_greater depends on the following definitions:
+
+    gcd_rem.gcd_rem
+
+    div_nat.div
+
+    mod_nat.nmod
+
+    divides.divides
+
+    notequal./=
+
+    real_defs.abs
+
+    reals.<=
+
+    reals.>
+
+    reals.>=
