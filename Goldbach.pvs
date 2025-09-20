@@ -39,12 +39,18 @@ Goldbach: THEORY
     ENDCASES
     MEASURE length(l)
 
+    mut_primes(primes_l : list[posnat]) : bool =
+    FORALL(i , j : below[length(primes_l)]) :
+    i /= j IMPLIES 
+    gcd_rem(nth(primes_l,i), nth(primes_l,j)) = 1
+
     nmod_pos(n : int, p : posnat): mod(p) =
     IF n >= 0 THEN nmod(n, p)
     ELSE p - nmod(-n, p)
     ENDIF
 
-    sign2nats(primes_l : (cons?[posnat]))(signs : (signature_pred(primes_l))) :
+    sign2nats(primes_l : (cons?[posnat]) | mut_primes(primes_l))
+             (signs : (signature_pred(primes_l))) :
     RECURSIVE [nat,nat] =
     IF length(primes_l) = 1 THEN (car(primes_l), car(signs))
     ELSE 
