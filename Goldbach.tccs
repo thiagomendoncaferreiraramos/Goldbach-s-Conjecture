@@ -38,22 +38,62 @@ Goldbach_TCCS: THEORY BEGIN
 	list_of_primes_TCC5: OBLIGATION
 	FORALL (n: nat): NOT n < 2 AND NOT prime?(n) IMPLIES n - 1 < n
 	
-	% Subtype TCC generated (at line 26, column 13) for  l
+	% Subtype TCC generated (at line 27, column 13) for  l
 	% expected type  (cons?[nat])
-	  % proved
-	prod_list_TCC1: OBLIGATION
+	  % untried
+	list_prod_TCC1: OBLIGATION
 	FORALL (l: list[nat]): NOT null?(l) IMPLIES cons?[nat](l)
 	
-	% Termination TCC generated (at line 26, column 18) for  prod_list(cdr(l))
-	  % proved
-	prod_list_TCC2: OBLIGATION
+	% Termination TCC generated (at line 27, column 18) for  list_prod(cdr(l))
+	  % untried
+	list_prod_TCC2: OBLIGATION
 	FORALL (l: list[nat]):
 	    NOT null?(l) IMPLIES length[nat](cdr[nat](l)) < length[nat](l)
 	
-	% The subtype TCC (at line 26, column 32) in decl nil for
+	% The subtype TCC (at line 27, column 32) in decl nil for
+	% term generated from list_prod  l
+	% expected type  (cons?[nat])
+	% Subtype TCC generated (at line 32, column 17) for  list_of_primes(i)
+	% expected type  list[nat]
+	  % untried
+	prod_leq_n_TCC1: OBLIGATION
+	FORALL (n: posnat, i: below[n]):
+	    every[number]
+	        (LAMBDA (x: number):
+	                number_field_pred(x) AND real_pred(x) AND rational_pred(x)
+	            AND integer_pred(x) AND (x >= 0))
+	        (list_of_primes(i))
+	
+	% The subtype TCC (at line 27, column 32) in decl nil for
+	 % term generated from list_prod  l
+	    % expected type  (cons?[nat])
+	  % is subsumed by list_prod_TCC1
+	
+	% Subtype TCC generated (at line 34, column 24) for  i - 1
+	% expected type  below[n]
+	  % untried
+	prod_leq_n_TCC2: OBLIGATION
+	FORALL (n: posnat, i: below[n]):
+	    NOT list_prod(list_of_primes(i)) <= n IMPLIES i - 1 >= 0 AND i - 1 < n
+	
+	% Termination TCC generated (at line 34, column 9) for  prod_leq_n(n, i - 1)
+	  % untried
+	prod_leq_n_TCC3: OBLIGATION
+	FORALL (n: posnat, i: below[n]):
+	    NOT list_prod(list_of_primes(i)) <= n IMPLIES i - 1 < i
+	
+	% The subtype TCC (at line 33, column 6) in decl nil for
+	% term generated from prod_leq_n  list_of_primes(i)
+	% expected type  list[nat]
+	% The subtype TCC (at line 40, column 13) in decl nil for
 	% term generated from prod_list  l
 	% expected type  (cons?[nat])
-	% Subtype TCC generated (at line 33, column 22) for  i
+	% The subtype TCC (at line 40, column 32) in decl nil for
+	% term generated from prod_list  l
+	% expected type  (cons?[nat])
+	% The termination TCC (at line 40, column 18) in decl nil for
+	% term generated from prod_list  prod_list(cdr(l))
+	% Subtype TCC generated (at line 47, column 22) for  i
 	% expected type  below[length[nonneg_int](pl)]
 	  % proved
 	signature_pred_TCC1: OBLIGATION
@@ -61,18 +101,29 @@ Goldbach_TCCS: THEORY BEGIN
 	          i: below[length[nat](l)]):
 	    i < length[nonneg_int](pl)
 	
-	% The subtype TCC (at line 26, column 32) in decl nil for
+	% The subtype TCC (at line 33, column 6) in decl nil for
+	 % term generated from prod_leq_n  list_of_primes(i)
+	    % expected type  list[nat]
+	  % is subsumed by prod_leq_n_TCC1
+	% The subtype TCC (at line 40, column 13) in decl nil for
 	 % term generated from prod_list  l
 	    % expected type  (cons?[nat])
-	  % is subsumed by prod_list_TCC1
+	  % is subsumed by list_prod_TCC1
+	% The subtype TCC (at line 40, column 32) in decl nil for
+	 % term generated from prod_list  l
+	    % expected type  (cons?[nat])
+	  % is subsumed by list_prod_TCC1
+	% The termination TCC (at line 40, column 18) in decl nil for
+	 % term generated from prod_list  prod_list(cdr(l))
+	  % is subsumed by list_prod_TCC2
 	
-	% Termination TCC generated (at line 38, column 36) for  sign_aux(n)(t)
+	% Termination TCC generated (at line 52, column 36) for  sign_aux(n)(t)
 	  % proved
 	sign_aux_TCC1: OBLIGATION
 	FORALL (l: list[posnat], h: posnat, t: list[posnat]):
 	    l = cons(h, t) IMPLIES length[posnat](t) < length[posnat](l)
 	
-	% Subtype TCC generated (at line 45, column 29) for  nth(primes_l, j)
+	% Subtype TCC generated (at line 59, column 29) for  nth(primes_l, j)
 	% expected type  {n: int | NOT abs(n) + abs(nth(primes_l, i)) = 0}
 	  % untried
 	mut_primes_TCC1: OBLIGATION
@@ -80,36 +131,37 @@ Goldbach_TCCS: THEORY BEGIN
 	    i /= j IMPLIES
 	     NOT abs(nth[posnat](primes_l, j)) + abs(nth[posnat](primes_l, i)) = 0
 	
-	% Subtype TCC generated (at line 49, column 18) for  -n
+	% Subtype TCC generated (at line 63, column 18) for  -n
 	% expected type  nat
 	  % untried
 	nmod_pos_TCC1: OBLIGATION
 	FORALL (n: int): NOT n >= 0 IMPLIES -n >= 0
 	
-	% Subtype TCC generated (at line 49, column 9) for  p - nmod(-n, p)
+	% Subtype TCC generated (at line 63, column 9) for  p - nmod(-n, p)
 	% expected type  mod(p)
 	  % untried
 	nmod_pos_TCC2: OBLIGATION
 	FORALL (n: int, p: posnat):
 	    NOT n >= 0 IMPLIES p - nmod(-n, p) >= 0 AND p - nmod(-n, p) < p
 	
-	% Subtype TCC generated (at line 54, column 53) for  signs
+	% Subtype TCC generated (at line 69, column 53) for  signs
 	% expected type  (cons?[nat])
 	  % untried
 	sign2nats_TCC1: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]), signs: (signature_pred(primes_l))):
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
+	          signs: (signature_pred(primes_l))):
 	    length(primes_l) = 1 IMPLIES cons?[nat](signs)
 	
-	% Subtype TCC generated (at line 59, column 33) for  prod
+	% Subtype TCC generated (at line 74, column 33) for  prod
 	% expected type  posnat
 	  % untried
 	sign2nats_TCC2: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]),
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
 	          v:
-	            [primes_l1:
-	               {z: (cons?[posnat]) |
+	            [primes_l11:
+	               {z: {primes_l: (cons?[posnat]) | mut_primes(primes_l)} |
 	                  length[posnat](z) < length[posnat](primes_l)} ->
-	               [(signature_pred(primes_l1)) -> [nat, nat]]],
+	               [(signature_pred(primes_l11)) -> [nat, nat]]],
 	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES
 	     FORALL (tuple: [nat, nat], prod: nat, val: nat):
@@ -117,16 +169,16 @@ Goldbach_TCCS: THEORY BEGIN
 	        prod = tuple`1 AND val = tuple`2
 	        IMPLIES prod > 0
 	
-	% Subtype TCC generated (at line 59, column 39) for  car(primes_l)
+	% Subtype TCC generated (at line 74, column 39) for  car(primes_l)
 	% expected type  {n: posnat | prod /= n}
 	  % untried
 	sign2nats_TCC3: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]),
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
 	          v:
-	            [primes_l1:
-	               {z: (cons?[posnat]) |
+	            [primes_l11:
+	               {z: {primes_l: (cons?[posnat]) | mut_primes(primes_l)} |
 	                  length[posnat](z) < length[posnat](primes_l)} ->
-	               [(signature_pred(primes_l1)) -> [nat, nat]]],
+	               [(signature_pred(primes_l11)) -> [nat, nat]]],
 	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES
 	     FORALL (tuple: [nat, nat], prod: nat, val: nat):
@@ -134,16 +186,16 @@ Goldbach_TCCS: THEORY BEGIN
 	        prod = tuple`1 AND val = tuple`2
 	        IMPLIES prod /= car[posnat](primes_l)
 	
-	% Subtype TCC generated (at line 61, column 53) for  signs
+	% Subtype TCC generated (at line 76, column 53) for  signs
 	% expected type  (cons?[nat])
 	  % untried
 	sign2nats_TCC4: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]),
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
 	          v:
-	            [primes_l1:
-	               {z: (cons?[posnat]) |
+	            [primes_l11:
+	               {z: {primes_l: (cons?[posnat]) | mut_primes(primes_l)} |
 	                  length[posnat](z) < length[posnat](primes_l)} ->
-	               [(signature_pred(primes_l1)) -> [nat, nat]]],
+	               [(signature_pred(primes_l11)) -> [nat, nat]]],
 	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES
 	     FORALL (tuple: [nat, nat], prod: nat, val: nat, prod_inv: nat):
@@ -152,42 +204,140 @@ Goldbach_TCCS: THEORY BEGIN
 	         val = tuple`2 AND prod_inv = linear_comb(prod, car(primes_l))`1
 	        IMPLIES cons?[nat](signs)
 	
-	% Subtype TCC generated (at line 56, column 51) for  signs
+	% Subtype TCC generated (at line 71, column 51) for  signs
 	% expected type  (cons?[nat])
 	  % untried
 	sign2nats_TCC5: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]), signs: (signature_pred(primes_l))):
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
+	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES cons?[nat](signs)
 	
-	% Subtype TCC generated (at line 56, column 47) for  cdr(signs)
+	% Subtype TCC generated (at line 71, column 47) for  cdr(signs)
 	% expected type  (signature_pred(cdr(primes_l)))
 	  % untried
 	sign2nats_TCC6: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]), signs: (signature_pred(primes_l))):
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
+	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES
 	     length[nat](cdr[nat](signs)) = length[posnat](cdr[posnat](primes_l)) AND
 	      signature_pred(cdr[posnat](primes_l))(cdr[nat](signs))
 	
-	% Subtype TCC generated (at line 56, column 32) for  cdr(primes_l)
-	% expected type  (cons?[posnat])
+	% Subtype TCC generated (at line 71, column 32) for  cdr(primes_l)
+	% expected type  {primes_l: (cons?[posnat]) | mut_primes(primes_l)}
 	  % untried
 	sign2nats_TCC7: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]), signs: (signature_pred(primes_l))):
-	    NOT length(primes_l) = 1 IMPLIES cons?[posnat](cdr[posnat](primes_l))
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
+	          signs: (signature_pred(primes_l))):
+	    NOT length(primes_l) = 1 IMPLIES
+	     cons?[posnat](cdr[posnat](primes_l)) AND mut_primes(cdr[posnat](primes_l))
 	
-	% Termination TCC generated (at line 56, column 22) for
+	% Termination TCC generated (at line 71, column 22) for
 	% sign2nats(cdr(primes_l))
 	  % untried
 	sign2nats_TCC8: OBLIGATION
-	FORALL (primes_l: (cons?[posnat]), signs: (signature_pred(primes_l))):
+	FORALL (primes_l: (cons?[posnat]) | mut_primes(primes_l),
+	          signs: (signature_pred(primes_l))):
 	    NOT length(primes_l) = 1 IMPLIES
 	     length[posnat](cdr[posnat](primes_l)) < length[posnat](primes_l)
 	
-	% Subtype TCC generated (at line 74, column 23) for  i
+	% Subtype TCC generated (at line 83, column 31) for  p - 1
+	% expected type  nat
+	  % untried
+	list_diff_TCC1: OBLIGATION
+	FORALL (p, n: nat): NOT p = 0 AND p = n IMPLIES p - 1 >= 0
+	
+	% Termination TCC generated (at line 83, column 21) for  list_diff(p - 1)
+	  % untried
+	list_diff_TCC2: OBLIGATION
+	FORALL (p, n: nat): NOT p = 0 AND p = n IMPLIES p - 1 < p
+	
+	% Subtype TCC generated (at line 84, column 27) for  p - 1
+	% expected type  nat
+	  % untried
+	list_diff_TCC3: OBLIGATION
+	FORALL (p, n: nat): NOT p = 0 AND NOT p = n IMPLIES p - 1 >= 0
+	
+	% Termination TCC generated (at line 84, column 17) for  list_diff(p - 1)
+	  % untried
+	list_diff_TCC4: OBLIGATION
+	FORALL (p, n: nat): NOT p = 0 AND NOT p = n IMPLIES p - 1 < p
+	
+	% Subtype TCC generated (at line 92, column 43) for  signs
+	% expected type  (cons?[nat])
+	  % untried
+	list_l_diff_TCC1: OBLIGATION
+	FORALL (primes_l: list[posnat],
+	          signs: list[nat] | length[nat](signs) = length[posnat](primes_l)):
+	    NOT null?(primes_l) IMPLIES cons?[nat](signs)
+	
+	% Subtype TCC generated (at line 92, column 28) for  primes_l
+	% expected type  (cons?)
+	  % untried
+	list_l_diff_TCC2: OBLIGATION
+	FORALL (primes_l: list[posnat],
+	          signs: list[nat] | length[nat](signs) = length[posnat](primes_l)):
+	    NOT null?(primes_l) IMPLIES cons?[posnat](primes_l)
+	
+	% Subtype TCC generated (at line 92, column 79) for  cdr(signs)
+	% expected type  {signs: list[nat] |
+	%    length(signs) = length(cdr(primes_l))}
+	  % untried
+	list_l_diff_TCC3: OBLIGATION
+	FORALL (primes_l: list[posnat],
+	          signs: list[nat] | length[nat](signs) = length[posnat](primes_l)):
+	    NOT null?(primes_l) IMPLIES
+	     length[nat](cdr[nat](signs)) = length[posnat](cdr[posnat](primes_l))
+	
+	% Termination TCC generated (at line 92, column 52) for
+	% list_l_diff(cdr(primes_l))
+	  % untried
+	list_l_diff_TCC4: OBLIGATION
+	FORALL (primes_l: list[posnat],
+	          signs: list[nat] | length[nat](signs) = length[posnat](primes_l)):
+	    NOT null?(primes_l) IMPLIES
+	     length[posnat](cdr[posnat](primes_l)) < length[posnat](primes_l)
+	
+	% The subtype TCC (at line 92, column 83) in decl nil for
+	% term generated from list_l_diff  signs
+	% expected type  (cons?[nat])
+	% The subtype TCC (at line 92, column 68) in decl nil for
+	% term generated from list_l_diff  primes_l
+	% expected type  (cons?)
+	% Subtype TCC generated (at line 98, column 26) for  l
+	% expected type  (cons?[list[nat]])
+	  % untried
+	e_list_TCC1: OBLIGATION
+	FORALL (l: list[list[nat]]): NOT null?(l) IMPLIES cons?[list[nat]](l)
+	
+	% The subtype TCC (at line 92, column 83) in decl nil for
+	 % term generated from list_l_diff  signs
+	    % expected type  (cons?[nat])
+	  % is subsumed by list_l_diff_TCC1
+	% The subtype TCC (at line 92, column 68) in decl nil for
+	 % term generated from list_l_diff  primes_l
+	    % expected type  (cons?)
+	  % is subsumed by list_l_diff_TCC2
+	
+	% Termination TCC generated (at line 98, column 31) for  e_list(n, cdr(l))
+	  % untried
+	e_list_TCC2: OBLIGATION
+	FORALL (l: list[list[nat]]):
+	    NOT null?(l) IMPLIES
+	     length[list[nat]](cdr[list[nat]](l)) < length[list[nat]](l)
+	
+	% The subtype TCC (at line 98, column 44) in decl nil for
+	% term generated from e_list  l
+	% expected type  (cons?[list[nat]])
+	% Subtype TCC generated (at line 115, column 23) for  i
 	% expected type  below[length[nat](sign_aux(n)(l))]
 	  % proved
 	sign_aux_correctness_TCC1: OBLIGATION
 	FORALL (n: nat, l: list[posnat], i: below[length[posnat](l)]):
 	    i < length[nat](sign_aux(n)(l))
+	
+	% The subtype TCC (at line 98, column 44) in decl nil for
+	 % term generated from e_list  l
+	    % expected type  (cons?[list[nat]])
+	  % is subsumed by e_list_TCC1
 
 END Goldbach_TCCS

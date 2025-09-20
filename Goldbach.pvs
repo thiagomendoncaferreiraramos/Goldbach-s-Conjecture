@@ -16,10 +16,24 @@ Goldbach: THEORY
     ENDIF
     MEASURE n
 
+
     % @QED list_of_primes_correctness proved by thiago on Wed, 19 Feb 2025 00:20:26 GMT
     list_of_primes_correctness: LEMMA
     FORALL(n : nat, i : below[length(list_of_primes(n))]):
     prime?(nth(list_of_primes(n),i)) AND nth(list_of_primes(n),i) <= n
+
+    list_prod(l : list[nat]) : RECURSIVE nat =
+    IF null?(l) THEN 1
+    ELSE car(l) * list_prod(cdr(l))
+    ENDIF
+    MEASURE length(l)
+
+    prod_leq_n(n : posnat, i : below[n]) : RECURSIVE list[nat] =
+    IF list_prod(list_of_primes(i)) <= n THEN
+      list_of_primes(i)
+    ELSE prod_leq_n(n , i - 1)
+    ENDIF
+    MEASURE i
 
     prod_list(l : list[nat]): RECURSIVE nat =
     IF null?(l) THEN 1
@@ -63,6 +77,33 @@ Goldbach: THEORY
                             + val)
     ENDIF
     MEASURE length(primes_l)
+
+    list_diff(p : nat)(n : nat) : RECURSIVE list[nat] =
+    IF p = 0 THEN (::)
+    ELSIF p = n THEN list_diff(p-1)(n)
+    ELSE cons(p, list_diff(p-1)(n))
+    ENDIF
+    MEASURE p
+
+    list_l_diff(primes_l : list[posnat])
+               (signs : list[nat] | length(signs) = length(primes_l)):
+    RECURSIVE list[list[nat]] =
+    IF null?(primes_l) THEN (::)
+    ELSE cons(list_diff(car(primes_l))(car(signs)), list_l_diff(cdr(primes_l))(cdr(signs)))
+    ENDIF
+    MEASURE length(primes_l)
+
+    e_list(n : nat, l : list[list[nat]]) : RECURSIVE list[list[nat]] =
+    IF null?(l) THEN (::)
+    ELSE cons(cons(n, car(l)), e_list(n,cdr(l)))
+    ENDIF
+    MEASURE length(l)
+
+
+
+    %cart_list(l1 : list[nat], llnat : list[list[nat]]) : RECURSIVE list[list[nat]] =
+    %IF null?(l1) 
+
 
     % @QED sign_aux_length proved by thiago on Thu, 27 Feb 2025 00:38:17 GMT
     sign_aux_length: LEMMA
