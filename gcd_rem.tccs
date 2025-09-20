@@ -128,13 +128,17 @@ gcd_rem_TCCS: THEORY BEGIN
 	gcd_rem_commutes_TCC1: OBLIGATION
 	FORALL (m: int, n: int | abs(m) + abs(n) /= 0): NOT abs(m) + abs(n) = 0
 	
-	% The subtype TCC (at line 22, column 27) in decl gcd_rem_commutes for  m
+	% The subtype TCC (at line 22, column 27) in decl nil for
+	% term generated from gcd_rem_commutes  m
 	% expected type  {n_1: int | NOT abs(n_1) + abs(n) = 0}
-	% The subtype TCC (at line 27, column 20) in decl gcd_rem_divides_left for  n
+	% The subtype TCC (at line 27, column 20) in decl nil for
+	% term generated from gcd_rem_divides_left  n
 	% expected type  {n: int | NOT abs(m) + abs(n) = 0}
-	% The subtype TCC (at line 32, column 20) in decl gcd_rem_divides_right for  n
+	% The subtype TCC (at line 32, column 20) in decl nil for
+	% term generated from gcd_rem_divides_right  n
 	% expected type  {n: int | NOT abs(m) + abs(n) = 0}
-	% The subtype TCC (at line 38, column 12) in decl gcd_rem_greater for  n
+	% The subtype TCC (at line 38, column 12) in decl nil for
+	% term generated from gcd_rem_greater  n
 	% expected type  {n: int | NOT abs(m) + abs(n) = 0}
 	% Subtype TCC generated (at line 41, column 38) for  n
 	% expected type  {n: int | NOT abs(m) + abs(n) = 0}
@@ -142,16 +146,20 @@ gcd_rem_TCCS: THEORY BEGIN
 	linear_comb_TCC1: OBLIGATION
 	FORALL (m: posnat, n: posnat | m /= n): NOT abs(m) + abs(n) = 0
 	
-	% The subtype TCC (at line 22, column 27) in decl gcd_rem_commutes for  m
+	% The subtype TCC (at line 22, column 27) in decl nil for
+	 % term generated from gcd_rem_commutes  m
 	    % expected type  {n_1: int | NOT abs(n_1) + abs(n) = 0}
 	  % is subsumed by gcd_rem_commutes_TCC1
-	% The subtype TCC (at line 27, column 20) in decl gcd_rem_divides_left for  n
+	% The subtype TCC (at line 27, column 20) in decl nil for
+	 % term generated from gcd_rem_divides_left  n
 	    % expected type  {n: int | NOT abs(m) + abs(n) = 0}
 	  % is subsumed by gcd_rem_commutes_TCC1
-	% The subtype TCC (at line 32, column 20) in decl gcd_rem_divides_right for  n
+	% The subtype TCC (at line 32, column 20) in decl nil for
+	 % term generated from gcd_rem_divides_right  n
 	    % expected type  {n: int | NOT abs(m) + abs(n) = 0}
 	  % is subsumed by gcd_rem_commutes_TCC1
-	% The subtype TCC (at line 38, column 12) in decl gcd_rem_greater for  n
+	% The subtype TCC (at line 38, column 12) in decl nil for
+	 % term generated from gcd_rem_greater  n
 	    % expected type  {n: int | NOT abs(m) + abs(n) = 0}
 	  % is subsumed by gcd_rem_commutes_TCC1
 	
@@ -325,7 +333,8 @@ gcd_rem_TCCS: THEORY BEGIN
 	    NOT nmod(m, n) = 0 AND NOT nmod(n, m) = 0 AND NOT m > n IMPLIES
 	     m + nmod(n, m) < m + n
 	
-	% The subtype TCC (at line 58, column 12) in decl gcd_rem_linear_comb for  n
+	% The subtype TCC (at line 58, column 12) in decl nil for
+	 % term generated from gcd_rem_linear_comb  n
 	    % expected type  {n: int | NOT abs(m) + abs(n) = 0}
 	  % is subsumed by linear_comb_TCC1
 

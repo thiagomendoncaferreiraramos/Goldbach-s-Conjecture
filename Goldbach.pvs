@@ -27,10 +27,10 @@ Goldbach: THEORY
     ENDIF
     MEASURE length(l)
 
-    signature_pred(n : nat)(l : list[nat] 
-          | length(l) = length(list_of_primes(n))) : bool =
+    signature_pred(pl : list[posnat])(l : list[nat] 
+          | length(l) = length(pl)) : bool =
     FORALL(i : below[length(l)]):
-    nth(l,i) < nth(list_of_primes(n),i)
+    nth(l,i) < nth(pl,i)
 
     sign_aux(n : nat)(l : list[posnat]) : RECURSIVE list[nat] =
     CASES l OF
@@ -38,6 +38,25 @@ Goldbach: THEORY
         cons(h,t) : cons(nmod(n,h), sign_aux(n)(t))
     ENDCASES
     MEASURE length(l)
+
+    nmod_pos(n : int, p : posnat): mod(p) =
+    IF n >= 0 THEN nmod(n, p)
+    ELSE p - nmod(-n, p)
+    ENDIF
+
+    sign2nats(primes_l : (cons?[posnat]))(signs : (signature_pred(primes_l))) :
+    RECURSIVE [nat,nat] =
+    IF length(primes_l) = 1 THEN (car(primes_l), car(signs))
+    ELSE 
+          LET tuple = sign2nats(cdr(primes_l))(cdr(signs)),
+          prod = tuple`1,
+          val  = tuple`2,
+          prod_inv = linear_comb(prod, car(primes_l))`1 IN
+     (prod * car(primes_l), prod * nmod(prod_inv * 
+                                      (nmod_pos( car(signs) - val, car(primes_l))),car(primes_l)) 
+                            + car(signs))
+    ENDIF
+    MEASURE length(primes_l)
 
     % @QED sign_aux_length proved by thiago on Thu, 27 Feb 2025 00:38:17 GMT
     sign_aux_length: LEMMA
@@ -49,8 +68,7 @@ Goldbach: THEORY
     FORALL(n : nat, l :list[posnat], i : below[length(l)]):
     nth(sign_aux(n)(l),i) < nth(l,i)
 
-    signature(n: nat)(m : nat): (signature_pred(n)) = 
-    sign_aux(m)(list_of_primes(n))
+   
 
     
 
