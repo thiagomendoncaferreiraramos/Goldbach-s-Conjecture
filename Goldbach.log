@@ -1,0 +1,19 @@
+
+Context changed to ~/Documentos/Goldbach/
+Parsing Goldbach
+Goldbach parsed in 0.02 seconds
+Typechecking Goldbach
+Parsing gcd_rem
+gcd_rem parsed in 0.02 seconds
+gcd_rem is already parsed
+Typechecking gcd_rem
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/floor_more.bin in 0.09s (load part took 0.01s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/div_nat.bin in 0.12s (load part took 0.01s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/mod_nat.bin in 0.06s (load part took 0.00s)
+gcd_rem typechecked in 1.06s: 36 TCCs, 0 proved, 6 subsumed, 30 unproved; 8 msgs
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/factorial.bin in 0.05s (load part took 0.01s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/max_bounded_posnat.bin in 0.06s (load part took 0.00s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/min_lem.bin in 0.05s (load part took 0.00s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/divides_lems.bin in 0.06s (load part took 0.01s)
+Restored theory from /home/thiago/pvs-7.1.0/nasalib/ints/pvsbin/primes.bin in 0.05s (load part took 0.00s)
+Goldbach typechecked in 1.68s: 21 TCCs, 0 proved, 1 subsumed, 20 unproved; 4 msgs

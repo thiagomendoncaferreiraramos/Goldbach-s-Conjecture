@@ -54,7 +54,7 @@ Goldbach: THEORY
           prod_inv = linear_comb(prod, car(primes_l))`1 IN
      (prod * car(primes_l), prod * nmod(prod_inv * 
                                       (nmod_pos( car(signs) - val, car(primes_l))),car(primes_l)) 
-                            + car(signs))
+                            + val)
     ENDIF
     MEASURE length(primes_l)
 
