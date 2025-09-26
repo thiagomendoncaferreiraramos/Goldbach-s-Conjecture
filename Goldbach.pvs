@@ -35,11 +35,7 @@ Goldbach: THEORY
     ENDIF
     MEASURE i
 
-    prod_list(l : list[nat]): RECURSIVE nat =
-    IF null?(l) THEN 1
-    ELSE car(l) * prod_list(cdr(l))
-    ENDIF
-    MEASURE length(l)
+  
 
     signature_pred(pl : list[posnat])(l : list[nat] 
           | length(l) = length(pl)) : bool =
@@ -101,9 +97,23 @@ Goldbach: THEORY
 
 
 
-    %cart_list(l1 : list[nat], llnat : list[list[nat]]) : RECURSIVE list[list[nat]] =
-    %IF null?(l1) 
+    cart_list(l1 : list[nat], llnat : list[list[nat]]) : RECURSIVE list[list[nat]] =
+    IF null?(l1) THEN (: (::) :)
+    ELSE append(e_list(car(l1),llnat), cart_list(cdr(l1),llnat))
+    ENDIF
+    MEASURE length(l1)
 
+    list2onelist(l1 : list[nat]) : RECURSIVE list[list[nat]] =
+    IF null?(l1) THEN (::)
+    ELSE cons((: car(l1) :), list2onelist(cdr(l1)))
+    ENDIF
+    MEASURE length(l1)
+
+    cart_Lists(llnat : (cons?[list[nat]])) : RECURSIVE list[list[nat]] =
+    IF length(llnat) = 1 THEN list2onelist(car(llnat))
+    ELSE cart_list(car(llnat), cart_Lists(cdr(llnat)))
+    ENDIF
+    MEASURE length(llnat)
 
     % @QED sign_aux_length proved by thiago on Thu, 27 Feb 2025 00:38:17 GMT
     sign_aux_length: LEMMA
@@ -116,6 +126,11 @@ Goldbach: THEORY
     nth(sign_aux(n)(l),i) < nth(l,i)
 
    
+    Goldbach_list_signs( n : posnat) : list[list[nat]] =
+    cart_Lists(list_l_diff(prod_leq_n(2*n,2*n-1))((sign_aux(2*n)(prod_leq_n(2*n,2*n-1)))))
+    
+    Goldbach_list(n : posnat) : list[nat] =
+    map(lambda(m,n : nat) :  n ) (map (sign2nats(prod_leq_n(2*n,2*n-1)))(Goldbach_list_signs(n)))
 
     
 
