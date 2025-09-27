@@ -461,6 +461,30 @@ Goldbach_TCCS: THEORY BEGIN
 	      mut_primes(prod_leq_n(2 * n, 2 * n - 1))
 	
 	% The subtype TCC (at line 133, column 64) in decl nil for
+	% term generated from Goldbach_list  2 * n - 1
+	% expected type  below[2 * n]
+	% The subtype TCC (at line 133, column 34) in decl nil for
+	% term generated from Goldbach_list  map
+	% expected type  below[2 * n]
+	% The subtype TCC (at line 133, column 34) in decl nil for
+	% term generated from Goldbach_list  map
+	% expected type  list[posnat]
+	% The subtype TCC (at line 133, column 34) in decl nil for
+	% term generated from Goldbach_list  map
+	% expected type  below[2 * n]
+	% The subtype TCC (at line 133, column 34) in decl nil for
+	% term generated from Goldbach_list  map
+	% expected type  list[posnat]
+	% Subtype TCC generated (at line 138, column 4) for
+	% y + ((n + x + 2) * (n - x + 1)) / 2
+	% expected type  nat
+	  % untried
+	kappa_TCC1: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    integer_pred(y + ((n + x + 2) * (n - x + 1)) / 2) AND
+	     y + ((n + x + 2) * (n - x + 1)) / 2 >= 0
+	
+	% The subtype TCC (at line 133, column 64) in decl nil for
 	 % term generated from Goldbach_list  2 * n - 1
 	    % expected type  below[2 * n]
 	  % is subsumed by Goldbach_list_signs_TCC1
@@ -476,5 +500,44 @@ Goldbach_TCCS: THEORY BEGIN
 	 % term generated from Goldbach_list  map
 	    % expected type  below[2 * n]
 	  % is subsumed by Goldbach_list_signs_TCC1
+	% The subtype TCC (at line 133, column 34) in decl nil for
+	 % term generated from Goldbach_list  map
+	    % expected type  list[posnat]
+	  % is subsumed by Goldbach_list_signs_TCC2
+	
+	% Subtype TCC generated (at line 142, column 35) for  x + 1
+	% expected type  below[1 + n]
+	  % untried
+	kappa__TCC1: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    NOT x = n AND y = 0 IMPLIES x + 1 < 1 + n
+	
+	% Subtype TCC generated (at line 142, column 39) for  x + 1
+	% expected type  below[2 + x]
+	  % untried
+	kappa__TCC2: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    NOT x = n AND y = 0 IMPLIES x + 1 < 2 + x
+	
+	% Termination TCC generated (at line 142, column 25) for
+	% kappa_(n)(x + 1, x + 1)
+	  % untried
+	kappa__TCC3: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    NOT x = n AND y = 0 IMPLIES kappa(n)(x + 1, x + 1) < kappa(n)(x, y)
+	
+	% Subtype TCC generated (at line 143, column 25) for  y - 1
+	% expected type  below[1 + x]
+	  % untried
+	kappa__TCC4: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    NOT x = n AND NOT y = 0 IMPLIES y - 1 >= 0 AND y - 1 < 1 + x
+	
+	% Termination TCC generated (at line 143, column 13) for
+	% kappa_(n)(x, y - 1)
+	  % untried
+	kappa__TCC5: OBLIGATION
+	FORALL (n: nat, x: below[n + 1], y: below[x + 1]):
+	    NOT x = n AND NOT y = 0 IMPLIES kappa(n)(x, y - 1) < kappa(n)(x, y)
 
 END Goldbach_TCCS
