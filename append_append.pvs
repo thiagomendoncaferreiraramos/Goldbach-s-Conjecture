@@ -1,0 +1,14 @@
+%%
+% @theory: append_append
+% @author: thiago
+% @date: Tue, 07 Oct 2025 20:53:13 GMT
+%%
+append_append[T : TYPE+]: THEORY
+  BEGIN 
+    append_list(L : list[list[T]]) : RECURSIVE list[T] =
+    IF null?(L) THEN (::)
+    ELSE append(car(L), append_list(cdr(L)))
+    ENDIF
+    MEASURE length(L)
+    
+  END append_append

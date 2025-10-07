@@ -1,0 +1,10 @@
+%%
+% @theory: Bin_tree
+% @author: thiago
+% @date: Mon, 06 Oct 2025 21:26:22 GMT
+%%
+Bin_tree[T : TYPE+]: DATATYPE
+  BEGIN 
+    Empty : Empty? : Bin_tree
+    Bin_T( elem : T, tree_left, tree_right: Bin_tree) : Bin_T? : Bin_tree
+  END Bin_tree

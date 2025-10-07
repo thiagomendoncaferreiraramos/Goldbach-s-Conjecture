@@ -133,19 +133,64 @@ Goldbach: THEORY
     map(lambda(m,n : nat) :  n ) (map (sign2nats(prod_leq_n(2*n,2*n-1)))(Goldbach_list_signs(n)))
 
 
+    IMPORTING Bin_tree[list[nat]]
 
-    kappa(n : nat)(x : below[n+1] ,y : below[x+1]) : nat =
-    y + ((n+x+2)*(n-x+1))/2
+    list_Bin_Tree(l : list[nat], Bt : Bin_tree, f : [list[nat]->list[nat]]) : bool =
+    CASES Bt OF
+          Empty : TRUE,
+          Bin_T(lbt,Bt_left,Bt_right) : f(l) = lbt
+    ENDCASES
 
-    kappa_(n : nat)(x : below[n+1] ,y : below[x+1]) : RECURSIVE nat =
-    IF x = n THEN y
-    ELSIF y = 0 THEN 1 + kappa_(n)(x+1,x+1)
-    ELSE 1 + kappa_(n)(x,y-1)
+    Bin_tree_pred(Bt : Bin_tree, fl, fr : [list[nat]->list[nat]]) : RECURSIVE bool =
+    CASES Bt OF
+          Empty : TRUE,
+          Bin_T(l,Bt_left, Bt_right) : list_Bin_Tree(l,Bt_left,fl) AND
+                                       list_Bin_Tree(l,Bt_right,fr) AND
+                                       Bin_tree_pred(Bt_left,fl,fr) AND
+                                       Bin_tree_pred(Bt_right,fl,fr)
+    ENDCASES
+    MEASURE Bt BY <<
+
+
+    l_prime(p : (prime?) | p /= 2)(n : below[p]) : below[p] =
+    IF even?(n) THEN n / 2
+    ELSE (p + n) / 2
     ENDIF
-    MEASURE kappa(n)(x,y) 
 
-    %kappa_inv(n : nat)(i : nat) : RECURSIVE [nat,nat] =
+    r_prime(p : (prime?) | p /= 2)(n : below[p]) : below[p] =
+    IF odd?(n) THEN (n - 1 ) / 2
+    ELSE (p + n - 1) / 2
+    ENDIF
 
+    mapl_prime(p : (prime?) | p /= 2)(l : list[below[p]]) : list[below[p]] =
+    map(l_prime(p))(l)
+
+    mapr_prime(p : (prime?) | p /= 2)(l : list[below[p]]) : list[below[p]] =
+    map(r_prime(p))(l)
+
+    add_list(p : (prime?) | p /= 2)(l : list[list[below[p]]]) :
+    RECURSIVE list[list[below[p]]] =
+    IF null?(l) THEN (::)
+    ELSE cons(mapl_prime(p)(car(l)), cons( mapr_prime(p)(car(l)), add_list(p)(cdr(l))))
+    ENDIF
+    MEASURE length(l)
+
+    list_tree(p : (prime?) | p /= 2)(depth : nat, l : list[list[below[p]]]) : 
+    RECURSIVE list[list[list[below[p]]]] =
+    IF depth = 0 THEN (: l :)
+    ELSE cons(l, list_tree(p)(depth -1, add_list(p)(l)))
+    ENDIF
+    MEASURE depth
+
+    IMPORTING append_append[list[nat]]
+
+    list_tree_1 : CONJECTURE
+    
+    
+    %list_sum_split(i, n : nat) : RECURSIVE list[list[nat]] =
+    %IF i = 0 THEN list_sum(n)
+    %ELSE LET lss = list_sum_split(i-1,n) IN
+    
 
     Goldbach : CHALLENGE
     FORALL(n : nat | n >= 2):

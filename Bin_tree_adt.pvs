@@ -1,0 +1,236 @@
+%%% ADT file generated from Bin_tree
+
+Bin_tree_adt[T: TYPE+]: THEORY
+ BEGIN
+  ASSUMING
+   T_TCC1: ASSUMPTION EXISTS (x: T): TRUE;
+  ENDASSUMING
+
+  Bin_tree: TYPE
+
+  Empty?, Bin_T?: [Bin_tree -> boolean]
+
+  elem: [(Bin_T?) -> T]
+
+  tree_left: [(Bin_T?) -> Bin_tree]
+
+  tree_right: [(Bin_T?) -> Bin_tree]
+
+  Empty: (Empty?)
+
+  Bin_T: [[T, Bin_tree, Bin_tree] -> (Bin_T?)]
+
+  Bin_tree_ord: [Bin_tree -> upto(1)]
+
+  Bin_tree_ord_defaxiom: AXIOM
+    Bin_tree_ord(Empty) = 0 AND
+     FORALL (elem: T, tree_left: Bin_tree, tree_right: Bin_tree):
+       Bin_tree_ord(Bin_T(elem, tree_left, tree_right)) = 1;
+
+  ord(x: Bin_tree): upto(1) =
+      CASES x OF Empty: 0, Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var): 1
+        ENDCASES
+
+  Bin_tree_Empty_extensionality: AXIOM
+    FORALL (Empty?_var: (Empty?), Empty?_var2: (Empty?)):
+      Empty?_var = Empty?_var2;
+
+  Bin_tree_Bin_T_extensionality: AXIOM
+    FORALL (Bin_T?_var: (Bin_T?), Bin_T?_var2: (Bin_T?)):
+      elem(Bin_T?_var) = elem(Bin_T?_var2) AND
+       tree_left(Bin_T?_var) = tree_left(Bin_T?_var2) AND
+        tree_right(Bin_T?_var) = tree_right(Bin_T?_var2)
+       IMPLIES Bin_T?_var = Bin_T?_var2;
+
+  Bin_tree_Bin_T_eta: AXIOM
+    FORALL (Bin_T?_var: (Bin_T?)):
+      Bin_T(elem(Bin_T?_var), tree_left(Bin_T?_var),
+            tree_right(Bin_T?_var))
+       = Bin_T?_var;
+
+  Bin_tree_elem_Bin_T: AXIOM
+    FORALL (Bin_T1_var: T, Bin_T2_var: Bin_tree, Bin_T3_var: Bin_tree):
+      elem(Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var)) = Bin_T1_var;
+
+  Bin_tree_tree_left_Bin_T: AXIOM
+    FORALL (Bin_T1_var: T, Bin_T2_var: Bin_tree, Bin_T3_var: Bin_tree):
+      tree_left(Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var)) = Bin_T2_var;
+
+  Bin_tree_tree_right_Bin_T: AXIOM
+    FORALL (Bin_T1_var: T, Bin_T2_var: Bin_tree, Bin_T3_var: Bin_tree):
+      tree_right(Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var)) = Bin_T3_var;
+
+  Bin_tree_inclusive: AXIOM
+    FORALL (Bin_tree_var: Bin_tree):
+      Empty?(Bin_tree_var) OR Bin_T?(Bin_tree_var);
+
+  Bin_tree_induction: AXIOM
+    FORALL (p: [Bin_tree -> boolean]):
+      (p(Empty) AND
+        FORALL (Bin_T1_var: T, Bin_T2_var: Bin_tree, Bin_T3_var: Bin_tree):
+          p(Bin_T2_var) AND p(Bin_T3_var) IMPLIES
+           p(Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var)))
+       IMPLIES FORALL (Bin_tree_var: Bin_tree): p(Bin_tree_var);
+
+  every(p: PRED[T])(a: Bin_tree):  boolean =
+      CASES a
+        OF Empty: TRUE,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             p(Bin_T1_var) AND
+              every(p)(Bin_T2_var) AND every(p)(Bin_T3_var)
+        ENDCASES;
+
+  every(p: PRED[T], a: Bin_tree):  boolean =
+      CASES a
+        OF Empty: TRUE,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             p(Bin_T1_var) AND
+              every(p, Bin_T2_var) AND every(p, Bin_T3_var)
+        ENDCASES;
+
+  some(p: PRED[T])(a: Bin_tree):  boolean =
+      CASES a
+        OF Empty: FALSE,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             p(Bin_T1_var) OR some(p)(Bin_T2_var) OR some(p)(Bin_T3_var)
+        ENDCASES;
+
+  some(p: PRED[T], a: Bin_tree):  boolean =
+      CASES a
+        OF Empty: FALSE,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             p(Bin_T1_var) OR some(p, Bin_T2_var) OR some(p, Bin_T3_var)
+        ENDCASES;
+
+  subterm(x: Bin_tree, y: Bin_tree):  boolean =
+      x = y OR
+       CASES y
+         OF Empty: FALSE,
+            Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+              subterm(x, Bin_T2_var) OR subterm(x, Bin_T3_var)
+         ENDCASES;
+
+  <<:  (strict_well_founded?[Bin_tree]) =
+      LAMBDA (x, y: Bin_tree):
+        CASES y
+          OF Empty: FALSE,
+             Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+               (x = Bin_T2_var OR x << Bin_T2_var) OR
+                (x = Bin_T3_var OR x << Bin_T3_var)
+          ENDCASES;
+
+  Bin_tree_well_founded: AXIOM strict_well_founded?[Bin_tree](<<);
+
+  reduce_nat(Empty?_fun: nat, Bin_T?_fun: [[T, nat, nat] -> nat]):
+        [Bin_tree -> nat] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree):
+        LET red: [Bin_tree -> nat] = reduce_nat(Empty?_fun, Bin_T?_fun) IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun,
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var))
+            ENDCASES;
+
+  REDUCE_nat(Empty?_fun: [Bin_tree -> nat],
+             Bin_T?_fun: [[T, nat, nat, Bin_tree] -> nat]):
+        [Bin_tree -> nat] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree):
+        LET red: [Bin_tree -> nat] = REDUCE_nat(Empty?_fun, Bin_T?_fun) IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun(Bin_tree_adtvar),
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var),
+                            Bin_tree_adtvar)
+            ENDCASES;
+
+  reduce_ordinal(Empty?_fun: ordinal,
+                 Bin_T?_fun: [[T, ordinal, ordinal] -> ordinal]):
+        [Bin_tree -> ordinal] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree):
+        LET red: [Bin_tree -> ordinal] =
+              reduce_ordinal(Empty?_fun, Bin_T?_fun)
+          IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun,
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var))
+            ENDCASES;
+
+  REDUCE_ordinal(Empty?_fun: [Bin_tree -> ordinal],
+                 Bin_T?_fun:
+                   [[T, ordinal, ordinal, Bin_tree] -> ordinal]):
+        [Bin_tree -> ordinal] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree):
+        LET red: [Bin_tree -> ordinal] =
+              REDUCE_ordinal(Empty?_fun, Bin_T?_fun)
+          IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun(Bin_tree_adtvar),
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var),
+                            Bin_tree_adtvar)
+            ENDCASES;
+ END Bin_tree_adt
+
+Bin_tree_adt_map[T: TYPE+, T1: TYPE+]: THEORY
+ BEGIN
+  ASSUMING
+   T_TCC1: ASSUMPTION EXISTS (x: T): TRUE;
+
+   T1_TCC1: ASSUMPTION EXISTS (x: T1): TRUE;
+  ENDASSUMING
+
+  IMPORTING Bin_tree_adt
+
+  map(f: [T -> T1])(a: Bin_tree[T]):  Bin_tree[T1] =
+      CASES a
+        OF Empty: Empty,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             Bin_T(f(Bin_T1_var), map(f)(Bin_T2_var), map(f)(Bin_T3_var))
+        ENDCASES;
+
+  map(f: [T -> T1], a: Bin_tree[T]):  Bin_tree[T1] =
+      CASES a
+        OF Empty: Empty,
+           Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+             Bin_T(f(Bin_T1_var), map(f, Bin_T2_var), map(f, Bin_T3_var))
+        ENDCASES;
+
+  every(R: [[T, T1] -> boolean])(x: Bin_tree[T], y: Bin_tree[T1]):
+        boolean =
+      Empty?(x) AND Empty?(y) OR
+            Bin_T?(x) AND Bin_T?(y) AND R(elem(x), elem(y))
+        AND every(R)(tree_left(x), tree_left(y))
+        AND every(R)(tree_right(x), tree_right(y));
+ END Bin_tree_adt_map
+
+Bin_tree_adt_reduce[T: TYPE+, range: TYPE]: THEORY
+ BEGIN
+  ASSUMING
+   T_TCC1: ASSUMPTION EXISTS (x: T): TRUE;
+  ENDASSUMING
+
+  IMPORTING Bin_tree_adt[T]
+
+  reduce(Empty?_fun: range, Bin_T?_fun: [[T, range, range] -> range]):
+        [Bin_tree[T] -> range] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree[T]):
+        LET red: [Bin_tree[T] -> range] = reduce(Empty?_fun, Bin_T?_fun) IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun,
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var))
+            ENDCASES;
+
+  REDUCE(Empty?_fun: [Bin_tree[T] -> range],
+         Bin_T?_fun: [[T, range, range, Bin_tree[T]] -> range]):
+        [Bin_tree[T] -> range] =
+      LAMBDA (Bin_tree_adtvar: Bin_tree[T]):
+        LET red: [Bin_tree[T] -> range] = REDUCE(Empty?_fun, Bin_T?_fun) IN
+          CASES Bin_tree_adtvar
+            OF Empty: Empty?_fun(Bin_tree_adtvar),
+               Bin_T(Bin_T1_var, Bin_T2_var, Bin_T3_var):
+                 Bin_T?_fun(Bin_T1_var, red(Bin_T2_var), red(Bin_T3_var),
+                            Bin_tree_adtvar)
+            ENDCASES;
+ END Bin_tree_adt_reduce
