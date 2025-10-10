@@ -141,15 +141,7 @@ Goldbach: THEORY
           Bin_T(lbt,Bt_left,Bt_right) : f(l) = lbt
     ENDCASES
 
-    Bin_tree_pred(Bt : Bin_tree, fl, fr : [list[nat]->list[nat]]) : RECURSIVE bool =
-    CASES Bt OF
-          Empty : TRUE,
-          Bin_T(l,Bt_left, Bt_right) : list_Bin_Tree(l,Bt_left,fl) AND
-                                       list_Bin_Tree(l,Bt_right,fr) AND
-                                       Bin_tree_pred(Bt_left,fl,fr) AND
-                                       Bin_tree_pred(Bt_right,fl,fr)
-    ENDCASES
-    MEASURE Bt BY <<
+    
 
 
     l_prime(p : (prime?) | p /= 2)(n : below[p]) : below[p] =
@@ -168,23 +160,17 @@ Goldbach: THEORY
     mapr_prime(p : (prime?) | p /= 2)(l : list[below[p]]) : list[below[p]] =
     map(r_prime(p))(l)
 
-    add_list(p : (prime?) | p /= 2)(l : list[list[below[p]]]) :
-    RECURSIVE list[list[below[p]]] =
-    IF null?(l) THEN (::)
-    ELSE cons(mapl_prime(p)(car(l)), cons( mapr_prime(p)(car(l)), add_list(p)(cdr(l))))
-    ENDIF
-    MEASURE length(l)
-
-    list_tree(p : (prime?) | p /= 2)(depth : nat, l : list[list[below[p]]]) : 
-    RECURSIVE list[list[list[below[p]]]] =
-    IF depth = 0 THEN (: l :)
-    ELSE cons(l, list_tree(p)(depth -1, add_list(p)(l)))
+    Bin_tree_build(p : (prime?) | p /= 2)
+                  (depth : nat, l : list[below[p]]) : RECURSIVE Bin_tree =
+    IF depth = 0 THEN Bin_T(l, Empty, Empty)
+    ELSE Bin_T(l, Bin_tree_build(p)(depth-1, mapl_prime(p)(l)),
+                  Bin_tree_build(p)(depth-1, mapr_prime(p)(l)))
     ENDIF
     MEASURE depth
 
-    IMPORTING append_append[list[nat]]
+    
 
-    list_tree_1 : CONJECTURE
+    %list_tree_1 : CONJECTURE
     
     
     %list_sum_split(i, n : nat) : RECURSIVE list[list[nat]] =

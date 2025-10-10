@@ -1,0 +1,45 @@
+%%
+% @theory: Bin_tree2list
+% @author: thiago
+% @date: Wed, 08 Oct 2025 19:42:33 GMT
+%%
+Bin_tree2list[T : TYPE+]: THEORY
+  BEGIN
+    IMPORTING Bin_tree[T]
+
+    BT2list(bt : Bin_tree) : RECURSIVE list[T] =
+    CASES bt OF
+        Empty : (::),
+        Bin_T(e, left, right) : append(BT2list(left),cons(e,BT2list(right)))
+    ENDCASES
+    MEASURE bt BY <<
+
+    BT_length(bt : Bin_tree) : RECURSIVE nat =
+    CASES bt OF
+        Empty : 0,
+        Bin_T(e, left, right) : 1 + BT_length(left) 
+                                  + BT_length(right)
+    ENDCASES
+    MEASURE bt BY <<
+
+    BT_sym?(bt : Bin_tree) : RECURSIVE bool =
+    CASES bt OF
+        Empty : TRUE,
+        Bin_T(e, left, right) : BT_length(left) = BT_length(right) AND
+                                BT_sym?(left) AND BT_sym?(right)
+    ENDCASES
+    MEASURE bt BY <<
+
+    list_pos_pred(l : list[T], P : [T->bool]) : RECURSIVE list[below[length(l)]] =
+    IF null?(l) THEN (::)
+    ELSIF P(car(l)) THEN cons(0,map(lambda(n : nat) : n+1)(list_pos_pred(cdr(l),P)))
+    ELSE map(LAMBDA(n : nat) : n+1)(list_pos_pred(cdr(l),P))
+    ENDIF
+    MEASURE length(l)
+
+    
+   
+    
+
+    
+  END Bin_tree2list

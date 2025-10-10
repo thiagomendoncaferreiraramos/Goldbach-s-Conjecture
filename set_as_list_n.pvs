@@ -1,0 +1,21 @@
+%%
+% @theory: set_as_list_n
+% @author: thiago
+% @date: Fri, 10 Oct 2025 20:31:09 GMT
+%%
+set_as_list_n[N : nat]: THEORY
+  BEGIN 
+    IMPORTING structures@set_as_list[below[N]]
+
+    no_rep_list?(l : list[below[N]]) :bool =
+    FORALL (i,j : below[length(l)]) :
+    nth(l,i) = nth(l,j) => i = j
+
+    list_intersec_length : CONJECTURE
+    FORALL(l1, l2: (no_rep_list?)) :
+    length(l1) + length(l2) > N =>
+    intersection_sl(l1,l2) > length(l1) + length(l2) - N
+
+   
+
+  END set_as_list_n
