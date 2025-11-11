@@ -11,7 +11,7 @@ Goldbach: THEORY
     %List of primes less than or equal then n.
     list_of_primes(n : nat): RECURSIVE list[(prime?)] =
     IF n < 2 THEN (::)
-    ELSIF prime?(n) THEN append(list_of_primes(n-1),(:n:))
+    ELSIF prime?(n) THEN cons(n,list_of_primes(n-1))
     ELSE list_of_primes(n-1)
     ENDIF
     MEASURE n
@@ -35,7 +35,7 @@ Goldbach: THEORY
     ENDIF
     MEASURE i
 
-  
+    
 
     signature_pred(pl : list[posnat])(l : list[nat] 
           | length(l) = length(pl)) : bool =
@@ -59,6 +59,35 @@ Goldbach: THEORY
     ELSE p - nmod(-n, p)
     ENDIF
 
+    diff(x,y : nat) : nat =
+    IF x = 0 AND y = 0 THEN 1
+    ELSIF (x = 0 AND y = 1) OR
+          (x = 1 AND y = 0) THEN 2
+    ELSE 0
+    ENDIF
+
+    diff_build(p1 : (prime?), p2 : (prime?) | p1 /= p2)
+                (e1 : below[p1], e2 : below[p2]) : below[p2] =
+    nmod(linear_comb(p1,p2)`2 * nmod_pos(e2 - e1, p2), p2)
+
+
+    %list-diff-pred(l : list[posnat])
+
+    tuple_buid_list_aux(p : (prime?), e : below[p])(l : list[(prime?)])
+    (list_t : list[[nat,nat]])
+    : RECURSIVE list[[nat,nat]] =
+    IF length(list_t) = 1 THEN (: (diff_build(p,car(l))(e , car(list_t)`1),
+                                   diff_build(p,car(l))(e , car(list_t)`2)) :)
+    ELSE car((diff_build(p,car(l))(e , car(list_t)`1),
+              diff_build(p,car(l))(e , car(list_t)`2)), 
+                  tuple_buid_list_aux(p, e)(cdr(l))(cdr(list_t)))
+    ENDIF
+    MEASURE length(l)
+
+    %tuple_buid_list(l : list[nat])(list_t : list[[nat,nat]]) : list[[nat,nat]] =
+    
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     sign2nats(primes_l : (cons?[posnat]) | mut_primes(primes_l))
              (signs : (signature_pred(primes_l))) :
     RECURSIVE [nat,nat] =
@@ -80,6 +109,12 @@ Goldbach: THEORY
     ELSE cons(p, list_diff(p-1)(n))
     ENDIF
     MEASURE p
+
+    list_less(k : posnat) : RECURSIVE list[posnat] =
+    IF k = 1 THEN (:1:)
+    ELSE append(list_less(k-1),(:k:))
+    ENDIF
+    MEASURE k
 
     list_l_diff(primes_l : list[posnat])
                (signs : list[nat] | length(signs) = length(primes_l)):
