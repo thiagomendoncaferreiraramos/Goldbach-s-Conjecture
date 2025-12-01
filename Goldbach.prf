@@ -1,5 +1,8 @@
 (Goldbach
  (list_of_primes_TCC1 0
+  (list_of_primes_TCC1-1 nil 3972830473 ("" (subtype-tcc) nil nil) nil
+   nil (list_of_primes subtype "(: :)" "list[(prime?)]")))
+ (list_of_primes_TCC2 0
   (list_of_primes_TCC1-1 nil 3944107465 ("" (subtype-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
@@ -24,41 +27,17 @@
     (real_ge_is_total_order name-judgement "(total_order?[real])"
      real_props nil)
     (/= const-decl "boolean" notequal nil)
-    (divides const-decl "bool" divides nil)
     (prime? const-decl "bool" primes ints))
    nil
    (list_of_primes subtype "(number_fields.-)(Goldbach.n, 1)" "nat")))
- (list_of_primes_TCC2 0
+ (list_of_primes_TCC3 0
   (list_of_primes_TCC2-1 nil 3944107465 ("" (termination-tcc) nil nil)
    ((/= const-decl "boolean" notequal nil)
-    (divides const-decl "bool" divides nil)
     (prime? const-decl "bool" primes ints))
    nil
    (list_of_primes termination
     "Goldbach.list_of_primes((number_fields.-)(Goldbach.n, 1))"
     "nil")))
- (list_of_primes_TCC3 0
-  (list_of_primes_TCC3-1 nil 3944107465 ("" (grind) nil nil)
-   ((boolean nonempty-type-decl nil booleans nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (NOT const-decl "[bool -> bool]" booleans nil)
-    (number nonempty-type-decl nil numbers nil)
-    (number_field_pred const-decl "[number -> boolean]" number_fields
-     nil)
-    (number_field nonempty-type-from-decl nil number_fields nil)
-    (real_pred const-decl "[number_field -> boolean]" reals nil)
-    (real nonempty-type-from-decl nil reals nil)
-    (>= const-decl "bool" reals nil)
-    (rational_pred const-decl "[real -> boolean]" rationals nil)
-    (rational nonempty-type-from-decl nil rationals nil)
-    (integer_pred const-decl "[rational -> boolean]" integers nil)
-    (int nonempty-type-eq-decl nil integers nil)
-    (nat nonempty-type-eq-decl nil naturalnumbers nil)
-    (/= const-decl "boolean" notequal nil)
-    (divides const-decl "bool" divides nil)
-    (prime? const-decl "bool" primes ints)
-    (every adt-def-decl "boolean" list_adt nil))
-   nil (list_of_primes subtype "(: Goldbach.n :)" "list[(prime?)]")))
  (list_of_primes_TCC4 0
   (list_of_primes_TCC4-1 nil 3944107761 ("" (subtype-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
@@ -82,14 +61,12 @@
     (real_ge_is_total_order name-judgement "(total_order?[real])"
      real_props nil)
     (/= const-decl "boolean" notequal nil)
-    (divides const-decl "bool" divides nil)
     (prime? const-decl "bool" primes ints))
    nil
    (list_of_primes subtype "(number_fields.-)(Goldbach.n, 1)" "nat")))
  (list_of_primes_TCC5 0
   (list_of_primes_TCC4-1 nil 3944107465 ("" (grind) nil nil)
    ((/= const-decl "boolean" notequal nil)
-    (divides const-decl "bool" divides nil)
     (prime? const-decl "bool" primes ints))
    nil
    (list_of_primes termination
@@ -198,15 +175,14 @@
     (well_founded? const-decl "bool" orders nil)
     (pred type-eq-decl nil defined_types nil))
    shostak))
- (prod_list_TCC1 0
-  (prod_list_TCC1-1 nil 3948913552 ("" (subtype-tcc) nil nil)
+ (list_prod_TCC1 0
+  (list_prod_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
     (list type-decl nil list_adt nil)
-    (every adt-def-decl "boolean" list_adt nil)
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -219,16 +195,15 @@
     (>= const-decl "bool" reals nil)
     (int nonempty-type-eq-decl nil integers nil)
     (nat nonempty-type-eq-decl nil naturalnumbers nil))
-   nil (prod_list subtype "Goldbach.l" "(list_adt[nat].cons?)")))
- (prod_list_TCC2 0
-  (prod_list_TCC2-1 nil 3948913552 ("" (termination-tcc) nil nil)
+   nil (list_prod subtype "Goldbach.l" "(list_adt[nat].cons?)")))
+ (list_prod_TCC2 0
+  (list_prod_TCC2-1 nil 3972478554 ("" (termination-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
     (list type-decl nil list_adt nil)
-    (every adt-def-decl "boolean" list_adt nil)
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -247,13 +222,1987 @@
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil))
    nil
-   (prod_list termination
-    "Goldbach.prod_list(list_adt[nat].cdr(Goldbach.l))" "nil")))
+   (list_prod termination
+    "Goldbach.list_prod(list_adt[nat].cdr(Goldbach.l))" "nil")))
+ (list_prod_greater0 0
+  (list_prod_greater0-1 nil 3973357092
+   ("" (measure-induct+ "length(l)" "l")
+    (("" (expand "list_prod" 1)
+      (("" (lift-if)
+        (("" (prop)
+          (("1" (assert) nil nil)
+           ("2" (inst -1 "cdr(x!1)")
+            (("2" (prop)
+              (("1" (inst -2 "0")
+                (("1" (expand "nth")
+                  (("1" (grind)
+                    (("1" (rewrite "pos_times_gt") nil nil)) nil))
+                  nil)
+                 ("2" (grind) nil nil))
+                nil)
+               ("2" (skeep)
+                (("2" (inst -1 "i+1")
+                  (("1" (expand "nth" -1) (("1" (propax) nil nil)) nil)
+                   ("2" (typepred "i") (("2" (grind) nil nil)) nil))
+                  nil))
+                nil)
+               ("3" (grind) nil nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (car adt-accessor-decl "[(cons?) -> T]" list_adt nil)
+    (pos_times_gt formula-decl nil real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (cdr adt-accessor-decl "[(cons?) -> list]" list_adt nil)
+    (list_prod def-decl "nat" Goldbach nil)
+    (nth def-decl "T" list_props nil) (> const-decl "bool" reals nil)
+    (below type-eq-decl nil nat_types nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (list type-decl nil list_adt nil)
+    (number nonempty-type-decl nil numbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
+ (list_prod_l2_TCC1 0
+  (list_prod_l2_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (> const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (above nonempty-type-eq-decl nil int_types nil))
+   nil (list_prod_l2 subtype "Goldbach.l" "(list_adt[nat].cons?)")))
+ (list_prod_l2_TCC2 0
+  (list_prod_l2_TCC2-1 nil 3972478554 ("" (termination-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (> const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (above nonempty-type-eq-decl nil int_types nil)
+    (length def-decl "nat" list_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   nil
+   (list_prod_l2 termination
+    "Goldbach.list_prod_l2(list_adt[above[2]].cdr(Goldbach.l))"
+    "nil")))
+ (list_prod_l2_TCC3 0
+  (list_prod_l2_TCC3-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "v(cdr[above[2]](l))")
+      (("" (typepred "l")
+        (("" (expand "every" -1)
+          (("" (lift-if)
+            (("" (prop)
+              (("" (case "car(l) - 2 > 0")
+                (("1" (name-replace "i" "car(l) - 2")
+                  (("1" (lemma "both_sides_times_pos_ge1")
+                    (("1" (inst -1 "i" "v(cdr[above[2]](l))" "0")
+                      (("1" (assert) nil nil) ("2" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (assert) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((cdr adt-accessor-decl "[(cons?) -> list]" list_adt nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (length def-decl "nat" list_props nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (above nonempty-type-eq-decl nil int_types nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil) (>= const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (posreal nonempty-type-eq-decl nil real_types nil)
+    (even_times_int_is_even application-judgement "even_int" integers
+     nil)
+    (both_sides_times_pos_ge1 formula-decl nil real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (car adt-accessor-decl "[(cons?) -> T]" list_adt nil))
+   nil
+   (list_prod_l2 subtype
+    "number_fields.*(((number_fields.-)(list_adt[nat].car(Goldbach.l), 2)), Goldbach.list_prod_l2(list_adt[above[2]].cdr(Goldbach.l)))"
+    "nat")))
+ (list_sieve_aux_TCC1 0
+  (list_sieve_aux_TCC1-1 nil 3972581930 ("" (subtype-tcc) nil nil) nil
+   nil
+   (list_sieve_aux subtype "(number_fields.-)(Goldbach.m, Goldbach.r)"
+    "naturalnumber")))
+ (list_sieve_aux_TCC2 0
+  (list_sieve_aux_TCC4-1 nil 3972581930 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (prime? const-decl "bool" primes ints)
+    (< const-decl "bool" reals nil)
+    (below type-eq-decl nil nat_types nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil))
+   nil
+   (list_sieve_aux subtype "(number_fields.+)(Goldbach.r, Goldbach.p)"
+    "below[1 + m]")))
+ (list_sieve_aux_TCC3 0
+  (list_sieve_aux_TCC5-1 nil 3972581930 ("" (termination-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (prime? const-decl "bool" primes ints)
+    (< const-decl "bool" reals nil)
+    (below type-eq-decl nil nat_types nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil))
+   nil
+   (list_sieve_aux termination
+    "Goldbach.list_sieve_aux(Goldbach.m, Goldbach.p, (number_fields.+)(Goldbach.r, Goldbach.p))"
+    "nil")))
+ (member_list_sieve_aux 0
+  (member_list_sieve_aux-1 nil 3973009886
+   ("" (measure-induct+ "m-r" ("m" "r"))
+    (("" (skeep)
+      (("" (expand "list_sieve_aux" -2)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (grind) nil nil)
+             ("2" (expand "member" -1)
+              (("2" (prop)
+                (("1" (assert) nil nil)
+                 ("2" (inst -2 "x!1" "p+x!2")
+                  (("1" (inst -2 "p" "k")
+                    (("1" (assert)
+                      (("1" (assert)
+                        (("1" (prop)
+                          (("1" (assert)
+                            (("1" (hide -2)
+                              (("1"
+                                (grind)
+                                (("1"
+                                  (case "p + x!2 >= x!2")
+                                  (("1" (assert) nil nil)
+                                   ("2"
+                                    (lemma "both_sides_plus_ge2")
+                                    (("2"
+                                      (inst -1 "p" "0" "x!2")
+                                      (("2"
+                                        (flatten)
+                                        (("2"
+                                          (case "p >= 0")
+                                          (("1" (assert) nil nil)
+                                           ("2"
+                                            (typepred "p")
+                                            (("2" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (assert)
+                            (("2" (case "p > 0")
+                              (("1" (grind) nil nil)
+                               ("2"
+                                (typepred "p")
+                                (("2" (grind) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (case "p > 0 ")
+                    (("1" (grind) nil nil)
+                     ("2" (typepred "p")
+                      (("2" (hide -2) (("2" (grind) nil nil)) nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((int_times_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (both_sides_plus_ge2 formula-decl nil real_props nil)
+    (> const-decl "bool" reals nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (list_sieve_aux def-decl "list[nat]" Goldbach nil)
+    (member def-decl "bool" list_props nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (below type-eq-decl nil nat_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (< const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
+ (card_sl_list_sieve_aux_TCC1 0
+  (card_sl_list_sieve_aux_TCC1-1 nil 3973008830
+   ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (prime? const-decl "bool" primes ints)
+    (< const-decl "bool" reals nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (below type-eq-decl nil nat_types nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil))
+   nil (card_sl_list_sieve_aux subtype "Goldbach.p" "posnat")))
+ (card_sl_list_sieve_aux 0
+  (card_sl_list_sieve_aux-1 nil 3973008847
+   ("" (measure-induct+ "m-r" ("m" "r"))
+    (("1" (skeep)
+      (("1" (expand "list_sieve_aux" 1)
+        (("1" (lift-if)
+          (("1" (prop)
+            (("1" (typepred "x!1")
+              (("1" (typepred "x!2")
+                (("1" (expand "card_sl" 1)
+                  (("1" (expand "member")
+                    (("1" (expand "card_sl")
+                      (("1" (lemma "div_nat")
+                        (("1" (inst -1 "p" "x!1-x!2")
+                          (("1" (assert) nil nil)
+                           ("2" (typepred "p") (("2" (grind) nil nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (expand "card_sl" 2)
+              (("2" (lift-if)
+                (("2" (prop)
+                  (("1" (lemma "member_list_sieve_aux")
+                    (("1" (inst?)
+                      (("1" (assert)
+                        (("1" (hide-all-but -1)
+                          (("1" (case "p > 0 ")
+                            (("1" (grind) nil nil)
+                             ("2" (typepred "p")
+                              (("2" (grind) nil nil)) nil))
+                            nil))
+                          nil))
+                        nil)
+                       ("2" (hide-all-but 1)
+                        (("2" (case "p > 0")
+                          (("1" (grind) nil nil)
+                           ("2" (typepred "p") (("2" (grind) nil nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (inst -1 "x!1" "p+x!2")
+                    (("1" (inst -1 "p")
+                      (("1" (prop)
+                        (("1" (lemma "div_nat")
+                          (("1" (inst -1 "p" "x!1-x!2")
+                            (("1" (assert) nil nil)
+                             ("2" (typepred "p")
+                              (("2"
+                                (hide-all-but (-1 1))
+                                (("2" (grind) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (hide-all-but 1)
+                          (("2" (case "p > 0")
+                            (("1" (grind) nil nil)
+                             ("2" (typepred "p")
+                              (("2" (grind) nil nil)) nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (hide-all-but 1)
+                      (("2" (case "p >0 ")
+                        (("1" (grind) nil nil)
+                         ("2" (typepred "p") (("2" (grind) nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("2" (typepred "p!1") (("2" (grind) nil nil)) nil)
+     ("3" (typepred "p!1") (("3" (grind) nil nil)) nil)
+     ("4" (grind) nil nil) ("5" (grind) nil nil) ("6" (grind) nil nil)
+     ("7" (grind) nil nil) ("8" (grind) nil nil) ("9" (grind) nil nil)
+     ("10" (grind) nil nil) ("11" (grind) nil nil)
+     ("12" (grind) nil nil) ("13" (grind) nil nil)
+     ("14" (grind) nil nil)
+     ("15" (typepred "p!1") (("15" (grind) nil nil)) nil))
+    nil)
+   ((even_minus_odd_is_odd application-judgement "odd_int" integers
+     nil)
+    (odd_minus_odd_is_even application-judgement "even_int" integers
+     nil)
+    (rat_minus_rat_is_rat application-judgement "rat" rationals nil)
+    (rat_div_nzrat_is_rat application-judgement "rat" rationals nil)
+    (member_list_sieve_aux formula-decl nil Goldbach nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (div_nat formula-decl nil div_nat ints)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (div const-decl "upto(n)" div_nat ints)
+    (upto nonempty-type-eq-decl nil naturalnumbers nil)
+    (<= const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (list_sieve_aux def-decl "list[nat]" Goldbach nil)
+    (card_sl def-decl "{n: nat | n = Card(list2set(l))}" set_as_list
+     structures)
+    (list2set def-decl "{s: finite_set[T] | s = {x | member(x, l)}}"
+     set_as_list structures)
+    (member def-decl "bool" list_props nil)
+    (Card const-decl "nat" finite_sets nil)
+    (finite_set type-eq-decl nil finite_sets nil)
+    (is_finite const-decl "bool" finite_sets nil)
+    (set type-eq-decl nil sets nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (> const-decl "bool" reals nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (below type-eq-decl nil nat_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (< const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
+ (list_sieve_TCC1 0
+  (list_sieve_TCC1-1 nil 3972581930 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (prime? const-decl "bool" primes ints)
+    (/= const-decl "boolean" notequal nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil))
+   nil (list_sieve subtype "Goldbach.p" "nat")))
+ (list_sieve_TCC2 0
+  (list_sieve_TCC2-1 nil 3973008348
+   ("" (skeep) (("" (typepred "r") (("" (propax) nil nil)) nil)) nil)
+   ((+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (below type-eq-decl nil nat_types nil)
+    (prime? const-decl "bool" primes ints)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil))
+   nil (list_sieve subtype "Goldbach.r" "below[1 + m]")))
+ (list_sieve0_TCC1 0
+  (list_sieve0_TCC1-1 nil 3972583055
+   ("" (skeep) (("" (typepred "r") (("" (assert) nil nil)) nil)) nil)
+   ((below type-eq-decl nil nat_types nil)
+    (prime? const-decl "bool" primes ints)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (< const-decl "bool" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   nil (list_sieve0 subtype "0" "below[1 + m]")))
+ (list_sieve_member 0
+  (list_sieve_member-1 nil 3973613541
+   ("" (measure-induct+ "m-r2" ("m" "r2")) (("" (postpone) nil nil))
+    nil)
+   nil shostak))
+ (list_sieve_disjoint 0
+  (list_sieve_disjoint-1 nil 3973612173
+   ("" (measure-induct+ "m-r1 + m-r2" ("m" "r1" "r2"))
+    (("" (skeep)
+      (("" (expand "list_sieve_aux" 2 1)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (expand "list_sieve_aux" 1)
+              (("1" (lift-if)
+                (("1" (prop)
+                  (("1" (expand "disjoint_sl?" 1)
+                    (("1" (expand "intersection_sl")
+                      (("1" (prop)
+                        (("1" (expand "member")
+                          (("1" (expand "member")
+                            (("1" (replaces -1)
+                              (("1"
+                                (assert)
+                                (("1"
+                                  (expand "abs")
+                                  (("1"
+                                    (expand "divides")
+                                    (("1"
+                                      (inst 2 "0")
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (expand "intersection_sl")
+                          (("2" (grind) nil nil)) nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (expand "disjoint_sl?" 2)
+                    (("2" (expand "intersection_sl")
+                      (("2" (prop)
+                        (("1" (expand "member")
+                          (("1" (prop)
+                            (("1" (replaces -1) nil nil)
+                             ("2" (postpone) nil nil))
+                            nil))
+                          nil)
+                         ("2" (postpone) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (postpone) nil nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil shostak))
+ (list_less_TCC1 0
+  (list_less_TCC1-1 nil 3972583055 ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil))
+   nil (list_less subtype "(number_fields.-)(Goldbach.n, 1)" "nat")))
+ (list_less_TCC2 0
+  (list_less_TCC2-1 nil 3972478554 ("" (termination-tcc) nil nil) nil
+   nil
+   (list_less termination
+    "Goldbach.list_less((number_fields.-)(Goldbach.n, 1))" "nil")))
+ (list_less_member 0
+  (list_less_member-1 nil 3972832223
+   ("" (measure-induct+ "n" "n")
+    (("" (skeep)
+      (("" (expand "list_less" 1)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (grind) nil nil) ("2" (grind) nil nil)
+             ("3" (expand "member" -1)
+              (("3" (prop)
+                (("1" (assert) nil nil)
+                 ("2" (inst -2 "x!1-1")
+                  (("1" (inst -2 "k") (("1" (assert) nil nil)) nil)
+                   ("2" (assert) nil nil))
+                  nil))
+                nil))
+              nil)
+             ("4" (expand "member" 1)
+              (("4" (flatten)
+                (("4" (inst -2 "x!1-1")
+                  (("1" (assert)
+                    (("1" (inst -2 "k") (("1" (assert) nil nil)) nil))
+                    nil)
+                   ("2" (assert) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_le_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (<= const-decl "bool" reals nil)
+    (list_less def-decl "list[nat]" Goldbach nil)
+    (member def-decl "bool" list_props nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (IFF const-decl "[bool, bool -> bool]" booleans nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
+ (card_sl_list_less 0
+  (card_sl_list_less-1 nil 3972831999
+   ("" (measure-induct+ "n" "n")
+    (("" (expand "list_less" 1)
+      (("" (lift-if)
+        (("" (prop)
+          (("1" (replace -1)
+            (("1" (expand "card_sl" 1) (("1" (grind) nil nil)) nil))
+            nil)
+           ("2" (expand "card_sl" 2)
+            (("2" (lift-if)
+              (("2" (prop)
+                (("1" (rewrite "list_less_member") nil nil)
+                 ("2" (inst -1 "x!1-1")
+                  (("1" (assert) nil nil) ("2" (assert) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_le_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (list_less_member formula-decl nil Goldbach nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (list_less def-decl "list[nat]" Goldbach nil)
+    (card_sl def-decl "{n: nat | n = Card(list2set(l))}" set_as_list
+     structures)
+    (list2set def-decl "{s: finite_set[T] | s = {x | member(x, l)}}"
+     set_as_list structures)
+    (member def-decl "bool" list_props nil)
+    (Card const-decl "nat" finite_sets nil)
+    (finite_set type-eq-decl nil finite_sets nil)
+    (is_finite const-decl "bool" finite_sets nil)
+    (set type-eq-decl nil sets nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
  (signature_pred_TCC1 0
   (signature_pred_TCC1-1 nil 3949604185 ("" (subtype-tcc) nil nil) nil
    nil
    (signature_pred subtype "Goldbach.i"
-    "below[length[int](list_of_primes(n))]")))
+    "below[length[nonneg_int](pl)]")))
+ (sieve_union_TCC1 0
+  (sieve_union_TCC1-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "pl")
+      (("" (rewrite "every_forall")
+        (("" (rewrite "every_forall")
+          (("" (skeep)
+            (("" (inst?)
+              (("" (flatten)
+                (("" (assert)
+                  (("" (expand "prime?")
+                    (("" (assert)
+                      (("" (prop)
+                        (("1" (assert) nil nil) ("2" (grind) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (>= const-decl "bool" reals nil) (> const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (every_forall formula-decl nil more_list_props structures))
+   nil (sieve_union subtype "Goldbach.pl" "list[posnat]")))
+ (sieve_union_TCC2 0
+  (sieve_union_TCC2-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "pl")
+      (("" (typepred "rl") (("" (grind) nil nil)) nil)) nil))
+    nil)
+   ((cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (/= const-decl "boolean" notequal nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (odd_plus_even_is_odd application-judgement "odd_int" integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (length def-decl "nat" list_props nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (signature_pred const-decl "bool" Goldbach nil))
+   nil (sieve_union subtype "Goldbach.rl" "(list_adt[nat].cons?)")))
+ (sieve_union_TCC3 0
+  (sieve_union_TCC3-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "rl")
+      (("" (expand "signature_pred")
+        (("" (inst -3 "0")
+          (("1" (expand "nth") (("1" (propax) nil nil)) nil)
+           ("2" (typepred "pl") (("2" (grind) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((signature_pred const-decl "bool" Goldbach nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (< const-decl "bool" reals nil)
+    (below type-eq-decl nil nat_types nil)
+    (nth def-decl "T" list_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (/= const-decl "boolean" notequal nil))
+   nil
+   (sieve_union subtype "list_adt[nat].car(Goldbach.rl)"
+    "{r: nat_types[list_adt[(primes.prime?)].car(Goldbach.pl)].below | reals.<(r, (number_fields.+)(1, Goldbach.m))}")))
+ (sieve_union_TCC4 0
+  (sieve_union_TCC4-1 nil 3972478554 ("" (grind) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (signature_pred const-decl "bool" Goldbach nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (length def-decl "nat" list_props nil))
+   nil (sieve_union subtype "Goldbach.rl" "(list_adt[nat].cons?)")))
+ (sieve_union_TCC5 0
+  (sieve_union_TCC5-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "rl")
+      (("" (expand "signature_pred")
+        (("" (inst -3 "0")
+          (("1" (expand "nth") (("1" (propax) nil nil)) nil)
+           ("2" (typepred "pl") (("2" (grind) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((signature_pred const-decl "bool" Goldbach nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (< const-decl "bool" reals nil)
+    (below type-eq-decl nil nat_types nil)
+    (nth def-decl "T" list_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (/= const-decl "boolean" notequal nil))
+   nil
+   (sieve_union subtype "list_adt[nat].car(Goldbach.rl)"
+    "{r: nat_types[list_adt[(primes.prime?)].car(Goldbach.pl)].below | reals.<(r, (number_fields.+)(1, Goldbach.m))}")))
+ (sieve_union_TCC6 0
+  (sieve_union_TCC6-1 nil 3972478554 ("" (grind) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (>= const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (signature_pred const-decl "bool" Goldbach nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (length def-decl "nat" list_props nil))
+   nil
+   (sieve_union subtype "list_adt[(primes.prime?)].cdr(Goldbach.pl)"
+    "(list_adt[(primes.prime?)].cons?)")))
+ (sieve_union_TCC7 0
+  (sieve_union_TCC7-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "rl")
+      (("" (expand "length" -2)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (assert) nil nil) ("2" (assert) nil nil)
+             ("3" (assert) nil nil)
+             ("4" (assert)
+              (("4" (expand "signature_pred")
+                (("4" (skeep)
+                  (("4" (inst -3 "i+1")
+                    (("1" (expand "nth" -3) (("1" (propax) nil nil))
+                      nil)
+                     ("2" (typepred "i") (("2" (grind) nil nil)) nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((signature_pred const-decl "bool" Goldbach nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (nth def-decl "T" list_props nil) (< const-decl "bool" reals nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (cdr adt-accessor-decl "[(cons?) -> list]" list_adt nil)
+    (below type-eq-decl nil nat_types nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil))
+   nil
+   (sieve_union subtype "list_adt[nat].cdr(Goldbach.rl)"
+    "(Goldbach.signature_pred(list_adt[(primes.prime?)].cdr(Goldbach.pl), Goldbach.m))")))
+ (sieve_union_TCC8 0
+  (sieve_union_TCC8-1 nil 3972478554 ("" (grind) nil nil)
+   ((length def-decl "nat" list_props nil)) nil
+   (sieve_union termination
+    "Goldbach.sieve_union(Goldbach.m, list_adt[(primes.prime?)].cdr(Goldbach.pl), list_adt[nat].cdr(Goldbach.rl))"
+    "nil")))
+ (sieve_union_lemma_TCC1 0
+  (sieve_union_lemma_TCC2-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "pl")
+      (("" (rewrite "every_forall")
+        (("" (rewrite "every_forall")
+          (("" (skeep)
+            (("" (inst -1 "n")
+              (("" (flatten)
+                (("" (assert) (("" (inst -7 "n") nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (> const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (below type-eq-decl nil nat_types nil)
+    (every_forall formula-decl nil more_list_props structures))
+   nil (sieve_union_lemma subtype "Goldbach.pl" "list[above[2]]")))
+ (sieve_union_lemma_TCC2 0
+  (sieve_union_lemma_TCC3-1 nil 3972478554
+   ("" (skeep)
+    (("" (typepred "pl")
+      (("" (rewrite "every_forall")
+        (("" (rewrite "every_forall")
+          (("" (skeep)
+            (("" (inst?)
+              (("" (flatten) (("" (assert) (("" (grind) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (list type-decl nil list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (/= const-decl "boolean" notequal nil)
+    (every_forall formula-decl nil more_list_props structures))
+   nil (sieve_union_lemma subtype "Goldbach.pl" "list[nat]")))
+ (sieve_union_lemma_TCC3 0
+  (sieve_union_lemma_TCC4-1 nil 3972478554
+   ("" (measure-induct+ "length(pl)" "pl")
+    (("1" (skeep)
+      (("1" (expand "list_prod" -3)
+        (("1" (inst -1 "cdr(x!1)")
+          (("1" (inst -1 "m" "cdr(rl)")
+            (("1" (prop)
+              (("1" (lemma "zero_times3")
+                (("1" (inst?)
+                  (("1" (inst -2 "0")
+                    (("1" (grind) nil nil)
+                     ("2" (typepred "x!1") (("2" (grind) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (skeep)
+                (("2" (inst -1 "i+1")
+                  (("1" (grind) nil nil)
+                   ("2" (typepred "i") (("2" (grind) nil nil)) nil))
+                  nil))
+                nil)
+               ("3" (grind) nil nil))
+              nil)
+             ("2" (typepred "rl")
+              (("2" (prop)
+                (("1" (expand "length" -2)
+                  (("1" (lift-if)
+                    (("1" (prop)
+                      (("1" (assert) nil nil) ("2" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (expand "signature_pred")
+                  (("2" (skeep)
+                    (("2" (inst -3 "i+1")
+                      (("1" (grind) nil nil)
+                       ("2" (typepred "i")
+                        (("2" (expand "length" 1)
+                          (("2" (lift-if)
+                            (("2" (prop)
+                              (("1"
+                                (typepred "x!1")
+                                (("1" (grind) nil nil))
+                                nil)
+                               ("2"
+                                (typepred "x!1")
+                                (("2" (grind) nil nil))
+                                nil)
+                               ("3" (grind) nil nil)
+                               ("4" (grind) nil nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (typepred "rl")
+              (("3" (typepred "x!1") (("3" (grind) nil nil)) nil))
+              nil))
+            nil)
+           ("2" (expand "list_prod" -2)
+            (("2" (assert)
+              (("2" (inst -1 "0")
+                (("1" (grind) nil nil)
+                 ("2" (typepred "x!1") (("2" (grind) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("2" (typepred "y!1")
+      (("2" (rewrite "every_forall")
+        (("2" (rewrite "every_forall")
+          (("2" (skeep)
+            (("2" (inst -1 "n")
+              (("2" (flatten)
+                (("2" (assert) (("2" (grind) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("3" (typepred "y!1")
+      (("3" (rewrite "every_forall")
+        (("3" (rewrite "every_forall")
+          (("3" (skeep)
+            (("3" (inst?)
+              (("3" (flatten)
+                (("3" (assert) (("3" (grind) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("4" (typepred "y!1")
+      (("4" (rewrite "every_forall")
+        (("4" (rewrite "every_forall")
+          (("4" (skeep)
+            (("4" (inst?)
+              (("4" (flatten)
+                (("4" (assert) (("4" (grind) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("5" (typepred "pl!1")
+      (("5" (rewrite "every_forall")
+        (("5" (skeep)
+          (("5" (rewrite "every_forall")
+            (("5" (skeep)
+              (("5" (inst?)
+                (("5" (flatten)
+                  (("5" (assert) (("5" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("6" (typepred "pl!1")
+      (("6" (rewrite "every_forall")
+        (("6" (rewrite "every_forall")
+          (("6" (skeep)
+            (("6" (inst?)
+              (("6" (flatten)
+                (("6" (assert) (("6" (grind) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (below type-eq-decl nil naturalnumbers nil)
+    (every_forall formula-decl nil more_list_props structures)
+    (car adt-accessor-decl "[(cons?) -> T]" list_adt nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (zero_times3 formula-decl nil real_props nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (cdr adt-accessor-decl "[(cons?) -> list]" list_adt nil)
+    (list_prod def-decl "nat" Goldbach nil)
+    (/= const-decl "boolean" notequal nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (signature_pred const-decl "bool" Goldbach nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (below type-eq-decl nil nat_types nil)
+    (nth def-decl "T" list_props nil) (> const-decl "bool" reals nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (length def-decl "nat" list_props nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
+    (prime? const-decl "bool" primes ints)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (list type-decl nil list_adt nil)
+    (number nonempty-type-decl nil numbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   nil
+   (sieve_union_lemma subtype "Goldbach.list_prod(Goldbach.pl)"
+    "nznum")))
+ (sieve_union_lemma 0
+  (sieve_union_lemma-1 nil 3972478554
+   ("" (measure-induct+ "length(pl)" pl)
+    (("1" (skeep)
+      (("1" (expand "sieve_union" 1)
+        (("1" (lift-if)
+          (("1" (split)
+            (("1" (flatten)
+              (("1" (expand "list_prod_l2" 1)
+                (("1" (expand "length" -1)
+                  (("1" (expand "list_prod_l2" 1)
+                    (("1" (lift-if)
+                      (("1" (split)
+                        (("1" (flatten)
+                          (("1" (expand "list_prod" 1)
+                            (("1" (expand "list_prod" 1)
+                              (("1"
+                                (assert)
+                                (("1"
+                                  (typepred
+                                   "card_sl(difference_sl(list_less(m), list_sieve0(m, car(x!1), car(rl))))")
+                                  (("1"
+                                    (lemma "difference_l2s")
+                                    (("1"
+                                      (inst?)
+                                      (("1"
+                                        (replaces -1)
+                                        (("1"
+                                          (lemma "card_diff_subset")
+                                          (("1"
+                                            (inst?)
+                                            (("1"
+                                              (prop)
+                                              (("1"
+                                                (typepred
+                                                 "card(difference(list2set(list_less(m)), list2set(list_sieve0(m, car(x!1), car(rl)))))")
+                                                (("1"
+                                                  (replaces -1)
+                                                  (("1"
+                                                    (replaces -1)
+                                                    (("1"
+                                                      (expand
+                                                       "list_sieve0"
+                                                       -1
+                                                       2)
+                                                      (("1"
+                                                        (rewrite
+                                                         "union_l2s")
+                                                        (("1"
+                                                          (lemma
+                                                           "card_disj_union")
+                                                          (("1"
+                                                            (inst?)
+                                                            (("1"
+                                                              (prop)
+                                                              (("1"
+                                                                (replaces
+                                                                 -1)
+                                                                (("1"
+                                                                  (typepred
+                                                                   "card_sl(list_less(m))")
+                                                                  (("1"
+                                                                    (typepred
+                                                                     "card(list2set(list_less(m)))")
+                                                                    (("1"
+                                                                      (replaces
+                                                                       -1)
+                                                                      (("1"
+                                                                        (replaces
+                                                                         -1
+                                                                         :dir
+                                                                         rl)
+                                                                        (("1"
+                                                                          (typepred
+                                                                           "card_sl(list_sieve_aux(m, car(x!1), 0))")
+                                                                          (("1"
+                                                                            (typepred
+                                                                             "card(list2set(list_sieve_aux(m, car(x!1), 0)))")
+                                                                            (("1"
+                                                                              (replaces
+                                                                               -1)
+                                                                              (("1"
+                                                                                (replaces
+                                                                                 -1
+                                                                                 :dir
+                                                                                 rl)
+                                                                                (("1"
+                                                                                  (typepred
+                                                                                   "card_sl(list_sieve(m, car(x!1), car(rl)))")
+                                                                                  (("1"
+                                                                                    (typepred
+                                                                                     "card(list2set(list_sieve(m, car(x!1), car(rl))))")
+                                                                                    (("1"
+                                                                                      (replaces
+                                                                                       -1)
+                                                                                      (("1"
+                                                                                        (replaces
+                                                                                         -1
+                                                                                         :dir
+                                                                                         rl)
+                                                                                        (("1"
+                                                                                          (replaces
+                                                                                           -1)
+                                                                                          (("1"
+                                                                                            (lemma
+                                                                                             "card_sl_list_sieve_aux")
+                                                                                            (("1"
+                                                                                              (expand
+                                                                                               "list_sieve"
+                                                                                               1)
+                                                                                              (("1"
+                                                                                                (inst-cp
+                                                                                                 -1
+                                                                                                 "m"
+                                                                                                 "car(x!1)"
+                                                                                                 "0")
+                                                                                                (("1"
+                                                                                                  (replaces
+                                                                                                   -2)
+                                                                                                  (("1"
+                                                                                                    (inst
+                                                                                                     -1
+                                                                                                     "m"
+                                                                                                     "car(x!1)"
+                                                                                                     "car(rl)")
+                                                                                                    (("1"
+                                                                                                      (replaces
+                                                                                                       -1)
+                                                                                                      (("1"
+                                                                                                        (lemma
+                                                                                                         "card_sl_list_less")
+                                                                                                        (("1"
+                                                                                                          (inst?)
+                                                                                                          (("1"
+                                                                                                            (replaces
+                                                                                                             -1)
+                                                                                                            (("1"
+                                                                                                              (assert)
+                                                                                                              (("1"
+                                                                                                                (typepred
+                                                                                                                 "rl")
+                                                                                                                (("1"
+                                                                                                                  (expand
+                                                                                                                   "signature_pred"
+                                                                                                                   -3)
+                                                                                                                  (("1"
+                                                                                                                    (case
+                                                                                                                     "-1 - div(m - car(rl), car(x!1)) - div(m, car(x!1)) + m >= - div(m, car(x!1)) -div(m, car(x!1)) + m -1")
+                                                                                                                    (("1"
+                                                                                                                      (case
+                                                                                                                       "-div(m, car(x!1)) - div(m, car(x!1)) + m - 1 >= -div(m, car(x!1)) - div(m, car(x!1)) + m - 1")
+                                                                                                                      (("1"
+                                                                                                                        (case
+                                                                                                                         "-div(m, car(x!1)) - div(m, car(x!1)) + m - 1 >=  (car(x!1) * m - 2 * m) / car(x!1) - 1")
+                                                                                                                        (("1"
+                                                                                                                          (assert)
+                                                                                                                          nil
+                                                                                                                          nil)
+                                                                                                                         ("2"
+                                                                                                                          (hide-all-but
+                                                                                                                           1)
+                                                                                                                          (("2"
+                                                                                                                            (grind)
+                                                                                                                            nil
+                                                                                                                            nil))
+                                                                                                                          nil))
+                                                                                                                        nil)
+                                                                                                                       ("2"
+                                                                                                                        (assert)
+                                                                                                                        nil
+                                                                                                                        nil))
+                                                                                                                      nil)
+                                                                                                                     ("2"
+                                                                                                                      (hide-all-but
+                                                                                                                       1)
+                                                                                                                      (("2"
+                                                                                                                        (grind)
+                                                                                                                        (("2"
+                                                                                                                          (case
+                                                                                                                           "floor(m / car(x!1)) >= floor((m - car(rl)) / car(x!1))")
+                                                                                                                          (("1"
+                                                                                                                            (grind)
+                                                                                                                            nil
+                                                                                                                            nil)
+                                                                                                                           ("2"
+                                                                                                                            (grind)
+                                                                                                                            (("2"
+                                                                                                                              (hide
+                                                                                                                               2)
+                                                                                                                              (("2"
+                                                                                                                                (typepred
+                                                                                                                                 "floor(m / car(x!1))")
+                                                                                                                                (("2"
+                                                                                                                                  (case
+                                                                                                                                   "floor(m / car(x!1)) + 1 > floor((m - car(rl)) / car(x!1))")
+                                                                                                                                  (("1"
+                                                                                                                                    (assert)
+                                                                                                                                    nil
+                                                                                                                                    nil)
+                                                                                                                                   ("2"
+                                                                                                                                    (hide
+                                                                                                                                     2)
+                                                                                                                                    (("2"
+                                                                                                                                      (typepred
+                                                                                                                                       "floor((m - car(rl)) / car(x!1))")
+                                                                                                                                      (("2"
+                                                                                                                                        (case
+                                                                                                                                         "(m - car(rl)) / car(x!1) <= m / car(x!1)")
+                                                                                                                                        (("1"
+                                                                                                                                          (assert)
+                                                                                                                                          nil
+                                                                                                                                          nil)
+                                                                                                                                         ("2"
+                                                                                                                                          (hide-all-but
+                                                                                                                                           1)
+                                                                                                                                          (("2"
+                                                                                                                                            (lemma
+                                                                                                                                             "both_sides_div_pos_lt1")
+                                                                                                                                            (("2"
+                                                                                                                                              (inst
+                                                                                                                                               -1
+                                                                                                                                               "car(x!1)"
+                                                                                                                                               "m-car(rl)"
+                                                                                                                                               "m")
+                                                                                                                                              (("1"
+                                                                                                                                                (assert)
+                                                                                                                                                nil
+                                                                                                                                                nil)
+                                                                                                                                               ("2"
+                                                                                                                                                (typepred
+                                                                                                                                                 "car[(prime?)](x!1)")
+                                                                                                                                                (("2"
+                                                                                                                                                  (grind)
+                                                                                                                                                  nil
+                                                                                                                                                  nil))
+                                                                                                                                                nil))
+                                                                                                                                              nil))
+                                                                                                                                            nil))
+                                                                                                                                          nil))
+                                                                                                                                        nil))
+                                                                                                                                      nil))
+                                                                                                                                    nil))
+                                                                                                                                  nil))
+                                                                                                                                nil))
+                                                                                                                              nil))
+                                                                                                                            nil))
+                                                                                                                          nil))
+                                                                                                                        nil))
+                                                                                                                      nil)
+                                                                                                                     ("3"
+                                                                                                                      (hide-all-but
+                                                                                                                       1)
+                                                                                                                      (("3"
+                                                                                                                        (typepred
+                                                                                                                         "car[(prime?)](x!1)")
+                                                                                                                        (("3"
+                                                                                                                          (grind)
+                                                                                                                          nil
+                                                                                                                          nil))
+                                                                                                                        nil))
+                                                                                                                      nil))
+                                                                                                                    nil))
+                                                                                                                  nil))
+                                                                                                                nil))
+                                                                                                              nil))
+                                                                                                            nil))
+                                                                                                          nil))
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil))
+                                                                nil)
+                                                               ("2"
+                                                                (case
+                                                                 "car(rl) /= 0")
+                                                                (("1"
+                                                                  (postpone)
+                                                                  nil
+                                                                  nil)
+                                                                 ("2"
+                                                                  (postpone)
+                                                                  nil
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil)
+                                               ("2"
+                                                (postpone)
+                                                nil
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (assert) (("2" (postpone) nil nil)) nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (postpone) nil nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("2" (typepred "y!1")
+      (("2" (hide -6 1)
+        (("2" (lemma "list_prod_greater0")
+          (("2" (inst -1 "y!1")
+            (("2" (assert)
+              (("2" (skeep)
+                (("2" (inst?) (("2" (assert) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("3" (typepred "y!1")
+      (("3" (hide-all-but (-1 -2 1))
+        (("3" (assert)
+          (("3" (rewrite "every_nth")
+            (("3" (rewrite "every_nth")
+              (("3" (skeep)
+                (("3" (inst?)
+                  (("3" (flatten)
+                    (("3" (assert) (("3" (grind) nil nil)) nil)) nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("4" (hide-all-but (1 -2))
+      (("4" (rewrite "every_nth")
+        (("4" (typepred "y!1")
+          (("4" (rewrite "every_nth")
+            (("4" (skeep)
+              (("4" (inst?)
+                (("4" (flatten)
+                  (("4" (assert) (("4" (inst?) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("5" (hide-all-but 1)
+      (("5" (typepred "y!1")
+        (("5" (rewrite "every_nth")
+          (("5" (rewrite "every_nth")
+            (("5" (skeep)
+              (("5" (inst?)
+                (("5" (flatten)
+                  (("5" (assert) (("5" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("6" (hide-all-but 2)
+      (("6" (typepred "y!1")
+        (("6" (rewrite "every_nth")
+          (("6" (rewrite "every_nth")
+            (("6" (skeep)
+              (("6" (inst?)
+                (("6" (flatten)
+                  (("6" (assert) (("6" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("7" (hide-all-but (-1 -2))
+      (("7" (lemma "list_prod_greater0")
+        (("7" (inst?)
+          (("7" (assert)
+            (("7" (skeep) (("7" (inst?) (("7" (assert) nil nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("8" (hide 2)
+      (("8" (typepred "pl!1")
+        (("8" (rewrite "every_nth")
+          (("8" (rewrite "every_nth")
+            (("8" (skeep)
+              (("8" (inst?)
+                (("8" (flatten)
+                  (("8" (assert) (("8" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("9" (hide 2)
+      (("9" (typepred "pl!1")
+        (("9" (rewrite "every_nth")
+          (("9" (rewrite "every_nth")
+            (("9" (skeep)
+              (("9" (inst?)
+                (("9" (flatten)
+                  (("9" (assert) (("9" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil)
+     ("10" (hide 2)
+      (("10" (typepred "pl!1")
+        (("10" (rewrite "every_nth")
+          (("10" (rewrite "every_nth")
+            (("10" (skeep)
+              (("10" (inst?)
+                (("10" (flatten)
+                  (("10" (assert) (("10" (grind) nil nil)) nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil shostak))
  (sign_aux_TCC1 0
   (sign_aux_TCC1-1 nil 3949604901 ("" (termination-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
@@ -262,7 +2211,6 @@
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
     (list type-decl nil list_adt nil)
-    (every adt-def-decl "boolean" list_adt nil)
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -287,6 +2235,83 @@
     (length def-decl "nat" list_props nil))
    nil
    (sign_aux termination "Goldbach.sign_aux(Goldbach.n)(Goldbach.t)"
+    "nil")))
+ (mut_primes_TCC1 0
+  (mut_primes_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (mut_primes subtype
+    "list_props[posnat].nth(Goldbach.primes_l, Goldbach.j)"
+    "{n: integers.int | (booleans.NOT)((number_fields.+)(real_defs.abs(n), real_defs.abs(list_props[posnat].nth(Goldbach.primes_l, Goldbach.i))) = 0)}")))
+ (nmod_pos_TCC1 0
+  (nmod_pos_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (nmod_pos subtype "(number_fields.-)(Goldbach.n)" "nat")))
+ (nmod_pos_TCC2 0
+  (nmod_pos_TCC2-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (nmod_pos subtype
+    "(number_fields.-)(Goldbach.p, mod_nat.nmod((number_fields.-)(Goldbach.n), Goldbach.p))"
+    "euclidean_division.mod(Goldbach.p)")))
+ (diff_build_TCC1 0
+  (diff_build_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (diff_build subtype "Goldbach.p2" "nat")))
+ (diff_build_TCC2 0
+  (diff_build_TCC2-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (diff_build subtype "Goldbach.p1" "posnat")))
+ (diff_build_TCC3 0
+  (diff_build_TCC3-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (diff_build subtype "Goldbach.p2"
+    "{n: integers.posnat | Goldbach.p1 /= n}")))
+ (diff_build_TCC4 0
+  (diff_build_TCC4-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (diff_build subtype "Goldbach.p2" "posnat")))
+ (list_diff_TCC1 0
+  (list_diff_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_diff subtype "(number_fields.-)(Goldbach.p, 1)" "nat")))
+ (list_diff_TCC2 0
+  (list_diff_TCC2-1 nil 3972478554 ("" (termination-tcc) nil nil) nil
+   nil
+   (list_diff termination
+    "Goldbach.list_diff((number_fields.-)(Goldbach.p, 1))" "nil")))
+ (list_diff_TCC3 0
+  (list_diff_TCC3-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_diff subtype "(number_fields.-)(Goldbach.p, 1)" "nat")))
+ (list_diff_TCC4 0
+  (list_diff_TCC4-1 nil 3972478554 ("" (termination-tcc) nil nil) nil
+   nil
+   (list_diff termination
+    "Goldbach.list_diff((number_fields.-)(Goldbach.p, 1))" "nil")))
+ (list_less_TCC3 0
+  (list_less_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_less subtype "(number_fields.-)(Goldbach.k, 1)" "nat")))
+ (list_less_TCC4 0
+  (list_less_TCC4-1 nil 3972583055 ("" (subtype-tcc) nil nil) nil nil
+   (list_less subtype
+    "Goldbach.list_less((number_fields.-)(Goldbach.k, 1))"
+    "list[posnat]")))
+ (list_less_TCC5 0
+  (list_less_TCC5-1 nil 3972583055 ("" (subtype-tcc) nil nil) nil nil
+   (list_less subtype "(: Goldbach.k :)" "list[posnat]")))
+ (list_l_diff_TCC1 0
+  (list_l_diff_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_l_diff subtype "Goldbach.signs" "(list_adt[nat].cons?)")))
+ (list_l_diff_TCC2 0
+  (list_l_diff_TCC2-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_l_diff subtype "Goldbach.primes_l" "(list_adt[nat].cons?)")))
+ (list_l_diff_TCC3 0
+  (list_l_diff_TCC3-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (list_l_diff subtype "list_adt[nat].cdr(Goldbach.signs)"
+    "{signs: list_adt[nat].list | list_props[nat].length(signs) = list_props[posnat].length(list_adt[posnat].cdr(Goldbach.primes_l))}")))
+ (list_l_diff_TCC4 0
+  (list_l_diff_TCC4-1 nil 3972478554 ("" (termination-tcc) nil nil) nil
+   nil
+   (list_l_diff termination
+    "Goldbach.list_l_diff(list_adt[posnat].cdr(Goldbach.primes_l))"
+    "nil")))
+ (e_list_TCC1 0
+  (e_list_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (e_list subtype "Goldbach.l" "(list_adt[list[nat]].cons?)")))
+ (e_list_TCC2 0
+  (e_list_TCC2-1 nil 3972478554 ("" (termination-tcc) nil nil) nil nil
+   (e_list termination
+    "Goldbach.e_list(Goldbach.n, list_adt[list[nat]].cdr(Goldbach.l))"
     "nil")))
  (sign_aux_length 0
   (sign_aux_length-1 nil 3949605408
@@ -355,7 +2380,6 @@
     (nonneg_int nonempty-type-eq-decl nil integers nil)
     (> const-decl "bool" reals nil)
     (AND const-decl "[bool, bool -> bool]" booleans nil)
-    (every adt-def-decl "boolean" list_adt nil)
     (PRED type-eq-decl nil defined_types nil)
     (list type-decl nil list_adt nil)
     (nat nonempty-type-eq-decl nil naturalnumbers nil)
@@ -469,7 +2493,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -479,103 +2503,22 @@
     (well_founded? const-decl "bool" orders nil)
     (pred type-eq-decl nil defined_types nil))
    shostak))
- (signature_TCC1 0
-  (signature_TCC1-1 nil 3949606169
-   ("" (skeep)
-    (("" (rewrite "every_nth")
-      (("" (skeep)
-        (("" (typepred "list_of_primes(n)")
-          (("" (rewrite "every_nth")
-            (("" (inst?)
-              (("" (flatten)
-                (("" (assert)
-                  (("" (expand "prime?")
-                    (("" (flatten) (("" (assert) nil nil)) nil)) nil))
-                  nil))
-                nil))
-              nil))
-            nil))
-          nil))
-        nil))
-      nil))
-    nil)
-   ((every_nth formula-decl nil list_props nil)
-    (boolean nonempty-type-decl nil booleans nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (PRED type-eq-decl nil defined_types nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
-    (number_field_pred const-decl "[number -> boolean]" number_fields
-     nil)
-    (number_field nonempty-type-from-decl nil number_fields nil)
-    (real_pred const-decl "[number_field -> boolean]" reals nil)
-    (real nonempty-type-from-decl nil reals nil)
-    (rational_pred const-decl "[real -> boolean]" rationals nil)
-    (rational nonempty-type-from-decl nil rationals nil)
-    (integer_pred const-decl "[rational -> boolean]" integers nil)
-    (>= const-decl "bool" reals nil) (> const-decl "bool" reals nil)
-    (list type-decl nil list_adt nil)
-    (int nonempty-type-eq-decl nil integers nil)
-    (nat nonempty-type-eq-decl nil naturalnumbers nil)
-    (every adt-def-decl "boolean" list_adt nil)
-    (prime? const-decl "bool" primes ints)
-    (list_of_primes def-decl "list[(prime?)]" Goldbach nil)
-    (number nonempty-type-decl nil numbers nil)
-    (NOT const-decl "[bool -> bool]" booleans nil)
-    (< const-decl "bool" reals nil)
-    (length def-decl "nat" list_props nil)
-    (below type-eq-decl nil naturalnumbers nil)
-    (real_gt_is_strict_total_order name-judgement
-     "(strict_total_order?[real])" real_props nil)
-    (real_ge_is_total_order name-judgement "(total_order?[real])"
-     real_props nil))
-   nil
-   (signature subtype "Goldbach.list_of_primes(Goldbach.n)"
-              "list[posnat]")))
- (signature_TCC2 0
-  (signature_TCC2-1 nil 3949606169
-   ("" (skeep)
-    (("" (prop)
-      (("1" (lemma "sign_aux_length") (("1" (inst?) nil nil)) nil)
-       ("2" (lemma "sign_aux_correctness")
-        (("2" (expand "signature_pred")
-          (("2" (skeep)
-            (("2" (inst -1 "m" "list_of_primes(n)" "i") nil nil)) nil))
-          nil))
-        nil))
-      nil))
-    nil)
-   ((list_of_primes def-decl "list[(prime?)]" Goldbach nil)
-    (prime? const-decl "bool" primes ints)
-    (posnat nonempty-type-eq-decl nil integers nil)
-    (nonneg_int nonempty-type-eq-decl nil integers nil)
-    (> const-decl "bool" reals nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
-    (every adt-def-decl "boolean" list_adt nil)
-    (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
-    (nat nonempty-type-eq-decl nil naturalnumbers nil)
-    (>= const-decl "bool" reals nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (int nonempty-type-eq-decl nil integers nil)
-    (integer_pred const-decl "[rational -> boolean]" integers nil)
-    (rational nonempty-type-from-decl nil rationals nil)
-    (rational_pred const-decl "[real -> boolean]" rationals nil)
-    (real nonempty-type-from-decl nil reals nil)
-    (real_pred const-decl "[number_field -> boolean]" reals nil)
-    (number_field nonempty-type-from-decl nil number_fields nil)
-    (number_field_pred const-decl "[number -> boolean]" number_fields
-     nil)
-    (boolean nonempty-type-decl nil booleans nil)
-    (number nonempty-type-decl nil numbers nil)
-    (sign_aux_length formula-decl nil Goldbach nil)
-    (signature_pred const-decl "bool" Goldbach nil)
-    (< const-decl "bool" reals nil)
-    (length def-decl "nat" list_props nil)
-    (below type-eq-decl nil nat_types nil)
-    (sign_aux def-decl "list[nat]" Goldbach nil)
-    (sign_aux_correctness formula-decl nil Goldbach nil))
-   nil
-   (signature subtype
-              "Goldbach.sign_aux(Goldbach.m)(Goldbach.list_of_primes(Goldbach.n))"
-              "(Goldbach.signature_pred(Goldbach.n))"))))
+ (l_prime_TCC1 0
+  (l_prime_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (l_prime subtype "number_fields./(Goldbach.n, 2)" "below[p]")))
+ (l_prime_TCC2 0
+  (l_prime_TCC2-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (l_prime subtype
+    "number_fields./(((number_fields.+)(Goldbach.p, Goldbach.n)), 2)"
+    "below[p]")))
+ (r_prime_TCC1 0
+  (r_prime_TCC1-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (r_prime subtype
+    "number_fields./(((number_fields.-)(Goldbach.n, 1)), 2)"
+    "below[p]")))
+ (r_prime_TCC2 0
+  (r_prime_TCC2-1 nil 3972478554 ("" (subtype-tcc) nil nil) nil nil
+   (r_prime subtype
+    "number_fields./(((number_fields.-)((number_fields.+)(Goldbach.p, Goldbach.n), 1)), 2)"
+    "below[p]"))))
 

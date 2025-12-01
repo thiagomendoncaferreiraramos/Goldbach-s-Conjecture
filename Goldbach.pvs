@@ -6,7 +6,9 @@
 Goldbach: THEORY
   BEGIN 
     IMPORTING gcd_rem,
-              ints@primes
+              ints@primes,
+              %ints@div_nat,
+              structures@set_as_list_props[nat]
 
     %List of primes less than or equal then n.
     list_of_primes(n : nat): RECURSIVE list[(prime?)] =
@@ -28,19 +30,94 @@ Goldbach: THEORY
     ENDIF
     MEASURE length(l)
 
-    prod_leq_n(n : posnat, i : below[n]) : RECURSIVE list[nat] =
-    IF list_prod(list_of_primes(i)) <= n THEN
-      list_of_primes(i)
-    ELSE prod_leq_n(n , i - 1)
+    % @QED list_prod_greater0 proved by thiago on Mon, 01 Dec 2025 20:34:13 GMT
+    list_prod_greater0 : LEMMA
+    FORALL(l : list[nat]) :
+    (FORALL(i : below[length(l)]) : nth(l,i) > 0) IMPLIES list_prod(l) > 0
+
+    list_prod_l2(l : list[above[2]]) : RECURSIVE nat =
+    IF null?(l) THEN 1
+    ELSE (car(l) - 2) * list_prod_l2(cdr(l))
     ENDIF
-    MEASURE i
+    MEASURE length(l)
+
+    %prod_leq_n(n : posnat, i : below[n]) : RECURSIVE list[nat] =
+    %IF list_prod(list_of_primes(i)) <= n THEN
+    %  list_of_primes(i)
+    %ELSE prod_leq_n(n , i - 1)
+    %ENDIF
+    %MEASURE i
 
     
+    list_sieve_aux(m : nat, p : (prime?), r : below[m+1]) : RECURSIVE list[nat] =
+    IF r + p > m THEN (: r :)
+    ELSE cons(r, list_sieve_aux(m, p , r + p))
+    ENDIF
+    MEASURE m - r
 
-    signature_pred(pl : list[posnat])(l : list[nat] 
+   % @QED member_list_sieve_aux proved by thiago on Mon, 24 Nov 2025 22:06:07 GMT
+   member_list_sieve_aux: LEMMA
+   FORALL(m : nat, p : (prime?), r : below[m+1], k : nat) :
+   member( k , list_sieve_aux(m, p, r)) =>
+   k >= r
+
+   % @QED card_sl_list_sieve_aux proved by thiago on Thu, 27 Nov 2025 22:04:13 GMT
+   card_sl_list_sieve_aux: LEMMA
+   FORALL(m : nat, p : (prime?), r : below[m+1]) :
+   card_sl(list_sieve_aux(m, p, r)) =
+   div(m-r, p) + 1
+
+    list_sieve(m : nat, p : (prime?), r : below[p] | r < m+1) : list[nat] =
+    list_sieve_aux(m, p, r)
+
+    list_sieve0(m : nat, p : (prime?), r : below[p] | r < m+1) : list[nat] =
+    union_sl(list_sieve_aux(m, p, 0), list_sieve(m, p, r))
+
+  list_sieve_member : CONJECTURE
+  FORALL(m : nat, p : (prime?), r2 : below[m+1], r1 : nat) :
+  member(r1, list_sieve_aux(m,p,r2)) IMPLIES
+      divides(p,r1-r2)
+
+   list_sieve_disjoint : CONJECTURE
+   FORALL(m : nat, p : (prime?), r1, r2 : below[m+1]) :
+      NOT divides(p,abs(r1-r2)) IMPLIES
+      disjoint_sl?(list_sieve_aux(m, p, r1), list_sieve_aux(m, p, r2))
+
+   list_less(n : nat) : RECURSIVE list[nat] =
+    IF n = 0 THEN (: 0 :)
+    ELSE cons(n,list_less(n-1))
+    ENDIF
+    MEASURE n
+
+    % @QED list_less_member proved by thiago on Sat, 22 Nov 2025 20:34:09 GMT
+    list_less_member: LEMMA
+    FORALL(n : nat, k : nat) :
+    member(k, list_less(n))  IFF k <= n
+
+   % @QED card_sl_list_less proved by thiago on Sat, 22 Nov 2025 20:45:35 GMT
+   card_sl_list_less: LEMMA
+   FORALL(n : nat) : card_sl(list_less(n)) = n + 1
+
+    signature_pred(pl : list[posnat], m : nat)(l : list[nat] 
           | length(l) = length(pl)) : bool =
     FORALL(i : below[length(l)]):
     nth(l,i) < nth(pl,i)
+    AND nth(l, i) < m
+
+
+    sieve_union(m : nat, pl : (cons?[(prime?)]), rl : (signature_pred(pl,m)) ):
+    RECURSIVE list[nat] =
+      IF length(pl) = 1 THEN list_sieve0(m, car(pl), car(rl))
+      ELSE union_sl(list_sieve0(m, car(pl),car(rl)), sieve_union(m,cdr(pl),cdr(rl)))
+      ENDIF
+      MEASURE length(pl)
+
+    sieve_union_lemma : CONJECTURE
+    FORALL (m : nat, pl : (cons?[(prime?)]) , rl : (signature_pred(pl,m))) :
+    (FORALL(i : below[length(pl)]) : nth(pl,i) > 2) IMPLIES
+    card_sl(difference_sl(list_less(m),sieve_union(m,pl,rl))) >= 
+    m * list_prod_l2(pl)/list_prod(pl) - 1
+   
 
     sign_aux(n : nat)(l : list[posnat]) : RECURSIVE list[nat] =
     CASES l OF
@@ -73,35 +150,26 @@ Goldbach: THEORY
 
     %list-diff-pred(l : list[posnat])
 
-    tuple_buid_list_aux(p : (prime?), e : below[p])(l : list[(prime?)])
-    (list_t : list[[nat,nat]])
-    : RECURSIVE list[[nat,nat]] =
-    IF length(list_t) = 1 THEN (: (diff_build(p,car(l))(e , car(list_t)`1),
-                                   diff_build(p,car(l))(e , car(list_t)`2)) :)
-    ELSE car((diff_build(p,car(l))(e , car(list_t)`1),
-              diff_build(p,car(l))(e , car(list_t)`2)), 
-                  tuple_buid_list_aux(p, e)(cdr(l))(cdr(list_t)))
-    ENDIF
-    MEASURE length(l)
+    
 
     %tuple_buid_list(l : list[nat])(list_t : list[[nat,nat]]) : list[[nat,nat]] =
     
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    sign2nats(primes_l : (cons?[posnat]) | mut_primes(primes_l))
-             (signs : (signature_pred(primes_l))) :
-    RECURSIVE [nat,nat] =
-    IF length(primes_l) = 1 THEN (car(primes_l), car(signs))
-    ELSE 
-          LET tuple = sign2nats(cdr(primes_l))(cdr(signs)),
-          prod = tuple`1,
-          val  = tuple`2,
-          prod_inv = linear_comb(prod, car(primes_l))`1 IN
-     (prod * car(primes_l), prod * nmod(prod_inv * 
-                                      (nmod_pos( car(signs) - val, car(primes_l))),car(primes_l)) 
-                            + val)
-    ENDIF
-    MEASURE length(primes_l)
+   % sign2nats(primes_l : (cons?[posnat]) | mut_primes(primes_l))
+   %          (signs : (signature_pred(primes_l))) :
+   % RECURSIVE [nat,nat] =
+   % IF length(primes_l) = 1 THEN (car(primes_l), car(signs))
+   % ELSE 
+   %       LET tuple = sign2nats(cdr(primes_l))(cdr(signs)),
+   %       prod = tuple`1,
+   %       val  = tuple`2,
+   %       prod_inv = linear_comb(prod, car(primes_l))`1 IN
+   %  (prod * car(primes_l), prod * nmod(prod_inv * 
+   %                                   (nmod_pos( car(signs) - val, car(primes_l))),car(primes_l)) 
+   %                         + val)
+   % ENDIF
+   % MEASURE length(primes_l)
 
     list_diff(p : nat)(n : nat) : RECURSIVE list[nat] =
     IF p = 0 THEN (::)
@@ -132,11 +200,11 @@ Goldbach: THEORY
 
 
 
-    cart_list(l1 : list[nat], llnat : list[list[nat]]) : RECURSIVE list[list[nat]] =
-    IF null?(l1) THEN (: (::) :)
-    ELSE append(e_list(car(l1),llnat), cart_list(cdr(l1),llnat))
-    ENDIF
-    MEASURE length(l1)
+    %cart_list(l1 : list[nat], llnat : list[list[nat]]) : RECURSIVE list[list[nat]] =
+    %IF null?(l1) THEN (: (::) :)
+    %ELSE append(e_list(car(l1),llnat), cart_list(cdr(l1),llnat))
+    %ENDIF
+    %MEASURE length(l1)
 
     list2onelist(l1 : list[nat]) : RECURSIVE list[list[nat]] =
     IF null?(l1) THEN (::)
@@ -144,11 +212,11 @@ Goldbach: THEORY
     ENDIF
     MEASURE length(l1)
 
-    cart_Lists(llnat : (cons?[list[nat]])) : RECURSIVE list[list[nat]] =
-    IF length(llnat) = 1 THEN list2onelist(car(llnat))
-    ELSE cart_list(car(llnat), cart_Lists(cdr(llnat)))
-    ENDIF
-    MEASURE length(llnat)
+    %cart_Lists(llnat : (cons?[list[nat]])) : RECURSIVE list[list[nat]] =
+    %IF length(llnat) = 1 THEN list2onelist(car(llnat))
+    %ELSE cart_list(car(llnat), cart_Lists(cdr(llnat)))
+    %ENDIF
+    %MEASURE length(llnat)
 
     % @QED sign_aux_length proved by thiago on Thu, 27 Feb 2025 00:38:17 GMT
     sign_aux_length: LEMMA
@@ -161,11 +229,11 @@ Goldbach: THEORY
     nth(sign_aux(n)(l),i) < nth(l,i)
 
    
-    Goldbach_list_signs( n : posnat) : list[list[nat]] =
-    cart_Lists(list_l_diff(prod_leq_n(2*n,2*n-1))((sign_aux(2*n)(prod_leq_n(2*n,2*n-1)))))
+   % Goldbach_list_signs( n : posnat) : list[list[nat]] =
+   % cart_Lists(list_l_diff(prod_leq_n(2*n,2*n-1))((sign_aux(2*n)(prod_leq_n(2*n,2*n-1)))))
     
-    Goldbach_list(n : posnat) : list[nat] =
-    map(lambda(m,n : nat) :  n ) (map (sign2nats(prod_leq_n(2*n,2*n-1)))(Goldbach_list_signs(n)))
+   % Goldbach_list(n : posnat) : list[nat] =
+   % map(lambda(m,n : nat) :  n ) (map (sign2nats(prod_leq_n(2*n,2*n-1)))(Goldbach_list_signs(n)))
 
 
     IMPORTING Bin_tree[list[nat]]
