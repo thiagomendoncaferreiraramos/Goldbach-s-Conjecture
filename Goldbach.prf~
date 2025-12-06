@@ -878,6 +878,130 @@
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil))
    nil (list_sieve0 subtype "0" "below[1 + m]")))
+ (list_sieve_member 0
+  (list_sieve_member-1 nil 3973613541
+   ("" (measure-induct+ "m-r2" ("m" "r2"))
+    (("" (skeep)
+      (("" (expand "list_sieve_aux" -2)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (expand "member" -2)
+              (("1" (expand "member" -2)
+                (("1" (replaces -2)
+                  (("1" (assert)
+                    (("1" (expand "divides")
+                      (("1" (inst 1 "0") (("1" (assert) nil nil)) nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (expand "member" -1)
+              (("2" (prop)
+                (("1" (replaces -1)
+                  (("1" (assert)
+                    (("1" (expand "divides")
+                      (("1" (inst 2 "0") (("1" (assert) nil nil)) nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (inst -2 "x!1" "p+x!2")
+                  (("1" (assert)
+                    (("1" (inst -2 "p" "r1")
+                      (("1" (prop)
+                        (("1" (lemma "divides_sum")
+                          (("1" (inst -1 "r1-p-x!2" "p" "p")
+                            (("1" (assert)
+                              (("1"
+                                (expand "divides" 1)
+                                (("1"
+                                  (inst 1 "1")
+                                  (("1" (assert) nil nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (hide 3 -1)
+                          (("2" (grind)
+                            (("2" (case "p > 0")
+                              (("1" (assert) nil nil)
+                               ("2"
+                                (typepred "p")
+                                (("2" (grind) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (assert)
+                    (("2" (case "p > 0")
+                      (("1" (assert) nil nil)
+                       ("2" (typepred "p")
+                        (("2" (hide -2) (("2" (grind) nil nil)) nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (> const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (divides_sum formula-decl nil divides nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (TRUE const-decl "bool" booleans nil)
+    (int_times_even_is_even application-judgement "even_int" integers
+     nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (list_sieve_aux def-decl "list[nat]" Goldbach nil)
+    (member def-decl "bool" list_props nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (below type-eq-decl nil nat_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (< const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
  (list_sieve_disjoint 0
   (list_sieve_disjoint-1 nil 3973612173
    ("" (measure-induct+ "m-r1 + m-r2" ("m" "r1" "r2"))
@@ -921,23 +1045,321 @@
                         (("1" (expand "member")
                           (("1" (prop)
                             (("1" (replaces -1) nil nil)
-                             ("2" (postpone) nil nil))
+                             ("2" (lemma "list_sieve_member")
+                              (("2"
+                                (inst -1 "x!1" "p" "x!3+p" "x!2")
+                                (("1"
+                                  (assert)
+                                  (("1"
+                                    (lemma "divides_sum")
+                                    (("1"
+                                      (inst -1 "p" "x!2-x!3-p" "p")
+                                      (("1"
+                                        (assert)
+                                        (("1"
+                                          (prop)
+                                          (("1"
+                                            (hide-all-but (-1 3))
+                                            (("1"
+                                              (expand "abs")
+                                              (("1" (propax) nil nil))
+                                              nil))
+                                            nil)
+                                           ("2"
+                                            (hide-all-but 1)
+                                            (("2"
+                                              (expand " divides" 1)
+                                              (("2"
+                                                (inst 1 "1")
+                                                (("2"
+                                                  (assert)
+                                                  nil
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil)
+                                 ("2"
+                                  (prop)
+                                  (("1"
+                                    (hide-all-but 1)
+                                    (("1"
+                                      (case "p>0")
+                                      (("1" (assert) nil nil)
+                                       ("2"
+                                        (typepred "p")
+                                        (("2" (grind) nil nil))
+                                        nil))
+                                      nil))
+                                    nil)
+                                   ("2" (assert) nil nil))
+                                  nil))
+                                nil))
+                              nil))
                             nil))
                           nil)
-                         ("2" (postpone) nil nil))
+                         ("2" (expand "member")
+                          (("2" (prop)
+                            (("2" (expand "intersection_sl")
+                              (("2"
+                                (expand "empty_sl?")
+                                (("2" (propax) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
                         nil))
                       nil))
                     nil))
                   nil))
                 nil))
               nil)
-             ("2" (postpone) nil nil))
+             ("2" (expand "disjoint_sl?")
+              (("2" (expand "intersection_sl" 2)
+                (("2" (prop)
+                  (("1" (lemma "list_sieve_member")
+                    (("1" (inst -1 "x!1" "p" "x!3" "x!2")
+                      (("1" (assert)
+                        (("1" (hide-all-but (-1 3))
+                          (("1" (expand "abs")
+                            (("1" (lift-if)
+                              (("1"
+                                (prop)
+                                (("1"
+                                  (expand "divides")
+                                  (("1"
+                                    (skeep)
+                                    (("1"
+                                      (inst 1 "-x")
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (inst -1 "x!1" "p+x!2" "x!3")
+                    (("1" (inst -1 "p")
+                      (("1" (prop)
+                        (("1" (expand "abs" -1)
+                          (("1" (assert)
+                            (("1" (hide 1 2)
+                              (("1"
+                                (lift-if)
+                                (("1"
+                                  (prop)
+                                  (("1"
+                                    (assert)
+                                    (("1"
+                                      (lemma "divides_sum")
+                                      (("1"
+                                        (inst -1 "p" "x!3-x!2-p" "p")
+                                        (("1"
+                                          (assert)
+                                          (("1"
+                                            (prop)
+                                            (("1"
+                                              (hide-all-but (-1 1 2))
+                                              (("1"
+                                                (expand "abs")
+                                                (("1"
+                                                  (assert)
+                                                  (("1"
+                                                    (lift-if)
+                                                    (("1"
+                                                      (prop)
+                                                      (("1"
+                                                        (assert)
+                                                        nil
+                                                        nil)
+                                                       ("2"
+                                                        (expand
+                                                         "divides")
+                                                        (("2"
+                                                          (skeep)
+                                                          (("2"
+                                                            (inst
+                                                             2
+                                                             "-x")
+                                                            (("2"
+                                                              (assert)
+                                                              nil
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil)
+                                             ("2"
+                                              (expand "divides" 1)
+                                              (("2"
+                                                (inst 1 "1")
+                                                (("2"
+                                                  (assert)
+                                                  nil
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil)
+                                   ("2"
+                                    (lemma "divides_diff")
+                                    (("2"
+                                      (inst -1 "p" "x!2-x!3+p" "p")
+                                      (("2"
+                                        (assert)
+                                        (("2"
+                                          (prop)
+                                          (("1"
+                                            (expand "abs")
+                                            (("1"
+                                              (lift-if)
+                                              (("1"
+                                                (prop)
+                                                (("1"
+                                                  (expand "divides")
+                                                  (("1"
+                                                    (skeep)
+                                                    (("1"
+                                                      (inst 1 "-x")
+                                                      (("1"
+                                                        (assert)
+                                                        nil
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil)
+                                           ("2"
+                                            (expand "divides" 1)
+                                            (("2"
+                                              (inst 1 "1")
+                                              (("2" (assert) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (assert)
+                          (("2" (case "p > 0")
+                            (("1" (hide 2 5 3) (("1" (grind) nil nil))
+                              nil)
+                             ("2" (hide-all-but 1)
+                              (("2"
+                                (typepred "p")
+                                (("2" (grind) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (hide-all-but 1)
+                      (("2" (case "p > 0")
+                        (("1" (assert) nil nil)
+                         ("2" (typepred "p") (("2" (grind) nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
             nil))
           nil))
         nil))
       nil))
     nil)
-   nil shostak))
+   ((minus_int_is_int application-judgement "int" integers nil)
+    (divides_diff formula-decl nil divides nil)
+    (intersection_sl def-decl "{ll: list[T] |
+   FORALL x: member(x, ll) IFF (member(x, l1) AND member(x, l2))}"
+     set_as_list structures)
+    (empty_sl? const-decl "bool" set_as_list structures)
+    (member def-decl "bool" list_props nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (TRUE const-decl "bool" booleans nil)
+    (int_times_even_is_even application-judgement "even_int" integers
+     nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (list_sieve_member formula-decl nil Goldbach nil)
+    (> const-decl "bool" reals nil)
+    (/= const-decl "boolean" notequal nil)
+    (int_times_int_is_int application-judgement "int" integers nil)
+    (divides_sum formula-decl nil divides nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (list_sieve_aux def-decl "list[nat]" Goldbach nil)
+    (disjoint_sl? const-decl "bool" set_as_list structures)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (abs const-decl "{n: nonneg_real | n >= m AND n >= -m}" real_defs
+         nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (prime? const-decl "bool" primes ints)
+    (int_abs_is_nonneg application-judgement "{j: nonneg_int | j >= i}"
+     real_defs nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (below type-eq-decl nil nat_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (< const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (even_times_int_is_even application-judgement "even_int" integers
+     nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
  (list_less_TCC1 0
   (list_less_TCC1-1 nil 3972583055 ("" (subtype-tcc) nil nil)
    ((boolean nonempty-type-decl nil booleans nil)
@@ -1104,6 +1526,87 @@
     (well_founded? const-decl "bool" orders nil)
     (pred type-eq-decl nil defined_types nil))
    shostak))
+ (list_less_correctness 0
+  (list_less_correctness-1 nil 3973973066
+   ("" (measure-induct+ "n" "n")
+    (("" (skeep)
+      (("" (expand "list_less" 1)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (typepred "k") (("1" (grind) nil nil)) nil)
+             ("2" (expand "member" 2)
+              (("2" (prop)
+                (("2" (inst -1 "x!1-1")
+                  (("1" (assert) (("1" (inst -1 "k") nil nil)) nil)
+                   ("2" (assert) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (x!1 skolem-const-decl "nat" Goldbach nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (list_less def-decl "list[nat]" Goldbach nil)
+    (member def-decl "bool" list_props nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (every adt-def-decl "boolean" list_adt nil)
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (below type-eq-decl nil nat_types nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
+   shostak))
+ (subset_sl_list_sieve_aux 0
+  (subset_sl_list_sieve_aux-1 nil 3973972688
+   ("" (measure-induct+ "m-r" ("m" "r"))
+    (("" (skeep)
+      (("" (expand "list_sieve_aux" 1)
+        (("" (lift-if)
+          (("" (prop)
+            (("1" (expand "subset_sl?" 1)
+              (("1" (expand "subset_sl?" 1)
+                (("1" (typepred "x!2") (("1" (postpone) nil nil)) nil))
+                nil))
+              nil)
+             ("2" (postpone) nil nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil shostak))
  (signature_pred_TCC1 0
   (signature_pred_TCC1-1 nil 3949604185 ("" (subtype-tcc) nil nil) nil
    nil
@@ -1892,7 +2395,7 @@
                                                                                                                        "-div(m, car(x!1)) - div(m, car(x!1)) + m - 1 >= -div(m, car(x!1)) - div(m, car(x!1)) + m - 1")
                                                                                                                       (("1"
                                                                                                                         (case
-                                                                                                                         "-div(m, car(x!1)) - div(m, car(x!1)) + m - 1 >=  (car(x!1) * m - 2 * m) / car(x!1) - 1")
+                                                                                                                         "-div(m, car(x!1)) - div(m, car(x!1)) + m - 1 >= (car(x!1) * m - 2 * m) / car(x!1) - 1")
                                                                                                                         (("1"
                                                                                                                           (assert)
                                                                                                                           nil
@@ -2028,15 +2531,21 @@
                                                                   nil))
                                                                 nil)
                                                                ("2"
-                                                                (case
-                                                                 "car(rl) /= 0")
-                                                                (("1"
-                                                                  (postpone)
-                                                                  nil
-                                                                  nil)
-                                                                 ("2"
-                                                                  (postpone)
-                                                                  nil
+                                                                (expand
+                                                                 "list_sieve")
+                                                                (("2"
+                                                                  (expand
+                                                                   "list_sieve0"
+                                                                   2)
+                                                                  (("2"
+                                                                    (expand
+                                                                     "list_sieve"
+                                                                     2)
+                                                                    (("2"
+                                                                      (postpone)
+                                                                      nil
+                                                                      nil))
+                                                                    nil))
                                                                   nil))
                                                                 nil))
                                                               nil))
@@ -2048,8 +2557,56 @@
                                                   nil))
                                                 nil)
                                                ("2"
-                                                (postpone)
-                                                nil
+                                                (expand
+                                                 "list_sieve0"
+                                                 1)
+                                                (("2"
+                                                  (expand
+                                                   "list_sieve"
+                                                   1)
+                                                  (("2"
+                                                    (rewrite
+                                                     "union_l2s")
+                                                    (("2"
+                                                      (lemma
+                                                       "sets_lemmas[nat].subset_union")
+                                                      (("2"
+                                                        (inst?)
+                                                        (("2"
+                                                          (assert)
+                                                          (("2"
+                                                            (hide-all-but
+                                                             1)
+                                                            (("2"
+                                                              (rewrite
+                                                               "subset_l2s"
+                                                               :dir
+                                                               rl)
+                                                              (("2"
+                                                                (rewrite
+                                                                 "subset_l2s"
+                                                                 :dir
+                                                                 rl)
+                                                                (("1"
+                                                                  (postpone)
+                                                                  nil
+                                                                  nil)
+                                                                 ("2"
+                                                                  (postpone)
+                                                                  nil
+                                                                  nil)
+                                                                 ("3"
+                                                                  (postpone)
+                                                                  nil
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
                                                 nil))
                                               nil))
                                             nil))
@@ -2062,7 +2619,12 @@
                               nil))
                             nil))
                           nil)
-                         ("2" (assert) (("2" (postpone) nil nil)) nil))
+                         ("2" (assert)
+                          (("2" (prop)
+                            (("2" (hide-all-but (-1 1))
+                              (("2" (grind) nil nil)) nil))
+                            nil))
+                          nil))
                         nil))
                       nil))
                     nil))

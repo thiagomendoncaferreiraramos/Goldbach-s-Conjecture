@@ -73,12 +73,14 @@ Goldbach: THEORY
     list_sieve0(m : nat, p : (prime?), r : below[p] | r < m+1) : list[nat] =
     union_sl(list_sieve_aux(m, p, 0), list_sieve(m, p, r))
 
-  list_sieve_member : CONJECTURE
+  % @QED list_sieve_member proved by thiago on Sat, 06 Dec 2025 00:17:15 GMT
+  list_sieve_member : LEMMA
   FORALL(m : nat, p : (prime?), r2 : below[m+1], r1 : nat) :
   member(r1, list_sieve_aux(m,p,r2)) IMPLIES
       divides(p,r1-r2)
 
-   list_sieve_disjoint : CONJECTURE
+   % @QED list_sieve_disjoint proved by thiago on Sat, 06 Dec 2025 00:47:51 GMT
+   list_sieve_disjoint : LEMMA
    FORALL(m : nat, p : (prime?), r1, r2 : below[m+1]) :
       NOT divides(p,abs(r1-r2)) IMPLIES
       disjoint_sl?(list_sieve_aux(m, p, r1), list_sieve_aux(m, p, r2))
@@ -97,6 +99,16 @@ Goldbach: THEORY
    % @QED card_sl_list_less proved by thiago on Sat, 22 Nov 2025 20:45:35 GMT
    card_sl_list_less: LEMMA
    FORALL(n : nat) : card_sl(list_less(n)) = n + 1
+
+  % @QED list_less_correctness proved by thiago on Sat, 06 Dec 2025 01:26:28 GMT
+  list_less_correctness: LEMMA
+  FORALL(n : nat, k : below[n+1]):
+  member(k, list_less(n))
+
+  % @QED subset_sl_list_sieve_aux proved by thiago on Sat, 06 Dec 2025 01:31:31 GMT
+  subset_sl_list_sieve_aux: LEMMA
+    FORALL(m : nat, p : (prime?), r : below[m+1]) :
+   subset_sl?(list_sieve_aux(m, p , r),list_less(m))
 
     signature_pred(pl : list[posnat], m : nat)(l : list[nat] 
           | length(l) = length(pl)) : bool =
