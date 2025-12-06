@@ -114,7 +114,7 @@ Goldbach: THEORY
           | length(l) = length(pl)) : bool =
     FORALL(i : below[length(l)]):
     nth(l,i) < nth(pl,i)
-    AND nth(l, i) < m
+    AND nth(l, i) < m+1
 
 
     sieve_union(m : nat, pl : (cons?[(prime?)]), rl : (signature_pred(pl,m)) ):
@@ -124,8 +124,12 @@ Goldbach: THEORY
       ENDIF
       MEASURE length(pl)
 
+    no_rep_list(l : list[nat]) : bool =
+    FORALL(i, j : below[length(l)]) :
+    i /= j IMPLIES nth(l,i) /= nth(l,j)
+
     sieve_union_lemma : CONJECTURE
-    FORALL (m : nat, pl : (cons?[(prime?)]) , rl : (signature_pred(pl,m))) :
+    FORALL (m : nat, pl : (cons?[(prime?)]) | no_rep_list(pl) , rl : (signature_pred(pl,m))) :
     (FORALL(i : below[length(pl)]) : nth(pl,i) > 2) IMPLIES
     card_sl(difference_sl(list_less(m),sieve_union(m,pl,rl))) >= 
     m * list_prod_l2(pl)/list_prod(pl) - 1
