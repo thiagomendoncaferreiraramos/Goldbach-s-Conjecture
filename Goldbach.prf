@@ -2575,7 +2575,7 @@
                                                                                                         nil)
                                                                                                        ("2"
                                                                                                         (case
-                                                                                                         "(m - car(rl)) / car(x!1) <=  m / car(x!1)")
+                                                                                                         "(m - car(rl)) / car(x!1) <= m / car(x!1)")
                                                                                                         (("1"
                                                                                                           (assert)
                                                                                                           nil
@@ -2942,7 +2942,50 @@
                   nil))
                 nil))
               nil)
-             ("2" (postpone) nil nil))
+             ("2" (prop)
+              (("2"
+                (typepred "card_sl(difference_sl(list_less(m),
+                            union_sl(list_sieve0(m, car(x!1), car(rl)),
+                   
+                  sieve_union(m, cdr(x!1), cdr(rl)))))")
+                (("1" (replaces -1)
+                  (("1" (rewrite "difference_l2s")
+                    (("1" (rewrite "card_def" :dir rl)
+                      (("1" (rewrite "card_diff_subset")
+                        (("1" (typepred "card_sl(list_less(m))")
+                          (("1"
+                            (typepred "card(list2set(list_less(m)))")
+                            (("1" (replaces -1)
+                              (("1"
+                                (replaces -1 :dir rl)
+                                (("1"
+                                  (rewrite "card_sl_list_less")
+                                  (("1"
+                                    (rewrite "union_l2s")
+                                    (("1"
+                                      (rewrite "card_union")
+                                      (("1"
+                                        (expand "list_prod_l2" 2)
+                                        (("1"
+                                          (expand "list_prod" 2)
+                                          (("1" (postpone) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (postpone) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (postpone) nil nil))
+                nil))
+              nil))
             nil))
           nil))
         nil))

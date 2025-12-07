@@ -2494,8 +2494,144 @@
                                                                 (rewrite
                                                                  "card_disj_union")
                                                                 (("1"
-                                                                  (postpone)
-                                                                  nil
+                                                                  (typepred
+                                                                   "card_sl(list_sieve_aux(m, car(x!1), 0))")
+                                                                  (("1"
+                                                                    (typepred
+                                                                     "card_sl(list_sieve_aux(m, car(x!1), car(rl)))")
+                                                                    (("1"
+                                                                      (typepred
+                                                                       "card(list2set(list_sieve_aux(m, car(x!1), 0)))")
+                                                                      (("1"
+                                                                        (typepred
+                                                                         "card(list2set(list_sieve_aux(m, car(x!1), car(rl))))")
+                                                                        (("1"
+                                                                          (replaces
+                                                                           -1)
+                                                                          (("1"
+                                                                            (replaces
+                                                                             -1)
+                                                                            (("1"
+                                                                              (replaces
+                                                                               -1
+                                                                               :dir
+                                                                               rl)
+                                                                              (("1"
+                                                                                (replaces
+                                                                                 -1
+                                                                                 :dir
+                                                                                 rl)
+                                                                                (("1"
+                                                                                  (rewrite
+                                                                                   "card_sl_list_sieve_aux")
+                                                                                  (("1"
+                                                                                    (rewrite
+                                                                                     "card_sl_list_sieve_aux")
+                                                                                    (("1"
+                                                                                      (hide
+                                                                                       -3)
+                                                                                      (("1"
+                                                                                        (grind)
+                                                                                        (("1"
+                                                                                          (case
+                                                                                           "floor((m - car(rl)) / car(x!1)) = floor(m / car(x!1))")
+                                                                                          (("1"
+                                                                                            (replaces
+                                                                                             -1)
+                                                                                            (("1"
+                                                                                              (assert)
+                                                                                              nil
+                                                                                              nil))
+                                                                                            nil)
+                                                                                           ("2"
+                                                                                            (hide
+                                                                                             3)
+                                                                                            (("2"
+                                                                                              (typepred
+                                                                                               "floor((m - car(rl)) / car(x!1))")
+                                                                                              (("2"
+                                                                                                (typepred
+                                                                                                 "floor(m / car(x!1))")
+                                                                                                (("2"
+                                                                                                  (case
+                                                                                                   "floor((m - car(rl)) / car(x!1)) <= floor(m / car(x!1))")
+                                                                                                  (("1"
+                                                                                                    (assert)
+                                                                                                    nil
+                                                                                                    nil)
+                                                                                                   ("2"
+                                                                                                    (case
+                                                                                                     "(m - car(rl)) / car(x!1) <= floor(m / car(x!1))")
+                                                                                                    (("1"
+                                                                                                      (assert)
+                                                                                                      nil
+                                                                                                      nil)
+                                                                                                     ("2"
+                                                                                                      (case
+                                                                                                       "(m - car(rl)) / car(x!1) < 1 + floor(m / car(x!1))")
+                                                                                                      (("1"
+                                                                                                        (assert)
+                                                                                                        nil
+                                                                                                        nil)
+                                                                                                       ("2"
+                                                                                                        (case
+                                                                                                         "(m - car(rl)) / car(x!1) <=  m / car(x!1)")
+                                                                                                        (("1"
+                                                                                                          (assert)
+                                                                                                          nil
+                                                                                                          nil)
+                                                                                                         ("2"
+                                                                                                          (hide-all-but
+                                                                                                           (1
+                                                                                                            -6))
+                                                                                                          (("2"
+                                                                                                            (inst
+                                                                                                             -1
+                                                                                                             "0")
+                                                                                                            (("2"
+                                                                                                              (expand
+                                                                                                               "nth")
+                                                                                                              (("2"
+                                                                                                                (lemma
+                                                                                                                 "both_sides_div_pos_le1")
+                                                                                                                (("2"
+                                                                                                                  (inst
+                                                                                                                   -1
+                                                                                                                   "car(x!1)"
+                                                                                                                   "m-car(rl)"
+                                                                                                                   "m")
+                                                                                                                  (("1"
+                                                                                                                    (assert)
+                                                                                                                    nil
+                                                                                                                    nil)
+                                                                                                                   ("2"
+                                                                                                                    (assert)
+                                                                                                                    nil
+                                                                                                                    nil))
+                                                                                                                  nil))
+                                                                                                                nil))
+                                                                                                              nil))
+                                                                                                            nil))
+                                                                                                          nil))
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
                                                                   nil)
                                                                  ("2"
                                                                   (rewrite
